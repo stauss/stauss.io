@@ -1,0 +1,37 @@
+footer#clapat-footer.stauss-footer.dark-section(data-bgcolor="#0c0c0c", data-header-theme="dark")
+  #footer-container
+    .stauss-footer-main
+      .stauss-footer-brand
+        img(src=assetPrefix + "images/brand/Stauss-Logo-Full-Light.svg", alt="Stauss")
+      .stauss-footer-time(data-time-zone="America/Chicago")
+        span(data-footer-time-label) Bentonville, AR
+        strong(data-footer-time) --:--
+    .stauss-footer-links
+      .stauss-footer-contact
+        h2 Contact Me
+        a(href="mailto:caleb@whoa.work") Caleb@whoa.work
+        a(href="tel:+14792021250") 479-202-1250
+      nav.stauss-footer-sitemap(aria-label="Sitemap")
+        h2 Sitemap
+        ul
+          li
+            a.ajax-link(href=assetPrefix + "portfolio-grid.html", data-type="page-transition") Projects
+          li
+            a(href=assetPrefix + "about.html") About
+          li
+            a(href=assetPrefix + "about.html#contact") Contact
+          each project in projects || []
+            li
+              a.ajax-link(href=assetPrefix + `projects/${project.slug}.html`, data-type="page-transition")= project.title
+    .footer-credits
+      .clapat-footer-left
+        #backtotop.button-wrap.button-link.left.circle-edge(data-sticky)
+          .icon-wrap
+            .icon-effects.parallax-wrap(data-ball-size="grow", data-ball-color="primary", data-ball-radius="circle")
+              .button-icon.parallax-element
+                i.fa-solid.fa-angle-up
+          .text-wrap
+            .button-text
+              span(data-hover="Back to Top") Back to Top
+      .clapat-footer-right
+        .copyright 2026 © Stauss. All rights reserved.

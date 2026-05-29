@@ -1,0 +1,102 @@
+extends ../layouts/base.pug
+include ../mixins/case-study.pug
+
+block content
+  +heroCase(project.heroTitle, project.deck)
+
+  #main-content
+    #main-page-content
+      +placeholderBand(project.heroImage)
+
+      +summaryBand({
+        role: project.role,
+        duration: project.duration,
+        products: project.products,
+        outcome: project.outcome,
+        copy: project.summary
+      })
+
+      +textPair(project.introHeading)
+        p= project.intro
+        p This page now uses the same production structure as the KX 200 case study: a strategic opening, capped text width, capped media width, shared parallax image behavior, reusable copy grids, and repeated proof sections ready for final content.
+        p Replace this temporary paragraph with project-specific details during the final content pass without touching the shared layout, header, footer, CSS, or script references.
+
+      +deviceGrid([
+        { src: projectAsset(project, project.images[0]), speed: "0.04" },
+        { src: projectAsset(project, project.images[1] || project.images[0]), speed: "0.08" }
+      ])
+
+      +quoteSection(project.operatingHeading)
+        p= project.operating
+        p The section is intentionally consistent across projects so the portfolio reads as a product leadership system rather than a set of unrelated templates. The image and copy can change while the rhythm stays stable.
+
+      +mediaSection(projectAsset(project, project.images[2] || project.images[0]), "0.05")
+
+      +portfolioCopy("Operating Model", `Temporary section headline for the product architecture behind ${project.title}.`)
+        p This placeholder copy is here to establish the production rhythm for the final case study. Use this section for the strategic shift, the constraint that mattered most, and the operating principle that governed downstream decisions.
+        p At final content pass, this area should explain what changed in the product model, not simply what screens were produced. The goal is to read as executive-level product judgment supported by concrete design evidence.
+
+      +copyIntroMatrix(
+        "Copy Layout 01",
+        {
+          heading: "Framing the problem from market pressure to product behavior.",
+          copy: "Use this block when the story needs a concise strategic setup before moving into artifacts. The first column can carry the decision, while the adjacent copy explains the consequence for users, operations, or the business."
+        },
+        {
+          heading: "Showing why the work mattered before showing how it looked.",
+          copy: "This companion column can hold proof: research signal, product constraint, risk, or outcome. It keeps the reader moving across a deliberate argument rather than dropping them into process detail too early."
+        }
+      )
+
+      +copyEditorialRail("Copy Layout 02", "Large thesis with two supporting copy blocks on the right.", [
+        "This layout is useful for a high-level claim that needs two kinds of evidence. One paragraph can define the design principle, while the second explains how that principle changed execution.",
+        "It also works well for research synthesis, product strategy, or implementation constraints where the reader needs a clear hierarchy and a balanced scan path."
+      ])
+
+      +copyDecisionGrid([
+        { label: "Decision", copy: "Preserve the behavior that already carries trust, then modernize around it." },
+        { label: "Constraint", copy: "Every added capability had to justify its cost in comprehension, operation, and maintenance." },
+        { label: "System", copy: "A shared operating grammar lets project-specific details change without fragmenting the portfolio." },
+        { label: "Outcome", copy: "The final page can show product judgment first, then support it with visual proof." }
+      ])
+
+      +copySequence("Copy Layout 04", "A sequence layout for research, product decisions, or build phases.", [
+        { label: "01", copy: "Establish the operational environment and identify which behaviors already carry trust." },
+        { label: "02", copy: "Translate those behaviors into interface rules that can scale without fragmenting the system." },
+        { label: "03", copy: "Validate the rules in context, then turn the proven behavior into implementation-ready documentation." }
+      ])
+
+      +copyThesis("The strongest portfolio pages read like product judgment supported by evidence, not a gallery with captions.", [
+        "This layout can hold a senior-level interpretation of the work. It gives room for a strong claim, then supports it with focused explanation that keeps the reader oriented.",
+        "Use it near the end of a case study when the page needs to consolidate lessons, outcomes, or what the project proves about the way you lead product design."
+      ])
+
+      +layeredParallax(
+        { src: projectAsset(project, project.images[3] || project.images[0]), speed: "-0.12" },
+        { src: projectAsset(project, project.images[4] || project.images[1] || project.images[0]), speed: "0.16" },
+        `Layered media section for showing context, system detail, and ${project.title} artifacts moving at different depths.`
+      )
+
+      +stackedImageGrid([
+        [
+          { src: projectAsset(project, project.images[0]), speed: "0.06", caption: "Temporary caption for interaction continuity research." },
+          { src: projectAsset(project, project.images[1] || project.images[0]), speed: "0.08", caption: "Temporary caption for system mapping." }
+        ],
+        [
+          { src: projectAsset(project, project.images[2] || project.images[0]), speed: "0.04", caption: "Temporary caption for implementation evidence." },
+          { src: projectAsset(project, project.images[3] || project.images[1] || project.images[0]), speed: "0.07", caption: "Temporary caption for validation evidence." }
+        ]
+      ])
+
+      +offsetMedia(
+        { src: projectAsset(project, project.images[4] || project.images[0]), speed: "0.05", caption: "Temporary wide image caption for workflow evidence." },
+        "Sticky editorial note for an important product decision.",
+        "This pinned block can hold a concise explanation while the image column carries detailed visual proof. It is designed for director-level reading: fast thesis, then evidence."
+      )
+
+      +statementBand(`Temporary statement section for the strongest ${project.title} outcome, written as a product leadership claim rather than a design-process caption.`)
+
+      +parallaxPair([
+        { src: projectAsset(project, project.images[0]), speed: "0.1", caption: "Temporary caption for first parallel artifact." },
+        { src: projectAsset(project, project.images[1] || project.images[0]), speed: "0.03", caption: "Temporary caption for second parallel artifact." }
+      ])

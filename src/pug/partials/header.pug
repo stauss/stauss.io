@@ -1,0 +1,64 @@
+header#clapat-header.classic-menu.stauss-site-header.disable-header-gradient
+  #header-container
+    #clapat-logo(data-ball="hide")
+      a.ajax-link(data-type="page-transition", href=assetPrefix + "index.html")
+        img.black-logo(src=assetPrefix + "images/brand/Stauss-Logo-Icon-Dark.svg", alt="Caleb Stauss")
+        img.white-logo(src=assetPrefix + "images/brand/Stauss-Logo-Icon-Light.svg", alt="Caleb Stauss")
+
+    nav#clapat-nav-wrapper
+      .nav-height
+        if headerMode === "case"
+          .case-menu-pill
+            span Menu
+            span.case-menu-lines(aria-hidden="true")
+              span
+              span
+        else
+          ul.clapat-nav
+            li.menu-timeline(data-ball="highlight")
+              a.ajax-link(data-type="page-transition", href=assetPrefix + "index.html")
+                .before-span
+                  span(data-hover="Projects") Projects
+            li.menu-timeline(data-ball="highlight")
+              a(href=assetPrefix + "about.html")
+                .before-span
+                  span(data-hover="About") About
+            li.menu-timeline(data-ball="highlight")
+              a(href=assetPrefix + "about.html#contact")
+                .before-span
+                  span(data-hover="Contact") Contact
+
+    #burger-button.button-wrap.button-link.right.circle-edge.burger-dots(data-sticky)
+      .icon-wrap
+        .icon-effects.parallax-wrap(data-ball-size="grow", data-ball-color="primary")
+          .button-icon.parallax-element
+            .burger-icon
+              span
+              span
+              span
+      .text-wrap
+        .button-text
+          span(data-hover="Menu") Menu
+
+    #header-buttons-wrapper.append-to-nav
+      a.header-resume-link.header-element-color(href="mailto:caleb@whoa.work?subject=Resume%20request") Resume
+
+    button.stauss-burger(aria-label="Open navigation", aria-expanded="false")
+      span
+      span
+      span
+
+#stauss-mobile-menu.stauss-mobile-menu(aria-hidden="true")
+  nav.stauss-mobile-nav
+    ul
+      li
+        a.ajax-link(href=assetPrefix + "portfolio-grid.html", data-type="page-transition") Projects
+      li
+        a(href=assetPrefix + "about.html") About
+      li
+        a(href=assetPrefix + "about.html#contact") Contact
+      li
+        a(href="mailto:caleb@whoa.work?subject=Resume%20request") Resume
+  .stauss-mobile-contact
+    a(href="mailto:caleb@whoa.work") Caleb@whoa.work
+    a(href="tel:+14792021250") 479-202-1250

@@ -1,0 +1,86 @@
+{
+  "images": [
+    {
+      "filename": "ios-app-icon-20x20.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "20x20"
+    },
+    {
+      "filename": "ios-app-icon-29x29.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "29x29"
+    },
+    {
+      "filename": "ios-app-icon-40x40.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "40x40"
+    },
+    {
+      "filename": "ios-app-icon-58x58.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "58x58"
+    },
+    {
+      "filename": "ios-app-icon-60x60.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "60x60"
+    },
+    {
+      "filename": "ios-app-icon-76x76.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "76x76"
+    },
+    {
+      "filename": "ios-app-icon-80x80.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "80x80"
+    },
+    {
+      "filename": "ios-app-icon-87x87.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "87x87"
+    },
+    {
+      "filename": "ios-app-icon-120x120.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "120x120"
+    },
+    {
+      "filename": "ios-app-icon-152x152.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "152x152"
+    },
+    {
+      "filename": "ios-app-icon-167x167.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "167x167"
+    },
+    {
+      "filename": "ios-app-icon-180x180.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "180x180"
+    },
+    {
+      "filename": "ios-app-icon-1024x1024.png",
+      "idiom": "universal",
+      "scale": "1x",
+      "size": "1024x1024"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}

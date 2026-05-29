@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f7f7">
+
+    <title>NerdWallet Currency Design System — Caleb Stauss</title>
+    <meta name="description" content="Turning a design system teams were ignoring into infrastructure they actually used — by making the official path faster than the workaround.">
+    <meta name="author" content="Caleb Stauss">
+
+    <link rel="canonical" href="https://stauss.io/work/nerdwallet-currency.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stauss.io/work/nerdwallet-currency.html">
+    <meta property="og:title" content="NerdWallet Currency Design System — Caleb Stauss">
+    <meta property="og:description" content="Turning a design system teams were ignoring into infrastructure they actually used — by making the official path faster than the workaround.">
+    <meta property="og:image" content="https://stauss.io/images/06hero.jpg">
+    <meta property="og:site_name" content="Caleb Stauss">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NerdWallet Currency Design System — Caleb Stauss">
+    <meta name="twitter:description" content="Turning a design system teams were ignoring into infrastructure they actually used — by making the official path faster than the workaround.">
+    <meta name="twitter:image" content="https://stauss.io/images/06hero.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../dist/images/web/favicon.svg">
+    <link rel="icon" type="image/png" sizes="48x48" href="../dist/images/web/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../dist/images/web/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../dist/images/web/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../dist/images/web/apple-touch-icon.png">
+    <link rel="manifest" href="../dist/images/web/site.webmanifest">
+
+    <!-- Critical CSS -->
+    <link href="../style.css" rel="stylesheet">
+    <link href="../css/variables.css" rel="stylesheet">
+    <link href="../css/preloader.css" rel="stylesheet">
+
+    <!-- Non-critical CSS -->
+    <link href="../css/content.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="../css/content.css" rel="stylesheet"></noscript>
+    <link href="../css/shortcodes.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="../css/shortcodes.css" rel="stylesheet"></noscript>
+    <link href="../css/custom.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="../css/custom.css" rel="stylesheet"></noscript>
+    <link href="../css/all.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="../css/all.min.css" rel="stylesheet"></noscript>
+
+    <!-- Force word-wrapper spans visible (preloader disabled) -->
+    <style>
+        .hero-title > .word-wrapper > span,
+        .hero-subtitle > .word-wrapper > span,
+        .hero-infotitle > .word-wrapper > span,
+        .next-hero-title > .word-wrapper > span,
+        .next-hero-subtitle > .word-wrapper > span { opacity: 1 !important; transform: none !important; }
+    </style>
+
+</head>
+
+
+<body class="disable-preloader enable-lenis hayler">
+
+<main>
+    <div class="clapat-index">
+
+        <!-- Page Content — light background, dark text -->
+        <div id="clapat-page-content" class="work-minimal" data-bgcolor="#f7f7f7">
+
+            <!-- Header -->
+            <header id="clapat-header" class="classic-menu disable-header-gradient">
+                <div id="header-container">
+
+                    <div id="clapat-logo" data-ball="hide">
+                        <a class="ajax-link" data-type="page-transition" href="../index.html">
+                            <img class="black-logo" src="../images/logo.png" alt="Caleb Stauss">
+                            <img class="white-logo" src="../images/logo-white.png" alt="Caleb Stauss">
+                        </a>
+                    </div>
+
+                    <nav id="clapat-nav-wrapper">
+                        <div class="nav-height">
+                            <ul class="clapat-nav">
+                                <li class="menu-timeline" data-ball="highlight">
+                                    <a class="ajax-link active" data-type="page-transition" href="../portfolio-grid.html">
+                                        <div class="before-span"><span data-hover="Work">Work</span></div>
+                                    </a>
+                                </li>
+                                <li class="menu-timeline" data-ball="highlight">
+                                    <a class="ajax-link" data-type="page-transition" href="../about.html">
+                                        <div class="before-span"><span data-hover="About">About</span></div>
+                                    </a>
+                                </li>
+                                <li class="menu-timeline" data-ball="highlight">
+                                    <a class="ajax-link" data-type="page-transition" href="../contact.html">
+                                        <div class="before-span"><span data-hover="Contact">Contact</span></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div id="burger-button" class="button-wrap button-link right circle-edge burger-dots" data-sticky>
+                        <div class="icon-wrap">
+                            <div class="icon-effects parallax-wrap" data-ball-size="grow" data-ball-color="primary">
+                                <div class="button-icon parallax-element">
+                                    <div class="burger-icon"><span></span><span></span><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-wrap">
+                            <div class="button-text"><span data-hover="Menu">Menu</span></div>
+                        </div>
+                    </div>
+
+                    <div id="header-buttons-wrapper" class="append-to-nav">
+                        <div id="header-button" class="button-wrap button-icon-box outline-solid reveal-icon right circle-edge header-element-color" data-sticky>
+                            <a class="ajax-link" data-type="page-transition" href="../contact.html">
+                                <div class="icon-wrap">
+                                    <div class="icon-effects parallax-wrap">
+                                        <div class="button-icon parallax-element">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="button-text"><span data-hover="Let's Talk">Let's Talk</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+            <!--/Header -->
+
+
+            <!-- Content Scroll -->
+            <div id="content-scroll">
+
+                <!-- Hero -->
+                <section id="hero" class="has-media autoscroll">
+                    <div id="hero-wrapper">
+
+                        <div id="hero-caption" class="content-full-width text-align-default-desktop">
+                            <div class="inner">
+                                <h1 class="hero-title caption-timeline inline-word-wrapper">
+                                    <span class="word-wrapper"><span>The System</span></span>
+                                    <span class="word-wrapper"><span>Had No Currency.</span></span>
+                                </h1>
+                                <div class="hero-subtitle caption-timeline">
+                                    <span class="word-wrapper"><span>Turning a design system teams were ignoring into infrastructure they actually used — by making the official path faster than the workaround.</span></span>
+                                </div>
+                                <div class="hero-infotitle caption-timeline">
+                                    <span class="word-wrapper"><span class="heading-3">NerdWallet · Design System</span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="hero-footer" class="has-border">
+                            <div class="hero-footer-left">
+                                <div id="scroll-down" class="button-wrap button-link right circle-edge" data-sticky>
+                                    <div class="icon-wrap">
+                                        <div class="icon-effects parallax-wrap" data-ball-color="primary">
+                                            <div class="button-icon parallax-element">
+                                                <i class="fa-solid fa-arrow-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-wrap sticky">
+                                        <div class="button-text parallax-element">
+                                            <span data-hover="Scroll">Scroll</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-footer-center">
+                                <div class="info-text"><span>3× Weekly Visits · 80% Useful Rating · 50%+ Faster Variant Discovery · 10+ Product Teams</span></div>
+                            </div>
+                            <div class="hero-footer-right">
+                                <div class="button-wrap button-link left circle-edge open-modal" data-sticky data-modal-target="#tldr-modal" data-modal-direction="right">
+                                    <div class="icon-wrap">
+                                        <div class="icon-effects parallax-wrap" data-ball-color="primary">
+                                            <div class="button-icon parallax-element">
+                                                <i class="fa-solid fa-bolt"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-wrap sticky">
+                                        <div class="button-text parallax-element">
+                                            <span data-hover="TL;DR">TL;DR</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="hero-media" class="parallax-media">
+                        <div id="hero-media-effects">
+                            <div id="hero-media-wrapper">
+                                <img src="../images/06hero.jpg" class="item-image" alt="NerdWallet Currency Design System">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TLDR Modal -->
+                    <div id="tldr-modal" class="modal-source">
+                        <div class="modal-project">
+
+                            <p>The Problem</p>
+                            <h5>NerdWallet had a working design system that few teams trusted enough to use. Inconsistent documentation, buried component variants, and unclear contribution paths made local workarounds faster than the official system.</h5>
+
+                            <hr class="animated-line">
+
+                            <p>The Platform</p>
+                            <p class="no-margins">Currency transformed the design system from an internal reference site into organizational infrastructure: a named product, a documentation platform, a Figma library, a React component library, Storybook support, grid tooling, and a contribution model serving more than 10 product teams.</p>
+
+                            <hr class="animated-line">
+
+                            <p>The Design Work</p>
+                            <p class="no-margins">The critical architectural decision was a variants-first documentation model. It moved the most common user question to the top of every component page, separating designer and engineer needs while keeping one shared source of truth.</p>
+
+                            <hr class="animated-line">
+
+                            <p>The Outcome</p>
+                            <p class="no-margins">Within the first month after launch, weekly documentation visits tripled. Post-launch research showed 80% of employees found the style guide useful, and the new component templates cut the time needed to find component variants by more than 50%.</p>
+
+                        </div>
+                    </div>
+                    <!--/TLDR Modal -->
+
+                </section>
+                <!--/Hero -->
+
+
+                <!-- Main Content -->
+                <div id="main-content">
+                    <div id="main-page-content">
+
+
+                        <!-- Context -->
+                        <section class="content-row full row_padding_top row_padding_left row_padding_right" data-bgcolor="#f7f7f7">
+                            <div class="columns-group">
+                                <div class="one_third">
+                                    <p data-animate>Role<br>Product Designer · Design Systems Strategist · Documentation Architect<br><br>Platform<br>Figma · React Component Library · Storybook · Chrome Grid Extension · nerdwallet.style<br><br>Duration<br>Design System Refresh</p><hr>
+                                </div>
+                                <div class="two_third">
+                                    <h3 class="has-mask" data-play-once>NerdWallet's style guide had existed for roughly two years. The company was growing, consistency mattered more every quarter, and the design system was supposed to make teams faster. Instead, many teams worked around it. The real brief was not to refresh the style guide. It was to make the official path faster than the workaround.</h3><hr>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Hero image -->
+                        <section class="content-row full row_padding_top row_padding_bottom row_padding_left row_padding_right" data-bgcolor="#ececec">
+                            <div class="columns-group">
+                                <div class="one_full">
+                                    <figure data-animate>
+                                        <img src="../images/projects/06project1.jpg" alt="Currency Design System — the documentation platform that gave the system institutional weight">
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- The Problem -->
+                        <section class="content-row full row_padding_top row_padding_bottom row_padding_left row_padding_right" data-bgcolor="#f7f7f7">
+                            <div class="columns-group">
+                                <div class="one_third">
+                                    <p data-animate>The Problem</p>
+                                </div>
+                                <div class="two_third">
+                                    <h3 class="has-mask" data-play-once>The thirty-second breakpoint.</h3>
+                                    <p>User research with 4 designers and 7 engineers clarified the failure. Most people were not unaware of the style guide. They were unwilling to interrupt real product work for a resource that made them hunt.</p>
+                                    <p>The primary job was simple: browse component variations. Yet that task was tedious. Pages carried too much unnecessary content, lacked the information designers needed, and made scanning harder than it should have been. Poor usability damaged the perceived reliability of the system itself. The system did not need more explanation at the top. It needed the answer at the top. Variants first. Usage second.</p>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Two-column images -->
+                        <section class="content-row full row_padding_top row_padding_bottom row_padding_left row_padding_right" data-bgcolor="#ececec">
+                            <div class="columns-group">
+                                <div class="one_half">
+                                    <figure data-animate>
+                                        <img src="../images/projects/06project2.jpg" alt="Research finding — users came for component variations, not documentation essays">
+                                        <figcaption>Research finding — most users came for component variations, not documentation essays</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="one_half">
+                                    <figure data-animate>
+                                        <img src="../images/projects/06project3.jpg" alt="Before and after — variants buried below content versus variants surfaced immediately">
+                                        <figcaption>Before and after — variants buried versus variants surfaced at the top</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- The Decision -->
+                        <section class="content-row full row_padding_top row_padding_bottom row_padding_left row_padding_right" data-bgcolor="#f7f7f7">
+                            <div class="columns-group">
+                                <div class="one_third">
+                                    <p data-animate>The Decision</p>
+                                </div>
+                                <div class="two_third">
+                                    <h3 class="has-mask" data-play-once>A name made it real.</h3>
+                                    <p>Naming was not decoration. It was adoption infrastructure. Before Currency, the system behaved like a shared internal resource — useful in theory, easy to ignore in practice. A name gave it something teams could reference in meetings, link to in documentation, and hold accountable over time.</p>
+                                    <p>Currency also fit the company. The word suggests value, exchange, shared acceptance, and daily use. A design system needs all four. The dedicated documentation destination reinforced the shift: a URL, a visual identity, and a recognizable product surface told the organization that the system had ownership. It was not a static archive. It was maintained infrastructure.</p>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Pull quote -->
+                        <section class="content-row full row_padding_top row_padding_bottom row_padding_left row_padding_right" data-bgcolor="#ececec">
+                            <div class="columns-group">
+                                <div class="one_full">
+                                    <h3 class="heading-1 has-mask text-align-center no-margins" data-play-once>Adoption rarely happens through discipline alone. It happens when the right choice costs less effort than the wrong one.</h3>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- The Architecture -->
+                        <section class="content-row full row_padding_top row_padding_bottom row_padding_left row_padding_right" data-bgcolor="#f7f7f7">
+                            <div class="columns-group">
+                                <div class="one_third">
+                                    <p data-animate>The Architecture</p>
+                                </div>
+                                <div class="two_third">
+                                    <h3 class="has-mask" data-play-once>Variants became the front door.</h3>
+                                    <p>The central design move was structural. Each component page was reorganized around the way teams actually used it. Component variants moved to the top, where they could be scanned immediately. Designers could compare options without reading a wall of guidance first. Engineers could move into code and implementation once the correct pattern was clear.</p>
+                                    <p>The refresh introduced three scalable templates: Foundation, Component, and Pattern. Foundation pages handled core decisions. Component pages handled reusable UI. Pattern pages gave broader experience guidelines a proper home. A Chrome extension brought NerdWallet's grid directly onto live product pages — no separate spec, no remembered column rules. The same logic extended into Figma: a system-aligned library made correct components available where designers were already working.</p>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Full-width image -->
+                        <section class="content-row full row_padding_top row_padding_bottom row_padding_left row_padding_right" data-bgcolor="#ececec">
+                            <div class="columns-group">
+                                <div class="one_full">
+                                    <figure data-animate>
+                                        <img src="../images/projects/06project4.jpg" alt="Currency component templates — variants first, usage second, implementation where engineers needed it">
+                                        <figcaption>Currency component templates — variants first, usage second, implementation where engineers needed it</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Outcomes -->
+                        <section class="content-row full row_padding_top row_padding_bottom row_padding_left row_padding_right" data-bgcolor="#f7f7f7">
+                            <div class="columns-group">
+                                <div class="one_third">
+                                    <p data-animate>Outcomes</p>
+                                </div>
+                                <div class="two_third">
+                                    <h3 class="has-mask" data-play-once>The system earned return visits.</h3>
+                                    <p>The launch changed the system's relationship with the organization. Teams returned to a resource they had previously abandoned. Designers and engineers could complete the most common task faster. The documentation became a working surface instead of a static reference.</p>
+                                </div>
+                            </div>
+                            <div class="columns-group">
+                                <div class="one_fourth">
+                                    <hr><h2 class="no-margins" data-animate>3×</h2>
+                                    <p data-animate>Weekly documentation visits within the first month after launch</p>
+                                </div>
+                                <div class="one_fourth">
+                                    <hr><h2 class="no-margins" data-animate>80%</h2>
+                                    <p data-animate>Of employees found the refreshed guide useful post-launch</p>
+                                </div>
+                                <div class="one_fourth">
+                                    <hr><h2 class="no-margins" data-animate>50%+</h2>
+                                    <p data-animate>Faster component-variant discovery with new templates</p>
+                                </div>
+                                <div class="one_fourth">
+                                    <hr><h2 class="no-margins" data-animate>10+</h2>
+                                    <p data-animate>Product teams served by the system</p>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Full-width image -->
+                        <section class="content-row full row_padding_top row_padding_bottom row_padding_left row_padding_right" data-bgcolor="#ececec">
+                            <div class="columns-group">
+                                <div class="one_full">
+                                    <figure data-animate>
+                                        <img src="../images/projects/06project5.jpg" alt="The Chrome grid extension — system standards embedded directly into the browser, not a separate tab">
+                                        <figcaption>The Chrome grid extension — system standards embedded directly into the browser workflow</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Reflection -->
+                        <section class="content-row full row_padding_top row_padding_bottom row_padding_left row_padding_right" data-bgcolor="#f7f7f7">
+                            <div class="columns-group">
+                                <div class="one_third">
+                                    <p data-animate>Reflection</p>
+                                </div>
+                                <div class="two_third">
+                                    <p class="has-mask" data-play-once>The refresh solved the adoption layer, but it also exposed the next constraint: contribution throughput. A small central systems team can create standards, but it cannot absorb unlimited product-team demand without a stronger distributed model. The contribution decision tree clarified where work belonged. It did not fully solve who had the capacity to review, refine, and ship every contribution.</p>
+                                    <p>Design systems do not fail only because components are missing. They fail when the operating model is weaker than the demand placed on it. The front door had been designed. The review pipeline needed the same rigor.</p>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+                    <!--/Main Page Content -->
+
+
+                    <!-- Project Navigation -->
+                    <section id="project-nav" class="flip-title-onload" data-next-bgcolor="#f7f7f7">
+                        <div id="project-nav-wrapper">
+
+                            <div id="project-nav-caption" class="content-full-width text-align-center">
+                                <div class="wrapper">
+                                    <a class="next-ajax-link-project" data-type="page-transition" href="tokenproof.html" data-ball="hover" data-ball-type="blur" data-ball-color="#b880ff" data-ball-size="small" data-ball-radius="rounded" data-ball-info="fa-solid fa-arrow-right" data-ball-info-color="#000"></a>
+                                    <div class="inner">
+                                        <div class="next-hero-title caption-timeline">
+                                            <span class="word-wrapper"><span>TokenProof</span></span>
+                                        </div>
+                                        <div class="next-hero-subtitle caption-timeline">
+                                            <span class="word-wrapper"><span>Verified Access Infrastructure</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="next-project-media">
+                                <div class="next-project-media-effects">
+                                    <div class="next-project-media-wrapper">
+                                        <img src="../images/07hero.jpg" class="item-image" alt="TokenProof">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <!--/Project Navigation -->
+
+                </div>
+                <!--/Main Content -->
+
+
+                <!-- Footer -->
+                <footer id="clapat-footer" class="absolute">
+                    <div id="footer-container" class="parallax-footer">
+                        <div class="footer-credits">
+                            <div class="clapat-footer-left">
+                                <div id="backtotop" class="button-wrap button-link left circle-edge" data-sticky>
+                                    <div class="icon-wrap">
+                                        <div class="icon-effects parallax-wrap" data-ball-size="grow" data-ball-color="primary" data-ball-radius="circle">
+                                            <div class="button-icon parallax-element">
+                                                <i class="fa-solid fa-angle-up"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="button-text"><span data-hover="Back to Top">Back to Top</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clapat-footer-center">
+                                <div class="copyright">2026 © Caleb Stauss. All rights reserved.</div>
+                            </div>
+                            <div class="clapat-footer-right">
+                                <div id="footer-socials" class="socials-wrap">
+                                    <div class="socials-text">Connect</div>
+                                    <ul class="socials">
+                                        <li><span class="parallax-wrap" data-ball-size="grow" data-ball-color="primary" data-ball-radius="circle"><a class="parallax-element" href="https://linkedin.com/in/calebstauss" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+            <!--/Content Scroll -->
+
+        </div>
+        <!--/Page Content -->
+
+    </div>
+</main>
+
+
+<!-- Cursor -->
+<div id="clapat-cursor" data-cursor-zoom="fa fa-plus" data-cursor-play="fa fa-play" data-cursor-pause="fa fa-pause" data-cursor-drag-x="Drag" data-cursor-drag-y="fa-solid fa-arrows-up-down" data-cursor-prev="fa fa-arrow-left" data-cursor-next="fa fa-arrow-right">
+    <div id="ball">
+        <div id="ball-loader"></div>
+    </div>
+</div>
+
+<div class="clapat-rotate-device"></div>
+
+<script src="../lib/gsap.js"></script>
+<script src="../lib/lenis.js"></script>
+<script src="../js/preloader.js"></script>
+<script src="../js/slider.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/scripts.js"></script>
+
+
+</body>
+</html>

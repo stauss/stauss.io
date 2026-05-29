@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f7f7">
+
+    <title>BendixKing KX 200 — Avionics Interface System — Caleb Stauss</title>
+    <meta name="description" content="Designing avionics UX where novelty is risk — translating legacy cockpit muscle memory into a scalable digital operating system pilots could trust without studying.">
+    <meta name="author" content="Caleb Stauss">
+
+    <link rel="canonical" href="https://stauss.io/work/bendixking-kx200.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stauss.io/work/bendixking-kx200.html">
+    <meta property="og:title" content="BendixKing KX 200 — Avionics Interface System — Caleb Stauss">
+    <meta property="og:description" content="Designing avionics UX where novelty is risk — translating legacy cockpit muscle memory into a scalable digital operating system pilots could trust without studying.">
+    <meta property="og:image" content="https://stauss.io/images/05hero.jpg">
+    <meta property="og:site_name" content="Caleb Stauss">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BendixKing KX 200 — Avionics Interface System — Caleb Stauss">
+    <meta name="twitter:description" content="Designing avionics UX where novelty is risk — translating legacy cockpit muscle memory into a scalable digital operating system pilots could trust without studying.">
+    <meta name="twitter:image" content="https://stauss.io/images/05hero.jpg">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <link href="../style.css" rel="stylesheet">
+    <link href="../css/variables.css" rel="stylesheet">
+    <link href="../css/preloader.css" rel="stylesheet">
+    <link href="../css/content.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="../css/content.css" rel="stylesheet"></noscript>
+    <link href="../css/shortcodes.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="../css/shortcodes.css" rel="stylesheet"></noscript>
+    <link href="../css/custom.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="../css/custom.css" rel="stylesheet"></noscript>
+    <link href="../css/all.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="../css/all.min.css" rel="stylesheet"></noscript>
+
+    <style>
+        .hero-title > .word-wrapper > span,
+        .hero-subtitle > .word-wrapper > span,
+        .hero-infotitle > .word-wrapper > span,
+        .next-hero-title > .word-wrapper > span,
+        .next-hero-subtitle > .word-wrapper > span { opacity: 1 !important; transform: none !important; }
+
+        body.case-study-page {
+            --case-page-max: 100%;
+            --case-text-max: 1800px;
+            --case-image-max: 2300px;
+            --case-surface-gray: #f5f5f7;
+            --case-copy-size: var(--type-22);
+            --case-copy-line: 1.55;
+            --case-heading-gap-48: 0.7em;
+            --case-heading-gap-36: 0.75em;
+            background: #fff;
+            color: #000;
+        }
+
+        .case-study-page #clapat-page-content,
+        .case-study-page #main-page-content,
+        .case-study-page #main-content {
+            background: #fff;
+            opacity: 1;
+        }
+
+        .case-study-page main,
+        .case-study-page #content-scroll {
+            overflow: visible;
+        }
+
+        .case-study-page #clapat-header {
+            height: 75px;
+            pointer-events: none;
+        }
+
+        .case-study-page #header-container {
+            height: 75px;
+            padding: 0 32px;
+        }
+
+        .case-study-page #clapat-logo,
+        .case-study-page #burger-button,
+        .case-study-page #header-buttons-wrapper,
+        .case-study-page #clapat-nav-wrapper {
+            pointer-events: auto;
+        }
+
+        .case-study-page #clapat-logo img {
+            height: 37px;
+        }
+
+        .case-study-page .classic-menu #clapat-nav-wrapper {
+            padding: 0;
+            background: rgba(2, 2, 2, 0.35);
+            border: 1px dashed rgba(25, 27, 29, 0.25);
+            border-radius: 6px;
+            backdrop-filter: blur(3px);
+        }
+
+        .case-study-page .classic-menu .clapat-nav {
+            height: 45px;
+            padding: 0 18px;
+            gap: 36px;
+        }
+
+        .case-menu-pill {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 354px;
+            height: 45px;
+            box-sizing: border-box;
+            padding: 0 18px;
+            color: #191b1d;
+            font-size: var(--type-15);
+            line-height: 1;
+        }
+
+        .case-menu-lines {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            gap: 3px;
+        }
+
+        .case-menu-lines span {
+            display: block;
+            width: 17px;
+            height: 2px;
+            background: #191b1d;
+        }
+
+        .case-study-page .classic-menu .clapat-nav > li > a {
+            font-size: var(--type-15);
+            line-height: 1;
+            color: #191b1d;
+        }
+
+        .case-study-page .classic-menu .clapat-nav > li > a.active span {
+            color: #fff;
+            background: #191b1d;
+            border-radius: 2px;
+            padding: 5px 9px;
+        }
+
+        .case-study-page #header-button .button-icon {
+            display: none;
+        }
+
+        .case-study-page #header-button .text-wrap {
+            transform: none;
+        }
+
+        .case-study-page #header-button .button-text {
+            height: auto;
+            padding: 12px 18px;
+            border: 1px dashed rgba(25, 27, 29, 0.25);
+            border-radius: 5px;
+            color: #191b1d;
+            font-size: var(--type-15);
+            line-height: 1;
+        }
+
+        .case-study-page #header-button .button-text span {
+            transform: none;
+            filter: none;
+        }
+
+        .case-study-page #header-button .button-text span::before {
+            display: none;
+        }
+
+        .case-study-page #burger-button {
+            display: none;
+        }
+
+        .case-frame {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: none;
+            margin: 0 auto;
+            max-width: 2250px;
+        }
+
+        .portfolio-figure,
+        .case-frame,
+        .portfolio-image-grid {
+            max-width: 2250px;
+        }
+
+        .case-text-inner,
+        .case-media-inner {
+            width: min(calc(100% - 128px), var(--case-text-max));
+            margin: 0 auto;
+        }
+
+        .case-media-inner {
+            width: min(calc(100% - 48px), var(--case-image-max));
+        }
+
+        .case-study-page .case-body-copy,
+        .case-study-page .case-body-copy p,
+        .case-study-page .case-two-column-copy p,
+        .case-study-page .portfolio-copy p,
+        .case-study-page .portfolio-copy li,
+        .case-study-page .portfolio-section-label {
+            font-size: var(--case-copy-size);
+            line-height: var(--case-copy-line);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        #hero.case-hero {
+            position: relative;
+            height: 576px;
+            max-width: none;
+            margin: 0 auto;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .case-hero-copy {
+            position: absolute;
+            inset: 0;
+            max-width: var(--case-text-max);
+            margin: 0 auto;
+        }
+
+        .case-hero-title {
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            max-width: 900px;
+            margin: 0;
+            font-size: var(--type-100);
+            line-height: 1;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+        }
+
+        .case-hero-deck {
+            position: absolute;
+            right: 0;
+            bottom: 60px;
+            width: 455px;
+            margin: 0;
+            font-size: var(--type-28);
+            line-height: 1.37;
+            font-weight: 500;
+            letter-spacing: -0.025em;
+        }
+
+        .case-placeholder-band {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 1054px;
+            background: var(--case-surface-gray);
+        }
+
+        .case-placeholder-band img {
+            width: 436px;
+            height: 436px;
+        }
+
+        .case-summary-band {
+            position: relative;
+            padding: 27.5em;
+            background: #000;
+            color: #fff;
+        }
+
+        .case-summary-grid,
+        .case-summary-footer {
+            position: absolute;
+            left: max(40px, calc((100% - var(--case-text-max)) / 2));
+            right: max(40px, calc((100% - var(--case-text-max)) / 2));
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .case-summary-grid {
+            top: 40px;
+            align-items: flex-start;
+        }
+
+        .case-summary-footer {
+            bottom: 40px;
+            align-items: flex-end;
+        }
+
+        .case-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .case-meta.align-right {
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        .case-meta-value {
+            font-size: var(--type-22);
+            line-height: 1.09;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+
+        .case-meta-label {
+            opacity: 0.8;
+            font-size: var(--type-11);
+            line-height: 2.18;
+            font-weight: 500;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .case-summary-copy {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 972px;
+            margin: 0;
+            transform: translate(-50%, -50%);
+            font-size: var(--type-48);
+            line-height: 1.25;
+            font-weight: 500;
+            letter-spacing: -0.0125em;
+        }
+
+        .case-text-section {
+            padding: 180px 64px;
+            background: #fff;
+        }
+
+        .case-text-pair {
+            display: flex;
+            gap: 106px;
+            max-width: min(1263px, var(--case-text-max));
+            margin: 0 auto;
+        }
+
+        .case-kicker-heading {
+            margin: 0 0 var(--case-heading-gap-36);
+            font-size: var(--type-36);
+            line-height: 1.11;
+            font-weight: 600;
+            letter-spacing: -0.011em;
+        }
+
+        .case-body-copy {
+            width: 764px;
+            margin: 0;
+            color: rgba(0, 0, 0, 0.75);
+        }
+
+        .case-body-copy p {
+            margin: 0 0 1.55em;
+            font-size: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+        }
+
+        .case-body-copy p:last-child {
+            margin-bottom: 0;
+        }
+
+        .case-device-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 17px;
+            padding: 16px;
+            background: #fff;
+        }
+
+        .case-device-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 1049px;
+            background: var(--case-surface-gray);
+            overflow: hidden;
+        }
+
+        .case-device-cell img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .case-quote-section {
+            padding: 130px 64px;
+            background: #fff;
+        }
+
+        .case-quote-inner {
+            max-width: min(1262px, var(--case-text-max));
+            margin: 0 auto;
+        }
+
+        .case-quote-heading {
+            width: 854px;
+            margin: 0 0 var(--case-heading-gap-48);
+            font-size: var(--type-48);
+            line-height: 1.04;
+            font-weight: 600;
+            letter-spacing: -0.008em;
+        }
+
+        .case-two-column-copy {
+            display: flex;
+            justify-content: space-between;
+            gap: 90px;
+            color: rgba(0, 0, 0, 0.75);
+        }
+
+        .case-two-column-copy p {
+            width: 586px;
+            margin: 0;
+        }
+
+        .case-media-section {
+            padding: 0 24px;
+            background: #fff;
+        }
+
+        .case-media-pad {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 180px 24px;
+            background: var(--case-surface-gray);
+            overflow: hidden;
+        }
+
+        .case-media-pad img {
+            width: min(100%, 1123px);
+            aspect-ratio: 1123 / 632;
+            object-fit: cover;
+        }
+
+        .portfolio-section {
+            width: 100%;
+            padding: 160px 0;
+            background: #fff;
+        }
+
+        .portfolio-section.dark {
+            background: #050505;
+            color: #fff;
+        }
+
+        .portfolio-section.soft {
+            background: var(--case-surface-gray);
+        }
+
+        .portfolio-copy {
+            display: grid;
+            grid-template-columns: minmax(220px, 0.35fr) minmax(0, 0.65fr);
+            gap: 96px;
+        }
+
+        .portfolio-section-label {
+            margin: 0;
+            color: rgba(0, 0, 0, 0.55);
+        }
+
+        .dark .portfolio-section-label,
+        .dark .portfolio-copy p {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .portfolio-copy h2,
+        .portfolio-large-statement {
+            margin: 0 0 var(--case-heading-gap-48);
+            font-size: var(--type-48);
+            line-height: 1.08;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+        }
+
+        .portfolio-copy p {
+            margin: 0 0 1.55em;
+            color: rgba(0, 0, 0, 0.75);
+        }
+
+        .portfolio-copy p:last-child {
+            margin-bottom: 0;
+        }
+
+        .copy-layout-section {
+            width: 100%;
+            padding: 140px 0;
+            background: #fff;
+        }
+
+        .copy-layout-section.soft {
+            background: var(--case-surface-gray);
+        }
+
+        .copy-layout-section.dark {
+            background: #050505;
+            color: #fff;
+        }
+
+        .copy-grid {
+            display: grid;
+            gap: 56px 32px;
+        }
+
+        .copy-grid h2,
+        .copy-grid h3,
+        .copy-grid p,
+        .copy-grid li {
+            margin: 0;
+        }
+
+        .copy-grid p,
+        .copy-grid li {
+            color: rgba(0, 0, 0, 0.75);
+            font-size: var(--case-copy-size);
+            line-height: var(--case-copy-line);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        .dark .copy-grid p,
+        .dark .copy-grid li {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .copy-grid h2 {
+            margin-bottom: var(--case-heading-gap-48);
+            font-size: var(--type-48);
+            line-height: 1.08;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+        }
+
+        .copy-grid h3 {
+            margin-bottom: var(--case-heading-gap-36);
+            font-size: var(--type-36);
+            line-height: 1.11;
+            font-weight: 600;
+            letter-spacing: -0.011em;
+        }
+
+        .copy-label {
+            color: rgba(0, 0, 0, 0.55);
+            font-size: var(--case-copy-size);
+            line-height: var(--case-copy-line);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        .dark .copy-label {
+            color: rgba(255, 255, 255, 0.62);
+        }
+
+        .copy-grid.intro-matrix {
+            grid-template-columns: minmax(220px, 0.7fr) repeat(2, minmax(0, 1fr));
+            align-items: start;
+        }
+
+        .copy-grid.editorial-rail {
+            grid-template-columns: minmax(260px, 0.42fr) minmax(0, 0.58fr);
+        }
+
+        .copy-grid.editorial-rail .copy-stack {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 32px;
+        }
+
+        .copy-grid.decision-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            border-top: 1px solid rgba(0, 0, 0, 0.16);
+        }
+
+        .copy-grid.decision-grid > div {
+            padding-top: 28px;
+        }
+
+        .copy-grid.sequence-grid {
+            grid-template-columns: minmax(220px, 0.32fr) minmax(0, 0.68fr);
+        }
+
+        .copy-sequence {
+            display: grid;
+            gap: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.16);
+        }
+
+        .copy-sequence-row {
+            display: grid;
+            grid-template-columns: minmax(120px, 0.24fr) minmax(0, 0.76fr);
+            gap: 32px;
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+        }
+
+        .copy-grid.thesis-grid {
+            grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr);
+            align-items: end;
+        }
+
+        .copy-thesis-stack {
+            display: grid;
+            gap: 32px;
+        }
+
+        .portfolio-image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 17px;
+        }
+
+        .portfolio-image-grid.stacked figure {
+            margin-bottom: 17px;
+        }
+
+        .portfolio-image-grid.stacked figure:last-child {
+            margin-bottom: 0;
+        }
+
+        .portfolio-figure {
+            position: relative;
+            display: block;
+            margin: 0;
+            overflow: hidden;
+            background: var(--case-surface-gray);
+        }
+
+        .portfolio-figure img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 420px;
+            object-fit: cover;
+        }
+
+        .portfolio-parallax-img {
+            transform: scale(1.06);
+            will-change: transform;
+        }
+
+        .portfolio-figure.wide img {
+            min-height: 720px;
+        }
+
+        .portfolio-figure.tall img {
+            min-height: 820px;
+        }
+
+        .portfolio-layered-media {
+            position: relative;
+            min-height: 920px;
+            overflow: hidden;
+            isolation: isolate;
+            background: #050505;
+        }
+
+        .portfolio-layered-media .portfolio-parallax-bg,
+        .portfolio-layered-media .portfolio-parallax-fg {
+            position: absolute;
+            will-change: transform;
+        }
+
+        .portfolio-layered-media .portfolio-parallax-bg {
+            inset: -12% 0;
+            z-index: 0;
+        }
+
+        .portfolio-layered-media .portfolio-parallax-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.62;
+        }
+
+        .portfolio-layered-media .portfolio-parallax-fg {
+            right: max(64px, calc((100% - var(--case-image-max)) / 2 + 64px));
+            bottom: 90px;
+            z-index: 2;
+            width: min(52vw, 960px);
+            box-shadow: 0 48px 120px rgba(0, 0, 0, 0.28);
+        }
+
+        .portfolio-layered-media .portfolio-parallax-fg img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .portfolio-layered-media .portfolio-copy-overlay {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            align-items: flex-end;
+            min-height: 920px;
+            padding: 0 0 90px;
+        }
+
+        .portfolio-layered-media h2 {
+            width: min(760px, 55vw);
+            margin: 0 0 var(--case-heading-gap-48);
+            color: #fff;
+            font-size: var(--type-48);
+            line-height: 1.08;
+            font-weight: 600;
+            letter-spacing: -0.012em;
+        }
+
+        .portfolio-offset {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .portfolio-offset.reverse {
+            grid-template-columns: 1fr 1fr 2fr;
+        }
+
+        .portfolio-pin-copy {
+            position: sticky;
+            top: 120px;
+        }
+
+        .portfolio-pin-copy.portfolio-copy {
+            display: block;
+        }
+
+        .portfolio-pin-copy h3 {
+            margin: 0 0 var(--case-heading-gap-36);
+            font-size: var(--type-36);
+            line-height: 1.11;
+            font-weight: 600;
+            letter-spacing: -0.011em;
+        }
+
+        .portfolio-statement-section {
+            display: flex;
+            align-items: center;
+            min-height: 720px;
+        }
+
+        .portfolio-large-statement {
+            width: min(1200px, 100%);
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+
+        .portfolio-parallax-pair {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .case-study-page #project-nav,
+        .case-study-page #clapat-footer {
+            display: none;
+        }
+
+        @media only screen and (max-width: 1680px) {
+            .case-hero-copy {
+                left: 65px;
+                right: 36px;
+                max-width: none;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .case-study-page #header-container {
+                padding: 0 20px;
+            }
+
+            #hero.case-hero {
+                height: auto;
+                min-height: 576px;
+                padding: 190px 30px 70px;
+            }
+
+            .case-hero-copy,
+            .case-hero-title,
+            .case-hero-deck {
+                position: relative;
+                inset: auto;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                width: auto;
+                max-width: none;
+            }
+
+            .case-hero-copy {
+                display: grid;
+                gap: 32px;
+                margin: 0;
+            }
+
+            .case-placeholder-band {
+                height: 70vh;
+                min-height: 520px;
+            }
+
+            .case-summary-band {
+                height: auto;
+                padding: 40px 30px;
+            }
+
+            .case-summary-grid,
+            .case-summary-footer,
+            .case-summary-copy {
+                position: relative;
+                inset: auto;
+                left: auto;
+                right: auto;
+                top: auto;
+                bottom: auto;
+                width: auto;
+                transform: none;
+            }
+
+            .case-summary-band {
+                display: grid;
+                gap: 100px;
+            }
+
+            .case-summary-copy {
+                order: 2;
+            }
+
+            .case-summary-footer {
+                order: 3;
+            }
+
+            .case-text-section,
+            .case-quote-section {
+                padding: 90px 30px;
+            }
+
+            .case-text-inner,
+            .case-media-inner {
+                width: calc(100% - 60px);
+            }
+
+            .case-text-pair,
+            .case-two-column-copy,
+            .portfolio-copy,
+            .portfolio-image-grid,
+            .portfolio-offset,
+            .portfolio-offset.reverse,
+            .portfolio-parallax-pair,
+            .copy-grid.intro-matrix,
+            .copy-grid.editorial-rail,
+            .copy-grid.editorial-rail .copy-stack,
+            .copy-grid.decision-grid,
+            .copy-grid.sequence-grid,
+            .copy-grid.thesis-grid,
+            .copy-sequence-row {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .case-kicker-heading,
+            .case-body-copy,
+            .case-quote-heading,
+            .case-two-column-copy p {
+                width: auto;
+            }
+
+            .portfolio-section {
+                padding: 90px 0;
+            }
+
+            .copy-layout-section {
+                padding: 90px 0;
+            }
+
+            .portfolio-layered-media,
+            .portfolio-layered-media .portfolio-copy-overlay {
+                min-height: 760px;
+            }
+
+            .portfolio-layered-media .portfolio-parallax-fg {
+                right: 30px;
+                bottom: 56px;
+                width: min(70vw, 620px);
+            }
+
+            .portfolio-layered-media h2 {
+                width: min(680px, 72vw);
+            }
+
+            .portfolio-pin-copy {
+                position: relative;
+                top: auto;
+            }
+
+            .case-device-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .case-study-page .classic-menu #clapat-nav-wrapper,
+            .case-study-page #header-button {
+                display: none;
+            }
+
+            .case-hero-title {
+                font-size: var(--type-100);
+            }
+
+            .case-device-cell {
+                min-height: 520px;
+            }
+
+            .case-summary-grid,
+            .case-summary-footer {
+                gap: 40px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body class="disable-preloader enable-lenis hayler case-study-page">
+
+<main>
+    <div class="clapat-index">
+
+        <div id="clapat-page-content" class="work-minimal" data-bgcolor="#f7f7f7">
+
+            <header id="clapat-header" class="classic-menu disable-header-gradient">
+                <div id="header-container">
+
+                    <div id="clapat-logo" data-ball="hide">
+                        <a class="ajax-link" data-type="page-transition" href="../index.html">
+                            <img class="black-logo" src="../images/logo.png" alt="Caleb Stauss">
+                            <img class="white-logo" src="../images/logo-white.png" alt="Caleb Stauss">
+                        </a>
+                    </div>
+
+                    <nav id="clapat-nav-wrapper">
+                        <div class="nav-height">
+                            <div class="case-menu-pill">
+                                <span>Menu</span>
+                                <span class="case-menu-lines" aria-hidden="true"><span></span><span></span></span>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div id="burger-button" class="button-wrap button-link right circle-edge burger-dots" data-sticky>
+                        <div class="icon-wrap">
+                            <div class="icon-effects parallax-wrap" data-ball-size="grow" data-ball-color="primary">
+                                <div class="button-icon parallax-element">
+                                    <div class="burger-icon"><span></span><span></span><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-wrap">
+                            <div class="button-text"><span data-hover="Menu">Menu</span></div>
+                        </div>
+                    </div>
+
+                    <div id="header-buttons-wrapper" class="append-to-nav">
+                        <div id="header-button" class="button-wrap button-icon-box outline-solid reveal-icon right circle-edge header-element-color" data-sticky>
+                            <a class="ajax-link" data-type="page-transition" href="../contact.html">
+                                <div class="icon-wrap">
+                                    <div class="icon-effects parallax-wrap">
+                                        <div class="button-icon parallax-element">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="button-text"><span data-hover="Early Access">Early Access</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+
+            <div id="content-scroll">
+
+                <section id="hero" class="case-hero">
+                    <div class="case-hero-copy">
+                        <h1 class="case-hero-title">High Altitude.<br>Zero Ambiguity.</h1>
+                        <p class="case-hero-deck">When the cockpit is under pressure, the interface cannot become another thing to manage.</p>
+                    </div>
+                </section>
+
+                <div id="main-content">
+                    <div id="main-page-content">
+
+                        <section class="case-frame case-placeholder-band" data-bgcolor="#f5f5f7">
+                            <img src="../images/case-study/kx-placeholder.svg" alt="">
+                        </section>
+
+                        <section class="case-frame case-summary-band" data-bgcolor="#000000">
+                            <div class="case-summary-grid">
+                                <div class="case-meta">
+                                    <div class="case-meta-value">Principal Product Designer</div>
+                                    <div class="case-meta-label">Role</div>
+                                </div>
+                                <div class="case-meta align-right">
+                                    <div class="case-meta-value">18+ Months</div>
+                                    <div class="case-meta-label">Duration</div>
+                                </div>
+                            </div>
+
+                            <p class="case-summary-copy">Architected the KX 200 suite for BendixKing, translating the tactile rhythm of legacy cockpit radios into a scalable, multi-variant digital interface system.</p>
+
+                            <div class="case-summary-footer">
+                                <div class="case-meta">
+                                    <div class="case-meta-label">Products</div>
+                                    <div class="case-meta-value">KX 200 C / CN / CT</div>
+                                </div>
+                                <div class="case-meta align-right">
+                                    <div class="case-meta-label">Outcome</div>
+                                    <div class="case-meta-value">3 Products</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="case-frame case-text-section" data-bgcolor="#ffffff">
+                            <div class="case-text-pair">
+                                <h2 class="case-kicker-heading">From Muscle Memory to Mission Logic.</h2>
+                                <div class="case-body-copy">
+                                    <p>The KX 200 required a familiar BendixKing radio lineage to gain modern digital capability without adding new cognitive load in flight.</p>
+                                    <p>My work focused on translating tactile memory, mode logic, hardware constraints, regulatory clarity, and multi-variant complexity into one operating model pilots could trust without studying.</p>
+                                    <p>In aviation, novelty is not automatically progress. New capability had to preserve the physical confidence pilots already had.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="case-frame case-device-grid" data-bgcolor="#ffffff">
+                            <div class="case-device-cell">
+                                <img class="portfolio-parallax-img" data-speed="0.04" src="../images/case-study/kx-ipad-left.png" alt="">
+                            </div>
+                            <div class="case-device-cell">
+                                <img class="portfolio-parallax-img" data-speed="0.08" src="../images/case-study/kx-ipad-right.png" alt="">
+                            </div>
+                        </section>
+
+                        <section class="case-frame case-quote-section" data-bgcolor="#ffffff">
+                            <div class="case-quote-inner">
+                                <h2 class="case-quote-heading">The safest interface was not the newest one. It was the one pilots already trusted.</h2>
+                                <div class="case-two-column-copy">
+                                    <p>The KX 200 inherited its behavioral gravity from the KY196B, a legacy radio model built around physical rhythm, tactile certainty, and fast frequency control. Pilots had already internalized how their hands, eyes, and instruments should relate under pressure, so the challenge was not to modernize at the expense of that instinct. It was to protect it. Deeper functionality, richer states, and more system intelligence had to fit around behavior pilots already trusted.</p>
+                                    <p>Physical controls stayed anchored while digital states expanded around them, allowing the system to grow without forcing pilots to relearn the relationship between action and response. Every new state had to earn its place by respecting existing spatial memory.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="case-frame case-media-section" data-bgcolor="#ffffff">
+                            <div class="case-media-pad">
+                                <img class="portfolio-parallax-img" data-speed="0.05" src="../images/case-study/kx-ipad-hero.png" alt="">
+                            </div>
+                        </section>
+
+                        <section class="portfolio-section" data-bgcolor="#ffffff">
+                            <div class="case-text-inner portfolio-copy">
+                                <p class="portfolio-section-label">Operating Model</p>
+                                <div>
+                                    <h2>Temporary section headline for the decision architecture behind the interface.</h2>
+                                    <p>This placeholder copy is here to establish the production rhythm for the final case study. Use this section for the strategic shift, the constraint that mattered most, and the operating principle that governed downstream decisions.</p>
+                                    <p>At final content pass, this area should explain what changed in the product model, not simply what screens were produced. The goal is to read as executive-level product judgment supported by concrete design evidence.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="copy-layout-section soft" data-bgcolor="#f5f5f7">
+                            <div class="case-text-inner copy-grid intro-matrix">
+                                <p class="copy-label">Copy Layout 01</p>
+                                <div>
+                                    <h3>Framing the problem from market pressure to product behavior.</h3>
+                                    <p>Use this block when the story needs a concise strategic setup before moving into artifacts. The first column can carry the decision, while the adjacent copy explains the consequence for users, operations, or the business.</p>
+                                </div>
+                                <div>
+                                    <h3>Showing why the work mattered before showing how it looked.</h3>
+                                    <p>This companion column can hold proof: research signal, product constraint, risk, or outcome. It keeps the reader moving across a deliberate argument rather than dropping them into process detail too early.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="copy-layout-section" data-bgcolor="#ffffff">
+                            <div class="case-text-inner copy-grid editorial-rail">
+                                <div>
+                                    <p class="copy-label">Copy Layout 02</p>
+                                    <h2>Large thesis with two supporting copy blocks on the right.</h2>
+                                </div>
+                                <div class="copy-stack">
+                                    <p>This layout is useful for a high-level claim that needs two kinds of evidence. One paragraph can define the design principle, while the second explains how that principle changed execution.</p>
+                                    <p>It also works well for research synthesis, product strategy, or implementation constraints where the reader needs a clear hierarchy and a balanced scan path.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="copy-layout-section dark" data-bgcolor="#050505">
+                            <div class="case-text-inner copy-grid decision-grid">
+                                <div>
+                                    <p class="copy-label">Decision</p>
+                                    <p>Preserve known cockpit rhythm instead of introducing novelty for its own sake.</p>
+                                </div>
+                                <div>
+                                    <p class="copy-label">Constraint</p>
+                                    <p>Every state had to fit physical controls, limited screen space, and certification-grade clarity.</p>
+                                </div>
+                                <div>
+                                    <p class="copy-label">System</p>
+                                    <p>One operating grammar could scale across communication, navigation, and transponder variants.</p>
+                                </div>
+                                <div>
+                                    <p class="copy-label">Outcome</p>
+                                    <p>The final interface could expand capability without asking pilots to relearn trusted behavior.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="copy-layout-section" data-bgcolor="#ffffff">
+                            <div class="case-text-inner copy-grid sequence-grid">
+                                <div>
+                                    <p class="copy-label">Copy Layout 04</p>
+                                    <h2>A sequence layout for research, product decisions, or build phases.</h2>
+                                </div>
+                                <div class="copy-sequence">
+                                    <div class="copy-sequence-row">
+                                        <p class="copy-label">01</p>
+                                        <p>Establish the operational environment and identify which behaviors already carry trust.</p>
+                                    </div>
+                                    <div class="copy-sequence-row">
+                                        <p class="copy-label">02</p>
+                                        <p>Translate those behaviors into interface rules that can scale across variants without fragmenting the system.</p>
+                                    </div>
+                                    <div class="copy-sequence-row">
+                                        <p class="copy-label">03</p>
+                                        <p>Validate the rules in context, then turn the proven behavior into implementation-ready documentation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="copy-layout-section soft" data-bgcolor="#f5f5f7">
+                            <div class="case-text-inner copy-grid thesis-grid">
+                                <h2>The strongest portfolio pages read like product judgment supported by evidence, not a gallery with captions.</h2>
+                                <div class="copy-thesis-stack">
+                                    <p>This layout can hold a senior-level interpretation of the work. It gives room for a strong claim, then supports it with focused explanation that keeps the reader oriented.</p>
+                                    <p>Use it near the end of a case study when the page needs to consolidate lessons, outcomes, or what the project proves about the way you lead product design.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="portfolio-layered-media" data-bgcolor="#050505">
+                            <div class="portfolio-parallax-bg" data-speed="-0.12">
+                                <img src="../images/projects/05project1.jpg" alt="">
+                            </div>
+                            <div class="case-text-inner portfolio-copy-overlay">
+                                <h2>Layered media section for showing context, hardware, and interface detail moving at different depths.</h2>
+                            </div>
+                            <figure class="portfolio-parallax-fg" data-speed="0.16">
+                                <img src="../images/projects/05project4.jpg" alt="">
+                            </figure>
+                        </section>
+
+                        <section class="portfolio-section soft" data-bgcolor="#f5f5f7">
+                            <div class="case-media-inner portfolio-image-grid stacked">
+                                <div>
+                                    <figure class="portfolio-figure">
+                                        <img class="portfolio-parallax-img" data-speed="0.06" src="../images/projects/05project2.jpg" alt="">
+                                        <figcaption>Temporary caption for interaction continuity research.</figcaption>
+                                    </figure>
+                                    <figure class="portfolio-figure">
+                                        <img class="portfolio-parallax-img" data-speed="0.08" src="../images/projects/05project3.jpg" alt="">
+                                        <figcaption>Temporary caption for multi-variant system mapping.</figcaption>
+                                    </figure>
+                                </div>
+                                <div>
+                                    <figure class="portfolio-figure">
+                                        <img class="portfolio-parallax-img" data-speed="0.04" src="../images/projects/05project5.jpg" alt="">
+                                        <figcaption>Temporary caption for certification-grade documentation.</figcaption>
+                                    </figure>
+                                    <figure class="portfolio-figure">
+                                        <img class="portfolio-parallax-img" data-speed="0.07" src="../images/projects/05project6.jpg" alt="">
+                                        <figcaption>Temporary caption for simulator validation evidence.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="portfolio-section" data-bgcolor="#ffffff">
+                            <div class="case-media-inner portfolio-offset">
+                                <figure class="portfolio-figure wide">
+                                    <img class="portfolio-parallax-img" data-speed="0.05" src="../images/projects/04project1.jpg" alt="">
+                                    <figcaption>Temporary wide image caption for workflow evidence.</figcaption>
+                                </figure>
+                                <div></div>
+                                <div class="portfolio-pin-copy portfolio-copy">
+                                    <div>
+                                        <h3>Sticky editorial note for an important product decision.</h3>
+                                        <p>This pinned block can hold a concise explanation while the image column carries detailed visual proof. It is designed for director-level reading: fast thesis, then evidence.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="portfolio-section dark portfolio-statement-section" data-bgcolor="#050505">
+                            <div class="case-text-inner">
+                                <h2 class="portfolio-large-statement">Temporary statement section for the strongest outcome, written as a product leadership claim rather than a design-process caption.</h2>
+                            </div>
+                        </section>
+
+                        <section class="portfolio-section soft" data-bgcolor="#f5f5f7">
+                            <div class="case-media-inner portfolio-parallax-pair">
+                                <figure class="portfolio-figure tall">
+                                    <img class="portfolio-parallax-img" data-speed="0.1" src="../images/projects/07project1.jpg" alt="">
+                                    <figcaption>Temporary caption for first parallel artifact.</figcaption>
+                                </figure>
+                                <figure class="portfolio-figure tall">
+                                    <img class="portfolio-parallax-img" data-speed="0.03" src="../images/projects/07project2.jpg" alt="">
+                                    <figcaption>Temporary caption for second parallel artifact.</figcaption>
+                                </figure>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+
+                <footer id="clapat-footer" class="absolute">
+                    <div id="footer-container" class="parallax-footer">
+                        <div class="footer-credits">
+                            <div class="clapat-footer-left">
+                                <div id="backtotop" class="button-wrap button-link left circle-edge" data-sticky>
+                                    <div class="icon-wrap">
+                                        <div class="icon-effects parallax-wrap" data-ball-size="grow" data-ball-color="primary" data-ball-radius="circle">
+                                            <div class="button-icon parallax-element">
+                                                <i class="fa-solid fa-angle-up"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="button-text"><span data-hover="Back to Top">Back to Top</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clapat-footer-center">
+                                <div class="copyright">2026 © Caleb Stauss. All rights reserved.</div>
+                            </div>
+                            <div class="clapat-footer-right">
+                                <div id="footer-socials" class="socials-wrap">
+                                    <div class="socials-text">Connect</div>
+                                    <ul class="socials">
+                                        <li><span class="parallax-wrap" data-ball-size="grow" data-ball-color="primary" data-ball-radius="circle"><a class="parallax-element" href="https://linkedin.com/in/calebstauss" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<div id="clapat-cursor" data-cursor-zoom="fa fa-plus" data-cursor-play="fa fa-play" data-cursor-pause="fa fa-pause" data-cursor-drag-x="Drag" data-cursor-drag-y="fa-solid fa-arrows-up-down" data-cursor-prev="fa fa-arrow-left" data-cursor-next="fa fa-arrow-right">
+    <div id="ball"><div id="ball-loader"></div></div>
+</div>
+<div class="clapat-rotate-device"></div>
+
+<script src="../lib/gsap.js"></script>
+<script src="../lib/lenis.js"></script>
+<script>
+    (function () {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const parallaxItems = Array.from(document.querySelectorAll("[data-speed]"));
+        if (!parallaxItems.length || reduceMotion.matches) return;
+
+        let ticking = false;
+
+        function updatePortfolioParallax() {
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            parallaxItems.forEach(function (item) {
+                const speed = parseFloat(item.getAttribute("data-speed")) || 0;
+                const rect = item.getBoundingClientRect();
+                if (rect.bottom < -viewportHeight * 0.2 || rect.top > viewportHeight * 1.2) return;
+
+                const midpoint = rect.top + rect.height / 2 - viewportHeight / 2;
+                const translate = midpoint * speed;
+                const scale = item.classList.contains("portfolio-parallax-img") ? " scale(1.06)" : "";
+                item.style.transform = "translate3d(0," + translate.toFixed(2) + "px,0)" + scale;
+            });
+
+            ticking = false;
+        }
+
+        function requestPortfolioParallax() {
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(updatePortfolioParallax);
+        }
+
+        window.addEventListener("scroll", requestPortfolioParallax, { passive: true });
+        window.addEventListener("resize", requestPortfolioParallax);
+        window.addEventListener("load", requestPortfolioParallax);
+        requestPortfolioParallax();
+    }());
+</script>
+<script src="../js/preloader.js"></script>
+<script src="../js/slider.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/scripts.js"></script>
+
+</body>
+</html>

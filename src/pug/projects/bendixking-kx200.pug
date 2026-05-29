@@ -1,0 +1,98 @@
+extends ../layouts/base.pug
+include ../mixins/case-study.pug
+
+block content
+  +heroCase("High Altitude.<br>Zero Ambiguity.", "When the cockpit is under pressure, the interface cannot become another thing to manage.")
+
+  #main-content
+    #main-page-content
+      +placeholderBand("images/case-study/kx-placeholder.svg")
+
+      +summaryBand(summary)
+
+      +textPair("From Muscle Memory to Mission Logic.")
+        p The KX 200 required a familiar BendixKing radio lineage to gain modern digital capability without adding new cognitive load in flight.
+        p My work focused on translating tactile memory, mode logic, hardware constraints, regulatory clarity, and multi-variant complexity into one operating model pilots could trust without studying.
+        p In aviation, novelty is not automatically progress. New capability had to preserve the physical confidence pilots already had.
+
+      +deviceGrid([
+        { src: "images/case-study/kx-ipad-left.png", speed: "0.04" },
+        { src: "images/case-study/kx-ipad-right.png", speed: "0.08" }
+      ])
+
+      +quoteSection("The safest interface was not the newest one. It was the one pilots already trusted.")
+        p The KX 200 inherited its behavioral gravity from the KY196B, a legacy radio model built around physical rhythm, tactile certainty, and fast frequency control. Pilots had already internalized how their hands, eyes, and instruments should relate under pressure, so the challenge was not to modernize at the expense of that instinct. It was to protect it. Deeper functionality, richer states, and more system intelligence had to fit around behavior pilots already trusted.
+        p Physical controls stayed anchored while digital states expanded around them, allowing the system to grow without forcing pilots to relearn the relationship between action and response. Every new state had to earn its place by respecting existing spatial memory.
+
+      +mediaSection("images/case-study/kx-ipad-hero.png", "0.05")
+
+      +portfolioCopy("Operating Model", "Temporary section headline for the decision architecture behind the interface.")
+        p This placeholder copy is here to establish the production rhythm for the final case study. Use this section for the strategic shift, the constraint that mattered most, and the operating principle that governed downstream decisions.
+        p At final content pass, this area should explain what changed in the product model, not simply what screens were produced. The goal is to read as executive-level product judgment supported by concrete design evidence.
+
+      +copyIntroMatrix(
+        "Copy Layout 01",
+        {
+          heading: "Framing the problem from market pressure to product behavior.",
+          copy: "Use this block when the story needs a concise strategic setup before moving into artifacts. The first column can carry the decision, while the adjacent copy explains the consequence for users, operations, or the business."
+        },
+        {
+          heading: "Showing why the work mattered before showing how it looked.",
+          copy: "This companion column can hold proof: research signal, product constraint, risk, or outcome. It keeps the reader moving across a deliberate argument rather than dropping them into process detail too early."
+        }
+      )
+
+      +copyEditorialRail("Copy Layout 02", "Large thesis with two supporting copy blocks on the right.", [
+        "This layout is useful for a high-level claim that needs two kinds of evidence. One paragraph can define the design principle, while the second explains how that principle changed execution.",
+        "It also works well for research synthesis, product strategy, or implementation constraints where the reader needs a clear hierarchy and a balanced scan path."
+      ])
+
+      +copyDecisionGrid([
+        { label: "Decision", copy: "Preserve known cockpit rhythm instead of introducing novelty for its own sake." },
+        { label: "Constraint", copy: "Every state had to fit physical controls, limited screen space, and certification-grade clarity." },
+        { label: "System", copy: "One operating grammar could scale across communication, navigation, and transponder variants." },
+        { label: "Outcome", copy: "The final interface could expand capability without asking pilots to relearn trusted behavior." }
+      ])
+
+      +copySequence("Copy Layout 04", "A sequence layout for research, product decisions, or build phases.", [
+        { label: "01", copy: "Establish the operational environment and identify which behaviors already carry trust." },
+        { label: "02", copy: "Translate those behaviors into interface rules that can scale across variants without fragmenting the system." },
+        { label: "03", copy: "Validate the rules in context, then turn the proven behavior into implementation-ready documentation." }
+      ])
+
+      +copyThesis("The strongest portfolio pages read like product judgment supported by evidence, not a gallery with captions.", [
+        "This layout can hold a senior-level interpretation of the work. It gives room for a strong claim, then supports it with focused explanation that keeps the reader oriented.",
+        "Use it near the end of a case study when the page needs to consolidate lessons, outcomes, or what the project proves about the way you lead product design."
+      ])
+
+      +layeredParallax(
+        { src: "images/projects/05project1.jpg", speed: "-0.12" },
+        { src: "images/projects/05project4.jpg", speed: "0.16" },
+        "Layered media section for showing context, hardware, and interface detail moving at different depths."
+      )
+
+      +stackedImageGrid([
+        [
+          { src: "images/projects/05project2.jpg", speed: "0.06", caption: "Temporary caption for interaction continuity research." },
+          { src: "images/projects/05project3.jpg", speed: "0.08", caption: "Temporary caption for multi-variant system mapping." }
+        ],
+        [
+          { src: "images/projects/05project5.jpg", speed: "0.04", caption: "Temporary caption for certification-grade documentation." },
+          { src: "images/projects/05project6.jpg", speed: "0.07", caption: "Temporary caption for simulator validation evidence." }
+        ]
+      ])
+
+      +offsetMedia(
+        { src: "images/projects/04project1.jpg", speed: "0.05", caption: "Temporary wide image caption for workflow evidence." },
+        "Sticky editorial note for an important product decision.",
+        "This pinned block can hold a concise explanation while the image column carries detailed visual proof. It is designed for director-level reading: fast thesis, then evidence."
+      )
+
+      +statementBand("Temporary statement section for the strongest outcome, written as a product leadership claim rather than a design-process caption.")
+
+      +parallaxPair([
+        { src: "images/projects/07project1.jpg", speed: "0.1", caption: "Temporary caption for first parallel artifact." },
+        { src: "images/projects/07project2.jpg", speed: "0.03", caption: "Temporary caption for second parallel artifact." }
+      ])
+ 
+   include ../partials/next-project

@@ -1,0 +1,10 @@
+script(src=assetPrefix + "lib/gsap.js")
+script(src=assetPrefix + "lib/lenis.js")
+script(src=assetPrefix + "js/header-theme.js")
+if pageScripts
+  each scriptPath in pageScripts
+    script(src=assetPrefix + scriptPath)
+script(src=assetPrefix + "js/preloader.js")
+script(src=assetPrefix + "js/slider.js")
+script(src=assetPrefix + "js/common.js")
+script(src=assetPrefix + "js/scripts.js")

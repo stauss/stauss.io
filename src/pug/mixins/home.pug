@@ -1,0 +1,36 @@
+mixin projectCard(project, index)
+  div(class=`clapat-item ${project.filter || "design-filter"}`)
+    .item-content.trigger-item(data-ball="hover", data-ball-type="solid", data-ball-color="#fff", data-ball-size="auto", data-ball-radius="rounded", data-ball-info="Discover", data-ball-info-color="#000", data-ball-class="thumb-hover")
+      .item-effects
+        a.item-link(data-type="page-transition", href=`projects/${project.slug}.html`)
+        .item-media.trigger-item-link
+          .item-media-wrapper
+            img.item-image(src=project.heroImage, alt=project.title)
+      .item-caption
+        .item-title
+          span= project.title
+        .item-date
+          span= String(index + 1).padStart(2, "0")
+        .item-cat
+          span(data-hover="Case Study")= project.category
+
+mixin carouselSlide(project, index)
+  .clapat-slide
+    .item-content.trigger-item(data-ball="hover", data-ball-type="solid", data-ball-color="#fff", data-ball-size="auto", data-ball-radius="rounded", data-ball-info="Discover", data-ball-info-color="#000", data-ball-class="thumb-hover")
+      .item-effects
+        a.item-link(data-type="page-transition", href=`projects/${project.slug}.html`)
+        .item-media.trigger-item-link
+          if project.slug === "major-league-pickleball"
+            .item-media-wrapper.home-mlp-card
+              img.home-mlp-bg(src="images/figma/mlp-featured-bg.png", alt="")
+              img.home-mlp-player(src="images/figma/mlp-featured-player.png", alt=project.title)
+          else
+            .item-media-wrapper
+              img.item-image(src=project.heroImage, alt=project.title)
+      .item-caption
+        .item-date
+          span= String(index + 1).padStart(2, "0")
+        .item-title
+          span= project.title
+        .item-cat
+          span(data-hover="View Case")= project.category

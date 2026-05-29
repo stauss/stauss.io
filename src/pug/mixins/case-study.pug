@@ -1,0 +1,159 @@
+mixin heroCase(title, deck)
+  section#hero.case-hero
+    .case-hero-copy
+      h1.case-hero-title!= title
+      p.case-hero-deck= deck
+
+mixin placeholderBand(src)
+  section.case-frame.case-placeholder-band(data-bgcolor="#f5f5f7")
+    img(src=assetPrefix + src, alt="")
+
+mixin summaryBand(summary)
+  section.case-frame.case-summary-band(data-bgcolor="#000000")
+    .case-summary-grid
+      .case-meta
+        .case-meta-value= summary.role
+        .case-meta-label Role
+      .case-meta.align-right
+        .case-meta-value= summary.duration
+        .case-meta-label Duration
+    p.case-summary-copy= summary.copy
+    .case-summary-footer
+      .case-meta
+        .case-meta-label Products
+        .case-meta-value= summary.products
+      .case-meta.align-right
+        .case-meta-label Outcome
+        .case-meta-value= summary.outcome
+
+mixin textPair(heading)
+  section.case-frame.case-text-section(data-bgcolor="#ffffff")
+    .case-text-inner
+      .case-text-pair
+        h2.case-kicker-heading= heading
+        .case-body-copy
+          block
+
+mixin deviceGrid(images)
+  section.case-frame.case-device-grid(data-bgcolor="#ffffff")
+    each image in images
+      .case-device-cell
+        img.portfolio-parallax-img(data-speed=image.speed, src=assetPrefix + image.src, alt=image.alt || "")
+
+mixin quoteSection(heading)
+  section.case-frame.case-quote-section(data-bgcolor="#ffffff")
+    .case-text-inner
+      .case-quote-inner
+        h2.case-quote-heading= heading
+        .case-two-column-copy
+          block
+
+mixin mediaSection(src, speed)
+  section.case-frame.case-media-section(data-bgcolor="#ffffff")
+    .case-media-inner
+      .case-media-pad
+        img.portfolio-parallax-img(data-speed=speed || "0.05", src=assetPrefix + src, alt="")
+
+mixin portfolioCopy(label, heading, tone)
+  section.portfolio-section(class=tone, data-bgcolor=tone === "dark" ? "#050505" : tone === "soft" ? "#f5f5f7" : "#ffffff")
+    .case-text-inner.portfolio-copy
+      p.portfolio-section-label= label
+      div
+        h2= heading
+        block
+
+mixin copyIntroMatrix(label, first, second)
+  section.copy-layout-section.soft(data-bgcolor="#f5f5f7")
+    .case-text-inner.copy-grid.intro-matrix
+      p.copy-label= label
+      div
+        h3= first.heading
+        p= first.copy
+      div
+        h3= second.heading
+        p= second.copy
+
+mixin copyEditorialRail(label, heading, paragraphs)
+  section.copy-layout-section(data-bgcolor="#ffffff")
+    .case-text-inner.copy-grid.editorial-rail
+      div
+        p.copy-label= label
+        h2= heading
+      .copy-stack
+        each paragraph in paragraphs
+          p= paragraph
+
+mixin copyDecisionGrid(items)
+  section.copy-layout-section.dark(data-bgcolor="#050505")
+    .case-text-inner.copy-grid.decision-grid
+      each item in items
+        div
+          p.copy-label= item.label
+          p= item.copy
+
+mixin copySequence(label, heading, rows)
+  section.copy-layout-section(data-bgcolor="#ffffff")
+    .case-text-inner.copy-grid.sequence-grid
+      div
+        p.copy-label= label
+        h2= heading
+      .copy-sequence
+        each row in rows
+          .copy-sequence-row
+            p.copy-label= row.label
+            p= row.copy
+
+mixin copyThesis(heading, paragraphs)
+  section.copy-layout-section.soft(data-bgcolor="#f5f5f7")
+    .case-text-inner.copy-grid.thesis-grid
+      h2= heading
+      .copy-thesis-stack
+        each paragraph in paragraphs
+          p= paragraph
+
+mixin layeredParallax(background, foreground, heading)
+  section.portfolio-layered-media(data-bgcolor="#050505")
+    .portfolio-parallax-bg(data-speed=background.speed)
+      img(src=assetPrefix + background.src, alt=background.alt || "")
+    .case-text-inner.portfolio-copy-overlay
+      h2= heading
+    figure.portfolio-parallax-fg(data-speed=foreground.speed)
+      img(src=assetPrefix + foreground.src, alt=foreground.alt || "")
+
+mixin stackedImageGrid(columns)
+  section.portfolio-section.soft(data-bgcolor="#f5f5f7")
+    .case-media-inner.portfolio-image-grid.stacked
+      each column in columns
+        div
+          each image in column
+            figure.portfolio-figure
+              img.portfolio-parallax-img(data-speed=image.speed, src=assetPrefix + image.src, alt=image.alt || "")
+              if image.caption
+                figcaption= image.caption
+
+mixin offsetMedia(image, heading, copy)
+  section.portfolio-section(data-bgcolor="#ffffff")
+    .case-media-inner.portfolio-offset
+      figure.portfolio-figure.wide
+        img.portfolio-parallax-img(data-speed=image.speed, src=assetPrefix + image.src, alt=image.alt || "")
+        if image.caption
+          figcaption= image.caption
+      div
+      .portfolio-pin-copy.portfolio-copy
+        div
+          h3= heading
+          p= copy
+
+mixin statementBand(text)
+  section.portfolio-section.dark.portfolio-statement-section(data-bgcolor="#050505")
+    .case-text-inner
+      h2.portfolio-large-statement= text
+
+mixin parallaxPair(images)
+  section.portfolio-section.soft(data-bgcolor="#f5f5f7")
+    .case-media-inner.portfolio-parallax-pair
+      each image in images
+        figure.portfolio-figure.tall
+          img.portfolio-parallax-img(data-speed=image.speed, src=assetPrefix + image.src, alt=image.alt || "")
+          if image.caption
+            figcaption= image.caption

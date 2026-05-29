@@ -1,0 +1,150 @@
+extends ../layouts/base.pug
+include ../mixins/home.pug
+
+block content
+  -
+    const experience = [
+      {
+        company: "Heartland Whole Health Institute",
+        role: "Product Experience Lead",
+        date: "2021 - 2023",
+        logo: "CalebStauss-Experience-Logo-WholeHealth.svg"
+      },
+      {
+        company: "NerdWallet",
+        role: "Sr Product Designer - Design Systems",
+        date: "2020 - 2021",
+        logo: "CalebStauss-Experience-Logo-NerdWallet.svg"
+      },
+      {
+        company: "RevUnit",
+        role: "Senior Product Designer",
+        date: "2018 - 2020",
+        logo: "CalebStauss-Experience-Logo-RevUnit.svg"
+      },
+      {
+        company: "RichContext",
+        role: "Founding Product Designer",
+        date: "2017 - 2018",
+        logo: "CalebStauss-Experience-Logo-RichContext.svg"
+      },
+      {
+        company: "Made With Craft",
+        role: "Founder & Product Director",
+        date: "2016 - 2017",
+        logo: "CalebStauss-Experience-Logo-Craft.svg"
+      },
+      {
+        company: "RevUnit",
+        role: "Senior Product Designer",
+        date: "2015 - 2016",
+        logo: "CalebStauss-Experience-Logo-RevUnit.svg"
+      },
+      {
+        company: "BLKBOX",
+        role: "User Experience Designer & UI Designer",
+        date: "2014 - 2015",
+        logo: "CalebStauss-Experience-Logo-BlkBoxLabs.svg"
+      },
+      {
+        company: "Summit Projects",
+        role: "UI Designer / Front-End Developer",
+        date: "2011 - 2014",
+        logo: "CalebStauss-Experience-Logo-SummitProjects.svg"
+      }
+    ];
+    const selectedProjectSlugs = ["major-league-pickleball", "handled", "endless-aisles", "nerdwallet-currency"];
+    const selectedProjects = selectedProjectSlugs
+      .map((slug) => projects.find((project) => project.slug === slug))
+      .filter(Boolean);
+
+  #main-content
+    #main-page-content.about-page-content
+      section.about-hero.dark-section(data-bgcolor="#000000", data-header-theme="dark")
+        .about-hero-inner
+          p.about-eyebrow I'm Caleb Stauss
+          h1 Product designer and systems engineer.
+
+      section.about-profile.light-section(data-bgcolor="#ffffff", data-header-theme="light")
+        .about-profile-inner
+          aside.about-profile-aside
+            .about-profile-sticky
+              h2
+                span Making sense of what is so teams can build
+                strong What's Next
+              ul.about-highlights
+                li Product and Visual Designer
+                li 15+ years of digital experience
+                li Currently looking for something full time
+
+          .about-profile-main
+            .about-copy
+              p For more than 15 years, I've helped teams turn early ideas, complex systems, and messy product challenges into digital experiences people understand, use, and trust.
+              p My work sits between vision and execution. I help teams define what they're really trying to build, why it matters, how it should work, and what needs to be true before the screen ever makes sense.
+              p Most design problems aren't design problems. They're structure problems. Logic gaps. Decisions that never got made explicit. My process starts by deconstructing those layers, finding the real shape of the problem, and building the system that gives the team a path forward.
+              p I've worked across enterprise platforms, internal tools, live sports infrastructure, avionics interfaces, Web3 verification systems, healthcare, retail technology, and early-stage product bets. The industries change. The work usually comes down to the same thing: turning unclear complexity into something people can use.
+              p A good screen solves the moment in front of the user. A good system helps the team solve the next hundred moments without starting over.
+              p If you're building something ambitious, tangled, or not yet fully defined, that's where I do my best work.
+
+            section.about-experience(aria-labelledby="about-experience-title")
+              h2#about-experience-title Experience
+              .about-experience-list
+                each item in experience
+                  article.about-experience-row
+                    .about-experience-company
+                      img.about-experience-logo(src=`${assetPrefix}images/experience/${item.logo}`, alt="")
+                      .about-experience-copy
+                        h3= item.company
+                        p= item.role
+                    p.about-experience-date= item.date
+
+      section#contact.about-contact-preview.light-section(data-bgcolor="#ffffff", data-header-theme="light")
+        .about-contact-inner
+          .about-contact-heading
+            h2 Each project starts with curiosity and solutions.
+          #contact-formular.about-contact-formular
+            #message
+            form(method="post", action=assetPrefix + "contact.php", name="contactform", id="contactform")
+              .contact-fields
+                .name-box(data-animate, data-animate-translate="20")
+                  input(name="name", type="text", id="name", size="30", value="", placeholder="What's your name", autocomplete="name")
+                  label.input_label(for="name")
+                .email-box(data-animate, data-animate-translate="20")
+                  input(name="email", type="email", id="email", size="30", value="", placeholder="How can I contact you?", autocomplete="email")
+                  label.input_label(for="email")
+              .message-box(data-animate, data-animate-translate="20")
+                textarea(name="comments", cols="40", rows="4", id="comments", placeholder="Project information", autocomplete="off")
+                label.input_label.slow(for="comments")
+              .verify-box(data-animate, data-animate-translate="20")
+                ul.verify-sum
+                  li 1
+                  li +
+                  li 3
+                  li =
+                input(name="verify", type="text", id="verify", size="4", value="", autocomplete="off", inputmode="numeric", aria-label="Captcha validation answer")
+                .required
+                  span *
+                  |  Captcha Validation
+              .button-wrap.button-icon-box.outline-solid.reveal-icon.left.rounded-edge(data-sticky, data-animate, data-animate-translate="20")
+                a#submit(role="button")
+                  .icon-wrap
+                    .icon-effects.parallax-wrap
+                      .button-icon.parallax-element
+                        i.fa-solid.fa-arrow-right
+                  .text-wrap
+                    .button-text
+                      span(data-hover="Send Message") Send Message
+
+      section.about-selected-work.dark-section(data-bgcolor="#000000", data-header-theme="dark")
+        .about-selected-inner
+          .about-selected-heading
+            h2 Selected work
+            a.ajax-link.about-selected-link(data-type="page-transition", href="portfolio-grid.html") View all
+        .clapat-slider-wrapper.showcase-slider-carousel-horizontal.home-carousel.about-selected-carousel
+          .clapat-slider.fit-thumb-screen.fit-with-cover(data-ball-drag="horizontal")
+            .clapat-slider-viewport
+              each project, index in selectedProjects
+                +carouselSlide(project, index)
+
+            .clapat-carousel-caption-wrapper
+              .clapat-carousel-caption

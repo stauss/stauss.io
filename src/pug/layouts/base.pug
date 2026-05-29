@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  include ../partials/head.pug
+
+  body(class=bodyClass)
+    main
+      .clapat-index
+        #clapat-page-content.work-minimal(data-bgcolor=pageBgColor || "#f7f7f7")
+          include ../partials/header.pug
+
+          #content-scroll
+            block content
+
+            include ../partials/footer.pug
+
+    #clapat-cursor(data-cursor-zoom="fa fa-plus", data-cursor-play="fa fa-play", data-cursor-pause="fa fa-pause", data-cursor-drag-x="Drag", data-cursor-drag-y="fa-solid fa-arrows-up-down", data-cursor-prev="fa fa-arrow-left", data-cursor-next="fa fa-arrow-right")
+      #ball
+        #ball-loader
+    .clapat-rotate-device
+
+    include ../partials/scripts.pug

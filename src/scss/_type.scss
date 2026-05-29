@@ -1,0 +1,42 @@
+.case-study-page {
+  font-family: var(--default-font-family);
+  font-variation-settings: normal;
+}
+
+.case-study-page .case-body-copy,
+.case-study-page .case-body-copy p,
+.case-study-page .case-two-column-copy p,
+.case-study-page .portfolio-copy p,
+.case-study-page .portfolio-copy li,
+.case-study-page .portfolio-section-label,
+.case-study-page .copy-grid p,
+.case-study-page .copy-grid li,
+.case-study-page .copy-label {
+  font-size: var(--case-copy-size);
+  line-height: var(--case-copy-line);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.case-study-page .case-h2,
+.case-study-page .portfolio-copy h2,
+.case-study-page .portfolio-large-statement,
+.case-study-page .copy-grid h2,
+.case-study-page .portfolio-layered-media h2 {
+  margin: 0 0 var(--case-heading-gap-48);
+  font-size: var(--type-48);
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+}
+
+.case-study-page .case-h3,
+.case-study-page .case-kicker-heading,
+.case-study-page .copy-grid h3,
+.case-study-page .portfolio-pin-copy h3 {
+  margin: 0 0 var(--case-heading-gap-36);
+  font-size: var(--type-36);
+  line-height: 1.11;
+  font-weight: 600;
+  letter-spacing: -0.011em;
+}

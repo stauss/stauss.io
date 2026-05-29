@@ -1,0 +1,22 @@
+.case-frame,
+.portfolio-section,
+.copy-layout-section {
+  width: 100%;
+}
+
+.case-text-inner {
+  width: min(calc(100% - 128px), var(--case-text-max));
+  margin: 0 auto;
+}
+
+.case-media-inner {
+  width: min(calc(100% - 48px), var(--case-image-max));
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .case-text-inner,
+  .case-media-inner {
+    width: calc(100% - 60px);
+  }
+}

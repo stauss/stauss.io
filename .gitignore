@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Build artifacts
+*.map
+
+# Verification screenshots
+verification-*.png
+homepage-carousel-mobile-check.png

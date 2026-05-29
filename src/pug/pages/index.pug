@@ -1,0 +1,85 @@
+extends ../layouts/base.pug
+include ../mixins/home.pug
+
+block content
+  -
+    const brandLogos = [
+      { src: "Brand-Logo-Walmart.svg", alt: "Walmart" },
+      { src: "Brand-Logo-Honeywell.svg", alt: "Honeywell" },
+      { src: "Brand-Logo-Procter-and-Gamble.svg", alt: "Procter and Gamble" },
+      { src: "Brand-Logo-Chevron.svg", alt: "Chevron" },
+      { src: "Brand-Logo-Coca-Cola.svg", alt: "Coca-Cola" },
+      { src: "Brand-Logo-UniGroup.svg", alt: "UniGroup" },
+      { src: "Brand-Logo-Walton-Family-Foundation.svg", alt: "Walton Family Foundation" },
+      { src: "Brand-Logo-Nerdwallet.svg", alt: "NerdWallet" },
+      { src: "Brand-Logo-Pierce.svg", alt: "Pierce" },
+      { src: "Brand-Logo-Ascension.svg", alt: "Ascension" },
+      { src: "Brand-Logo-Major-League-Pickleball.svg", alt: "Major League Pickleball" },
+      { src: "Brand-Logo-Western-Fire-Chiefs.svg", alt: "Western Fire Chiefs" },
+      { src: "Brand-Logo-Visit-Central-Oregon.svg", alt: "Visit Central Oregon" },
+      { src: "Brand-Logo-Association-of-Pickleball-Players.svg", alt: "Association of Pickleball Players" },
+      { src: "Brand-Logo-Handled.svg", alt: "Handled" }
+    ];
+  #main-content
+    #main-page-content
+      section.home-figma-hero.dark-section(data-bgcolor="#000000", data-header-theme="dark")
+        .home-hero-intro
+          h1 Design with Altitude
+          p From concept to launch, scale, and sunset.
+
+        .clapat-slider-wrapper.showcase-slider-carousel-horizontal.home-carousel
+          .clapat-slider.fit-thumb-screen.fit-with-cover(data-ball-drag="horizontal")
+            .clapat-slider-viewport
+              each project, index in projects
+                +carouselSlide(project, index)
+
+            .clapat-carousel-caption-wrapper
+              .clapat-carousel-caption
+
+          .clapat-slider-footer.fade-slide-element.fadeout-element.has-border
+            .slider-footer-left
+              .clapat-slider-progress
+                .progress-info-fill Drag to Explore
+                .progress-info-empty Drag to Explore
+            .slider-footer-center
+              .clapat-slider-navigation
+                .button-wrap.cp-button-prev
+                  .icon-wrap
+                    .icon-effects.parallax-wrap(data-ball-size="match", data-ball-color="primary", data-ball-radius="circle")
+                      .button-icon.parallax-element
+                        i.fa-solid.fa-arrow-left
+                .cp-buttons-caption Navigate
+                .button-wrap.cp-button-next
+                  .icon-wrap
+                    .icon-effects.parallax-wrap(data-ball-size="match", data-ball-color="primary", data-ball-radius="circle")
+                      .button-icon.parallax-element
+                        i.fa-solid.fa-arrow-right
+            .slider-footer-right
+              .info-text
+                span Case Studies
+
+      section.home-about-section.light-section(data-bgcolor="#ffffff", data-header-theme="light")
+        .home-about-inner
+          .home-about-copy
+            h2 Making sense of what is to help build what's next.
+            p For more than 15 years, I've helped turn early ideas, complex systems, and messy product challenges into digital experiences people understand, use, and trust. My work sits between vision and execution: defining what needs to exist, designing the structure underneath it, and building the product with enough clarity to launch, scale, and hold up under pressure.
+          .home-about-mark(aria-label="Caleb Stauss, product designer and systems engineer")
+            img(src="images/brand/CalebStauss-Monogram-Product-Designer-Systems-Engineer.svg", alt="")
+
+      section.home-services-section.light-section(data-bgcolor="#ffffff", data-header-theme="light")
+        h2 What I Help Teams Solve
+        .home-services-grid
+          each service in [{title:"Product Direction", copy:"Turning ambiguous product pressure into clear strategy, scope, and execution paths.", items:["Vision framing","Roadmapping","Discovery systems","Executive narrative","Launch planning","Product critique"]}, {title:"Systems Design", copy:"Designing reusable structures that let teams move faster without losing coherence.", items:["Design systems","UX architecture","Component models","Content systems","Workflow design","Documentation"]}, {title:"Design Engineering", copy:"Bridging design intent and production reality through prototypes, implementation, and QA.", items:["Front-end builds","Prototype systems","Interaction models","Technical planning","Design QA","Handoff systems"]}]
+            article.home-service-card
+              h3= service.title
+              p= service.copy
+              ul
+                each item in service.items
+                  li= item
+
+      section.home-brands-section.dark-section(data-bgcolor="#0c0c0c", data-header-theme="dark")
+        h2 Brands that trust my work.
+        .home-brand-grid
+          each logo in brandLogos
+            .home-brand-cell
+              img(src=`images/brand-logos/${logo.src}`, alt=logo.alt)

@@ -1,0 +1,51 @@
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(name="theme-color", content=themeColor || "#f7f7f7")
+
+  title= title
+  meta(name="description", content=description)
+  meta(name="author", content="Caleb Stauss")
+  if canonical
+    link(rel="canonical", href=canonical)
+
+  meta(property="og:type", content="website")
+  meta(property="og:url", content=canonical)
+  meta(property="og:title", content=title)
+  meta(property="og:description", content=description)
+  meta(property="og:image", content=ogImage)
+  meta(property="og:site_name", content="Caleb Stauss")
+
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:title", content=title)
+  meta(name="twitter:description", content=description)
+  meta(name="twitter:image", content=ogImage)
+
+  link(rel="icon", type="image/svg+xml", href=assetPrefix + "dist/images/web/favicon.svg")
+  link(rel="icon", type="image/png", sizes="48x48", href=assetPrefix + "dist/images/web/favicon-48x48.png")
+  link(rel="icon", type="image/png", sizes="32x32", href=assetPrefix + "dist/images/web/favicon-32x32.png")
+  link(rel="icon", type="image/png", sizes="16x16", href=assetPrefix + "dist/images/web/favicon-16x16.png")
+  link(rel="apple-touch-icon", sizes="180x180", href=assetPrefix + "dist/images/web/apple-touch-icon.png")
+  link(rel="manifest", href=assetPrefix + "dist/images/web/site.webmanifest")
+
+  link(rel="stylesheet", href=assetPrefix + "style.css")
+  link(rel="stylesheet", href=assetPrefix + "css/variables.css")
+  link(rel="stylesheet", href=assetPrefix + "css/preloader.css")
+  link(rel="preload", as="style", href=assetPrefix + "css/content.css", onload="this.rel='stylesheet'")
+  noscript
+    link(rel="stylesheet", href=assetPrefix + "css/content.css")
+  if extraCss
+    each cssPath in extraCss
+      link(rel="preload", as="style", href=assetPrefix + cssPath, onload="this.rel='stylesheet'")
+      noscript
+        link(rel="stylesheet", href=assetPrefix + cssPath)
+  link(rel="preload", as="style", href=assetPrefix + "css/shortcodes.css", onload="this.rel='stylesheet'")
+  noscript
+    link(rel="stylesheet", href=assetPrefix + "css/shortcodes.css")
+  link(rel="preload", as="style", href=assetPrefix + "css/custom.css", onload="this.rel='stylesheet'")
+  noscript
+    link(rel="stylesheet", href=assetPrefix + "css/custom.css")
+  link(rel="preload", as="style", href=assetPrefix + "css/all.min.css", onload="this.rel='stylesheet'")
+  noscript
+    link(rel="stylesheet", href=assetPrefix + "css/all.min.css")
+  link(rel="stylesheet", href=assetPrefix + "css/case-study.css")
