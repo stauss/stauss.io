@@ -1,15 +1,15 @@
 mixin heroCase(title, deck)
-  section#hero.case-hero
+  section#hero.case-hero(data-header-theme="light")
     .case-hero-copy
       h1.case-hero-title!= title
       p.case-hero-deck= deck
 
 mixin placeholderBand(src)
-  section.case-frame.case-placeholder-band(data-bgcolor="#f5f5f7")
+  section.case-frame.case-placeholder-band(data-bgcolor="#f5f5f7", data-header-theme="light")
     img(src=assetPrefix + src, alt="")
 
 mixin summaryBand(summary)
-  section.case-frame.case-summary-band(data-bgcolor="#000000")
+  section.case-frame.case-summary-band(data-bgcolor="#000000", data-header-theme="dark")
     .case-summary-grid
       .case-meta
         .case-meta-value= summary.role
@@ -27,7 +27,7 @@ mixin summaryBand(summary)
         .case-meta-value= summary.outcome
 
 mixin textPair(heading)
-  section.case-frame.case-text-section(data-bgcolor="#ffffff")
+  section.case-frame.case-text-section(data-bgcolor="#ffffff", data-header-theme="light")
     .case-text-inner
       .case-text-pair
         h2.case-kicker-heading= heading
@@ -35,13 +35,13 @@ mixin textPair(heading)
           block
 
 mixin deviceGrid(images)
-  section.case-frame.case-device-grid(data-bgcolor="#ffffff")
+  section.case-frame.case-device-grid(data-bgcolor="#ffffff", data-header-theme="light")
     each image in images
       .case-device-cell
         img.portfolio-parallax-img(data-speed=image.speed, src=assetPrefix + image.src, alt=image.alt || "")
 
 mixin quoteSection(heading)
-  section.case-frame.case-quote-section(data-bgcolor="#ffffff")
+  section.case-frame.case-quote-section(data-bgcolor="#ffffff", data-header-theme="light")
     .case-text-inner
       .case-quote-inner
         h2.case-quote-heading= heading
@@ -49,13 +49,13 @@ mixin quoteSection(heading)
           block
 
 mixin mediaSection(src, speed)
-  section.case-frame.case-media-section(data-bgcolor="#ffffff")
+  section.case-frame.case-media-section(data-bgcolor="#ffffff", data-header-theme="light")
     .case-media-inner
       .case-media-pad
         img.portfolio-parallax-img(data-speed=speed || "0.05", src=assetPrefix + src, alt="")
 
 mixin portfolioCopy(label, heading, tone)
-  section.portfolio-section(class=tone, data-bgcolor=tone === "dark" ? "#050505" : tone === "soft" ? "#f5f5f7" : "#ffffff")
+  section.portfolio-section(class=tone, data-bgcolor=tone === "dark" ? "#050505" : tone === "soft" ? "#f5f5f7" : "#ffffff", data-header-theme=tone === "dark" ? "dark" : "light")
     .case-text-inner.portfolio-copy
       p.portfolio-section-label= label
       div
@@ -63,7 +63,7 @@ mixin portfolioCopy(label, heading, tone)
         block
 
 mixin copyIntroMatrix(label, first, second)
-  section.copy-layout-section.soft(data-bgcolor="#f5f5f7")
+  section.copy-layout-section.soft(data-bgcolor="#f5f5f7", data-header-theme="light")
     .case-text-inner.copy-grid.intro-matrix
       p.copy-label= label
       div
@@ -74,7 +74,7 @@ mixin copyIntroMatrix(label, first, second)
         p= second.copy
 
 mixin copyEditorialRail(label, heading, paragraphs)
-  section.copy-layout-section(data-bgcolor="#ffffff")
+  section.copy-layout-section(data-bgcolor="#ffffff", data-header-theme="light")
     .case-text-inner.copy-grid.editorial-rail
       div
         p.copy-label= label
@@ -84,7 +84,7 @@ mixin copyEditorialRail(label, heading, paragraphs)
           p= paragraph
 
 mixin copyDecisionGrid(items)
-  section.copy-layout-section.dark(data-bgcolor="#050505")
+  section.copy-layout-section.dark(data-bgcolor="#050505", data-header-theme="dark")
     .case-text-inner.copy-grid.decision-grid
       each item in items
         div
@@ -92,7 +92,7 @@ mixin copyDecisionGrid(items)
           p= item.copy
 
 mixin copySequence(label, heading, rows)
-  section.copy-layout-section(data-bgcolor="#ffffff")
+  section.copy-layout-section(data-bgcolor="#ffffff", data-header-theme="light")
     .case-text-inner.copy-grid.sequence-grid
       div
         p.copy-label= label
@@ -104,7 +104,7 @@ mixin copySequence(label, heading, rows)
             p= row.copy
 
 mixin copyThesis(heading, paragraphs)
-  section.copy-layout-section.soft(data-bgcolor="#f5f5f7")
+  section.copy-layout-section.soft(data-bgcolor="#f5f5f7", data-header-theme="light")
     .case-text-inner.copy-grid.thesis-grid
       h2= heading
       .copy-thesis-stack
@@ -112,7 +112,7 @@ mixin copyThesis(heading, paragraphs)
           p= paragraph
 
 mixin layeredParallax(background, foreground, heading)
-  section.portfolio-layered-media(data-bgcolor="#050505")
+  section.portfolio-layered-media(data-bgcolor="#050505", data-header-theme="dark")
     .portfolio-parallax-bg(data-speed=background.speed)
       img(src=assetPrefix + background.src, alt=background.alt || "")
     .case-text-inner.portfolio-copy-overlay
@@ -121,7 +121,7 @@ mixin layeredParallax(background, foreground, heading)
       img(src=assetPrefix + foreground.src, alt=foreground.alt || "")
 
 mixin stackedImageGrid(columns)
-  section.portfolio-section.soft(data-bgcolor="#f5f5f7")
+  section.portfolio-section.soft(data-bgcolor="#f5f5f7", data-header-theme="light")
     .case-media-inner.portfolio-image-grid.stacked
       each column in columns
         div
@@ -132,7 +132,7 @@ mixin stackedImageGrid(columns)
                 figcaption= image.caption
 
 mixin offsetMedia(image, heading, copy)
-  section.portfolio-section(data-bgcolor="#ffffff")
+  section.portfolio-section(data-bgcolor="#ffffff", data-header-theme="light")
     .case-media-inner.portfolio-offset
       figure.portfolio-figure.wide
         img.portfolio-parallax-img(data-speed=image.speed, src=assetPrefix + image.src, alt=image.alt || "")
@@ -145,12 +145,12 @@ mixin offsetMedia(image, heading, copy)
           p= copy
 
 mixin statementBand(text)
-  section.portfolio-section.dark.portfolio-statement-section(data-bgcolor="#050505")
+  section.portfolio-section.dark.portfolio-statement-section(data-bgcolor="#050505", data-header-theme="dark")
     .case-text-inner
       h2.portfolio-large-statement= text
 
 mixin parallaxPair(images)
-  section.portfolio-section.soft(data-bgcolor="#f5f5f7")
+  section.portfolio-section.soft(data-bgcolor="#f5f5f7", data-header-theme="light")
     .case-media-inner.portfolio-parallax-pair
       each image in images
         figure.portfolio-figure.tall
