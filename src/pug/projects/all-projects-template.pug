@@ -1,0 +1,1735 @@
+extends ../layouts/base.pug
+
+block content
+  //- ==========================================
+  //- PROJECT 01 — Neo Action (project01.pug)
+  //- ==========================================
+
+  //- Hero Section — image only
+  section#hero.has-media.autoscroll
+    #hero-wrapper
+      #hero-caption.content-full-width.text-align-default-desktop
+        .inner
+          h1.hero-title.caption-timeline
+            span.word-wrapper
+              span Neo
+            span.word-wrapper
+              span Action
+          .hero-subtitle.caption-timeline
+            span.word-wrapper
+              span Built to capture what others miss. We shaped the identity of Neo Action Pro from product logic to visual presence, across CGI, web and motion.
+          .hero-infotitle.caption-timeline
+            span.word-wrapper
+              span.heading-3 2026
+      #hero-footer.has-border
+        .hero-footer-left
+          #scroll-down.button-wrap.button-link.right.circle-edge(data-sticky)
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-down
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Scroll to Explore') Scroll to Explore
+        .hero-footer-center
+          .info-text
+            span Created 2026
+        .hero-footer-right
+          #project-credits.button-wrap.button-link.left.circle-edge.open-modal(data-sticky data-modal-target='#hero-modal' data-modal-direction='right')
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-regular.fa-file
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Project Credits') Project Credits
+    #hero-media.parallax-media
+      #hero-media-effects
+        #hero-media-wrapper
+          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+    #hero-modal.modal-source
+      .modal-project
+        p Client:
+        h5 Neo Action Pro
+        hr.animated-line
+        p Overview:
+        p.no-margins
+          | We built the visual system around one idea: geometric precision. The camera is a near-perfect cube, so we leaned into that. Concrete, shadow, negative space.
+          br
+          br
+          | Nothing that competes with the object itself. Light was the only storytelling tool, no props, no lifestyle, no context. Just the product and the surface it rests on. Typography followed the same logic: neutral, tight, confident.
+        hr
+        .button-wrap.button-icon-box.apart-icon.right.rounded-edge.small-btn(data-sticky)
+          a(target='_blank' href='http://www.clapat-templates.com/')
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-right
+            .text-wrap
+              .button-text
+                span(data-hover='Live Website') Live Website
+  //- Main Content
+  #main-content
+    #main-page-content
+      //- Row: Client meta + intro text (1/3 + 2/3)
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_third
+            p(data-animate)
+              | Client
+              br
+              | Neo Systems GmbH
+              br
+              br
+              | Sector
+              br
+              | Branding, CGI Direction, Motion Guidelines
+
+              br
+              br
+              | Industry
+              br
+              | Consumer Electronics
+            hr
+            hr
+          .two_third
+            h3.has-mask(data-play-once) What does it mean to be product-led in a saturated market? For Neo Systems it meant starting from the object itself, letting form drive every visual decision, and building a brand that feels as precise as the hardware inside.
+            hr
+      //- Row: Full-width image + two half images
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_full
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+      //- Row: Centered large quote text (heading-1)
+      section.content-row.full.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_full
+            hr
+            hr
+            h3.heading-1.has-mask.text-align-center.no-margins(data-play-once) For Neo Systems it meant starting from the object, letting form drive every visual decision made.
+            hr
+      //- Row: Small looped carousel slider (autocenter, animated-entry)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_full
+            .clapat-slider-wrapper.content-slider.small-looped-carousel.autocenter.animated-entry
+              .clapat-slider
+                .clapat-slider-viewport
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              .clapat-controls
+                .clapat-button-prev.slider-button-prev
+                .clapat-button-next.slider-button-next
+                .clapat-slider-pagination
+      //- Row: Two right-offset text columns (2/4 spacer + 1/4 + 1/4)
+      section.content-row.full.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .two_fourth
+          .one_fourth
+            p.has-mask(data-play-once) Neo needed a clear position in a crowded market. Not the rugged adventurer, not the technical pro. A camera for people who care as much about design as they do about what they capture.
+          .one_fourth
+            p.has-mask(data-play-once) CGI direction focused on restraint. Every frame was built around the product alone, no props, no context added. The geometry of the cube did the work, shadow and light told the rest.
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+        .columns-group
+          .one_full
+            hr
+    //- Project Navigation — next project transition
+    section#project-nav.flip-title-onload(data-next-bgcolor='#0c0c0c')
+      #project-nav-wrapper
+        #project-nav-caption.content-full-width.text-align-center
+          .wrapper
+            a.next-ajax-link-project(data-type='page-transition' href='project02.html' data-ball='hover' data-ball-type='blur' data-ball-color='#b880ff' data-ball-size='small' data-ball-radius='rounded' data-ball-info='fa-solid fa-arrow-right' data-ball-info-color='#000')
+            .inner
+              .next-hero-title.caption-timeline
+                span.word-wrapper
+                  span Thorned
+              .next-hero-subtitle.caption-timeline
+                span.word-wrapper
+                  span Next Project
+        .next-project-media
+          .next-project-media-effects
+            .next-project-media-wrapper
+              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              .item-video-wrapper
+                video.item-video(loop muted playsinline)
+                  source(src='../images/02hero.mp4' type='video/mp4')
+
+  //- ==========================================
+  //- PROJECT 02 — Thorned (project02.pug)
+  //- ==========================================
+
+  //- Hero Section — image + video loop
+  section#hero.has-media.autoscroll
+    #hero-wrapper
+      #hero-caption.content-full-width.text-align-default-desktop
+        .inner
+          h1.hero-title.caption-timeline.inline-word-wrapper
+            span.word-wrapper
+              span Thorned
+          .hero-subtitle.caption-timeline
+            span.word-wrapper
+              span Where body meets structure and beauty meets tension. We shaped the visual world of Thorned from concept to campaign, across art direction, web and motion.
+          .hero-infotitle.caption-timeline
+            span.word-wrapper
+              span.heading-3 2026
+      #hero-footer.has-border
+        .hero-footer-left
+          #scroll-down.button-wrap.button-link.right.circle-edge(data-sticky)
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-down
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Scroll to Explore') Scroll to Explore
+        .hero-footer-center
+          .info-text
+            span Created 2026
+        .hero-footer-right
+          #project-credits.button-wrap.button-link.left.circle-edge.open-modal(data-sticky data-modal-target='#hero-modal' data-modal-direction='right')
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-regular.fa-file
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Project Credits') Project Credits
+    #hero-media.parallax-media
+      #hero-media-effects
+        #hero-media-wrapper
+          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          .item-video-wrapper
+            video.item-video(loop muted playsinline)
+              source(src='../images/02hero.mp4' type='video/mp4')
+    #hero-modal.modal-source
+      .modal-project
+        p Client:
+        h5 Thorned Studio
+        hr.animated-line
+        p Overview:
+        p.no-margins
+          | Thorned came to us as a raw concept: wearable sculpture at the edge of fashion and art. The brief was open, the territory undefined. We built the identity from a single image, a figure in blue light, thorns growing from skin.
+          br
+          br
+          | From there we shaped the visual language, the campaign direction and the digital presence around one idea: beauty that resists.
+        hr
+        .button-wrap.button-icon-box.apart-icon.right.rounded-edge.small-btn(data-sticky)
+          a(target='_blank' href='http://www.clapat-templates.com/')
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-right
+            .text-wrap
+              .button-text
+                span(data-hover='Live Website') Live Website
+  //- Main Content
+  #main-content
+    #main-page-content
+      //- Row: Client meta + intro text (1/3 + 2/3)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.light-section.change-header-color(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_third
+            p(data-animate)
+              | Client
+              br
+              | Thorned Studio
+              br
+              br
+              | Sector
+              br
+              | Branding, CGI Direction, Motion Guidelines
+
+              br
+              br
+              | Industry
+              br
+              | Consumer Electronics
+            hr
+            hr
+          .two_third
+            h3.has-mask(data-play-once) What does it mean to design for tension? For Thorned it meant holding two opposites at once, fragility and threat, softness and sharp edge, until the uneasy space between them became the brand itself and the only honest answer.
+            hr
+      //- Row: Video with light parallax background
+      .content-row.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.align_content_center.justify_content_center
+            hr
+            .video-wrapper.autocenter.has-animation(data-controls data-poster='../images/projects/temp/temp-image-half.jpg')
+              video.bgvid(controls loop preload='auto')
+                source(src='../images/projects/02project_video.mp4' type='video/mp4')
+            hr
+      //- Row: Centered large quote text (heading-1)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.light-section.change-header-color(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_full
+            hr
+            hr
+            h3.heading-1.has-mask.text-align-center.no-margins(data-play-once) For Thorned it meant holding two opposites, until the space between them became the work.
+            hr
+      //- Row: Full-height slider on parallax background
+      .content-row.row_full_height.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.align_content_center.justify_content_center
+            .clapat-slider-wrapper.content-slider.autocenter
+              .clapat-slider
+                .clapat-slider-viewport
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              .clapat-controls
+                .clapat-button-prev.slider-button-prev
+                .clapat-button-next.slider-button-next
+                .clapat-slider-pagination
+      //- Row: Two right-offset text columns (2/4 spacer + 1/4 + 1/4)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.light-section.change-header-color(data-bgcolor='#f7f7f7')
+        .columns-group
+          .two_fourth
+          .one_fourth
+            p.has-mask(data-play-once) Thorned needed a presence as unsettling as the object itself. Not dark for the sake of it, not fashion in the usual sense. A brand for people who wear things that ask questions before they answer them.
+          .one_fourth
+            p.has-mask(data-play-once) Art direction focused on the body as architecture. Light as the only set. Blue and rose fighting for the same surface. Every frame built to hold the tension without resolving it. Nothing explained, nothing softened.
+        .columns-group
+          .one_full
+            hr
+    //- Project Navigation — next project transition
+    section#project-nav.flip-title-onload.change-header-color(data-next-bgcolor='#f7f7f7')
+      #project-nav-wrapper
+        #project-nav-caption.content-full-width.text-align-center
+          .wrapper
+            a.next-ajax-link-project(data-type='page-transition' href='project03.html' data-ball='hover' data-ball-type='blur' data-ball-color='#b880ff' data-ball-size='small' data-ball-radius='rounded' data-ball-info='fa-solid fa-arrow-right' data-ball-info-color='#000')
+            .inner
+              .next-hero-title.caption-timeline
+                span.word-wrapper
+                  span Pure Motion
+              .next-hero-subtitle.caption-timeline
+                span.word-wrapper
+                  span Next Project
+        .next-project-media
+          .next-project-media-effects
+            .next-project-media-wrapper
+              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+
+  //- ==========================================
+  //- PROJECT 03 — Pure Motion (project03.pug)
+  //- ==========================================
+
+  //- Hero Section — image only
+  section#hero.has-media.autoscroll
+    #hero-wrapper
+      #hero-caption.content-full-width.text-align-default-desktop
+        .inner
+          h1.hero-title.caption-timeline.inline-word-wrapper
+            span.word-wrapper
+              span Pure Motion
+          .hero-subtitle.caption-timeline
+            span.word-wrapper
+              span A timepiece shaped around silence and precision. We built the identity of Pure Motion from object logic to visual presence, across brand, web and motion.
+          .hero-infotitle.caption-timeline
+            span.word-wrapper
+              span.heading-3 2026
+      #hero-footer.has-border
+        .hero-footer-left
+          #scroll-down.button-wrap.button-link.right.circle-edge(data-sticky)
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-down
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Scroll to Explore') Scroll to Explore
+        .hero-footer-center
+          .info-text
+            span Created 2026
+        .hero-footer-right
+          #project-credits.button-wrap.button-link.left.circle-edge.open-modal(data-sticky data-modal-target='#hero-modal' data-modal-direction='right')
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-regular.fa-file
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Project Credits') Project Credits
+    #hero-media.parallax-media
+      #hero-media-effects
+        #hero-media-wrapper
+          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+    #hero-modal.modal-source
+      .modal-project
+        p Client:
+        h5 Vael Watches
+        hr.animated-line
+        p Overview:
+        p.no-margins
+          | Pure Motion started from a single constraint: nothing on the dial, nothing on the case that was not necessary. Vael came to us with a watch and asked us to build a world around it.
+          br
+          br
+          | We shaped the visual identity, the campaign direction and the web presence around one principle: restraint as a statement. Every frame, every typographic choice, every transition was designed to feel like the watch itself.
+        hr
+        .button-wrap.button-icon-box.apart-icon.right.rounded-edge.small-btn(data-sticky)
+          a(target='_blank' href='http://www.clapat-templates.com/')
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-right
+            .text-wrap
+              .button-text
+                span(data-hover='Live Website') Live Website
+  //- Main Content
+  #main-content
+    #main-page-content
+      //- Row: Client meta + intro text (1/3 + 2/3)
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_third
+            p(data-animate)
+              | Client
+              br
+              | Vael Watches GmbH
+              br
+              br
+              | Sector
+              br
+              | Branding, CGI Direction, Motion Guidelines
+
+              br
+              br
+              | Industry
+              br
+              | Consumer Electronics
+            hr
+            hr
+          .two_third
+            h3.has-mask(data-play-once) What does it mean to design for silence? For Vael it meant removing every element that competed with the object, until what remained was only intention, material and the quiet confidence of a thing made well.
+            hr
+      //- Row: 2×2 stacked image grid (two half columns, two images each)
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.dark-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+            hr
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+            hr
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+      //- Row: Two right-offset text columns (2/4 spacer + 1/4 + 1/4)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .two_fourth
+          .one_fourth
+            p.has-mask(data-play-once) Vael needed a presence that matched the object. Not loud, not minimal for the sake of it. A brand for people who notice the finish of a brushed case, the weight of a crown, the way a hand moves at rest.
+          .one_fourth
+            p.has-mask(data-play-once) Photography direction used motion blur as the only narrative device. The watch in movement, then frozen. Time as subject, not just product. No lifestyle, no wrist, no context beyond light and speed.
+      //- Row: Full-height parallax image with bottom-anchored text
+      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.justify_content_end.align_content_end
+            h3.has-mask.no-margins(data-play-once) Details that endure.
+            hr
+            hr
+      //- Row: Two left-aligned text columns (1/4 + 1/4 + 2/4 spacer)
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_fourth
+            p.has-mask(data-play-once) The typeface was chosen for its geometric neutrality. Nothing that pulls attention from the dial. Every weight and size decision made in reference to the proportions of the case itself.
+          .one_fourth
+            p.has-mask(data-play-once) Motion guidelines defined how the brand moves online and in print. Transitions timed to mirror the sweep of a seconds hand. Slow in, immediate out. Precision without drama.
+          .two_fourth
+      //- Row: 2×2 stacked image grid (closing)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+            hr
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+            hr
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+        .columns-group
+          .one_full
+            hr
+    //- Project Navigation — next project transition
+    section#project-nav.flip-title-onload(data-next-bgcolor='#f7f7f7')
+      #project-nav-wrapper
+        #project-nav-caption.content-full-width.text-align-center
+          .wrapper
+            a.next-ajax-link-project(data-type='page-transition' href='project04.html' data-ball='hover' data-ball-type='blur' data-ball-color='#b880ff' data-ball-size='small' data-ball-radius='rounded' data-ball-info='fa-solid fa-arrow-right' data-ball-info-color='#000')
+            .inner
+              .next-hero-title.caption-timeline
+                span.word-wrapper
+                  span Arctic Flame
+              .next-hero-subtitle.caption-timeline
+                span.word-wrapper
+                  span Next Project
+        .next-project-media
+          .next-project-media-effects
+            .next-project-media-wrapper
+              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+
+  //- ==========================================
+  //- PROJECT 04 — Arctic Flame (project04.pug)
+  //- ==========================================
+
+  //- Hero Section — image only
+  section#hero.has-media.autoscroll
+    #hero-wrapper
+      #hero-caption.content-full-width.text-align-default-desktop
+        .inner
+          h1.hero-title.caption-timeline.inline-word-wrapper
+            span.word-wrapper
+              span Arctic
+            span.word-wrapper
+              span Flame
+          .hero-subtitle.caption-timeline
+            span.word-wrapper
+              span Where color becomes attitude and volume becomes identity. We shaped the Arctic Flame campaign from product concept to full visual presence, across photography, web and motion.
+          .hero-infotitle.caption-timeline
+            span.word-wrapper
+              span.heading-3 2026
+      #hero-footer.has-border
+        .hero-footer-left
+          #scroll-down.button-wrap.button-link.right.circle-edge(data-sticky)
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-down
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Scroll to Explore') Scroll to Explore
+        .hero-footer-center
+          .info-text
+            span Created 2026
+        .hero-footer-right
+          #project-credits.button-wrap.button-link.left.circle-edge.open-modal(data-sticky data-modal-target='#hero-modal' data-modal-direction='right')
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-regular.fa-file
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Project Credits') Project Credits
+    #hero-media.parallax-media
+      #hero-media-effects
+        #hero-media-wrapper
+          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+    #hero-modal.modal-source
+      .modal-project
+        p Client:
+        h5 Arctic Flame Studio
+        hr.animated-line
+        p Overview:
+        p.no-margins Arctic Flame came to us as a single brief: make orange feel inevitable. The client had a jacket and a conviction that outerwear could be as bold as any streetwear drop. We built the campaign direction, the photography approach and the digital presence around one idea: color as the loudest thing in the room. No apology, no context, just signal.
+        hr
+        .button-wrap.button-icon-box.apart-icon.right.rounded-edge.small-btn(data-sticky)
+          a(target='_blank' href='http://www.clapat-templates.com/')
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-right
+            .text-wrap
+              .button-text
+                span(data-hover='Live Website') Live Website
+  //- Main Content
+  #main-content
+    #main-page-content
+      //- Row: Client meta + intro text (1/3 + 2/3)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_third
+            p(data-animate)
+              | Client
+              br
+              | Arctic Flame Studio
+              br
+              br
+              | Sector
+              br
+              | Branding, CGI Direction, Motion Guidelines
+
+              br
+              br
+              | Industry
+              br
+              | Consumer Electronics
+            hr
+            hr
+          .two_third
+            h3.has-mask(data-play-once) What does it mean to design for volume in every sense? For Arctic Flame it meant treating color as structure, letting the jacket fill the frame completely, and building a brand voice as saturated and direct as the product itself.
+            hr
+      //- Row: Offset image layout: 2/4 image + 1/4 gap + 1/4 pinned image
+      section.content-row.full.row_padding_bottom.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .two_fourth
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_fourth
+          .one_fourth.pinned-col
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+      //- Row: Reverse offset: 1/4 pinned text + 1/4 gap + 2/4 image
+      section.content-row.full.row_padding_bottom.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_fourth.pinned-col
+            h5.has-mask(data-play-once) Color was the brief, the set and the only prop. Everything else stepped back until the jacket owned the frame.
+          .one_fourth
+          .two_fourth
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+      //- Row: Full-height parallax with centered heading overlay
+      .content-row.row_full_height.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.justify_content_center.align_content_center
+            h3.heading-1.no-margins.text-align-center
+              | Color is the loudest thing
+              br.destroy
+              | in the room
+      //- Row: Wide + pinned offset image pair (2/4 + 1/4 + 1/4 pinned)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .two_fourth
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_fourth
+          .one_fourth.pinned-col
+            h5.has-mask(data-play-once) Photography built each frame around presence, not context. The model, the jacket, the metal surface.
+      //- Row: Reverse wide + pinned image pair (1/4 pinned + 1/4 + 2/4)
+      section.content-row.full.row_padding_bottom.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_fourth.pinned-col
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_fourth
+          .two_fourth
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+        .columns-group
+          .one_full
+            hr
+    //- Project Navigation — next project transition
+    section#project-nav.flip-title-onload(data-next-bgcolor='#f7f7f7')
+      #project-nav-wrapper
+        #project-nav-caption.content-full-width.text-align-center
+          .wrapper
+            a.next-ajax-link-project(data-type='page-transition' href='project05.html' data-ball='hover' data-ball-type='blur' data-ball-color='#b880ff' data-ball-size='small' data-ball-radius='rounded' data-ball-info='fa-solid fa-arrow-right' data-ball-info-color='#000')
+            .inner
+              .next-hero-title.caption-timeline
+                span.word-wrapper
+                  span Yolk
+              .next-hero-subtitle.caption-timeline
+                span.word-wrapper
+                  span Next Project
+        .next-project-media
+          .next-project-media-effects
+            .next-project-media-wrapper
+              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+
+  //- ==========================================
+  //- PROJECT 05 — Yolk (project05.pug)
+  //- ==========================================
+
+  //- Hero Section — image only
+  section#hero.has-media.autoscroll
+    #hero-wrapper
+      #hero-caption.content-full-width.text-align-default-desktop
+        .inner
+          h1.hero-title.caption-timeline.inline-word-wrapper
+            span.word-wrapper
+              span Yolk
+          .hero-subtitle.caption-timeline
+            span.word-wrapper
+              span Where the product becomes the environment. We shaped the Yolk campaign from a single conviction: one color, one object, no compromise, across product photography, web and motion.
+          .hero-infotitle.caption-timeline
+            span.word-wrapper
+              span.heading-3 2026
+      #hero-footer.has-border
+        .hero-footer-left
+          #scroll-down.button-wrap.button-link.right.circle-edge(data-sticky)
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-down
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Scroll to Explore') Scroll to Explore
+        .hero-footer-center
+          .info-text
+            span Created 2026
+        .hero-footer-right
+          #project-credits.button-wrap.button-link.left.circle-edge.open-modal(data-sticky data-modal-target='#hero-modal' data-modal-direction='right')
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-regular.fa-file
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Project Credits') Project Credits
+    #hero-media.parallax-media
+      #hero-media-effects
+        #hero-media-wrapper
+          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+    #hero-modal.modal-source
+      .modal-project
+        p Client:
+        h5 Yolk Footwear
+        hr.animated-line
+        p Overview:
+        p.no-margins
+          | Yolk came to us with a sneaker and a brief so simple it was almost a dare: make yellow disappear into itself. The shoe, the background, the light, all the same.
+          br
+          br
+          | We built the campaign direction and the digital presence around total color immersion. No contrast, no relief, no escape. Just the object dissolving into its own signal.
+        hr
+        .button-wrap.button-icon-box.apart-icon.right.rounded-edge.small-btn(data-sticky)
+          a(target='_blank' href='http://www.clapat-templates.com/')
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-right
+            .text-wrap
+              .button-text
+                span(data-hover='Live Website') Live Website
+  //- Main Content
+  #main-content
+    #main-page-content
+      //- Row: Client meta + intro text (1/3 + 2/3)
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.dark-section.change-header-color(data-bgcolor='#111')
+        .columns-group
+          .one_third
+            p(data-animate)
+              | Client
+              br
+              | Yolk Footwear
+              br
+              br
+              | Sector
+              br
+              | Branding, CGI Direction, Motion Guidelines
+
+              br
+              br
+              | Industry
+              br
+              | Consumer Electronics
+            hr
+            hr
+          .two_third
+            h3.has-mask(data-play-once) What does it mean to design for total immersion in a world built on contrast? For Yolk it meant removing every visual anchor, letting color absorb the frame completely, and building a product presence that hits before the eye has time to adjust.
+            hr
+      //- Row: Two half images + full-width image (stacked)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section.change-header-color(data-bgcolor='#111')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+        .columns-group
+          .one_full
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+      //- Row: Centered large quote text (heading-1)
+      section.content-row.full.row_padding_left.row_padding_right.dark-section.change-header-color(data-bgcolor='#111')
+        .columns-group
+          .one_full
+            hr
+            hr
+            h3.heading-1.has-mask.text-align-center.no-margins(data-play-once) For Yolk it meant letting color absorb the frame before the eye has time to adjust.
+            hr
+      //- Row: Two half images + full-width image (stacked)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section.change-header-color(data-bgcolor='#111')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+        .columns-group
+          .one_full
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+        .columns-group
+          .one_full
+            hr
+    //- Project Navigation — next project transition
+    section#project-nav.flip-title-onload(data-next-bgcolor='#0c0c0c')
+      #project-nav-wrapper
+        #project-nav-caption.content-full-width.text-align-center
+          .wrapper
+            a.next-ajax-link-project(data-type='page-transition' href='project06.html' data-ball='hover' data-ball-type='blur' data-ball-color='#b880ff' data-ball-size='small' data-ball-radius='rounded' data-ball-info='fa-solid fa-arrow-right' data-ball-info-color='#000')
+            .inner
+              .next-hero-title.caption-timeline
+                span.word-wrapper
+                  span Mono Block
+              .next-hero-subtitle.caption-timeline
+                span.word-wrapper
+                  span Next Project
+        .next-project-media
+          .next-project-media-effects
+            .next-project-media-wrapper
+              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+
+  //- ==========================================
+  //- PROJECT 06 — Mono Block (project06.pug)
+  //- ==========================================
+
+  //- Hero Section — image only
+  section#hero.has-media.autoscroll
+    #hero-wrapper
+      #hero-caption.content-full-width.text-align-default-desktop
+        .inner
+          h1.hero-title.caption-timeline.inline-word-wrapper
+            span.word-wrapper
+              span Mono Block
+          .hero-subtitle.caption-timeline
+            span.word-wrapper
+              span Where raw material becomes brand language. We shaped the identity of Mono Block from the ground up, across brand strategy, visual system, web and motion.
+          .hero-infotitle.caption-timeline
+            span.word-wrapper
+              span.heading-3 2026
+      #hero-footer.has-border
+        .hero-footer-left
+          #scroll-down.button-wrap.button-link.right.circle-edge(data-sticky)
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-down
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Scroll to Explore') Scroll to Explore
+        .hero-footer-center
+          .info-text
+            span Created 2026
+        .hero-footer-right
+          #project-credits.button-wrap.button-link.left.circle-edge.open-modal(data-sticky data-modal-target='#hero-modal' data-modal-direction='right')
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-regular.fa-file
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Project Credits') Project Credits
+    #hero-media.parallax-media
+      #hero-media-effects
+        #hero-media-wrapper
+          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+    #hero-modal.modal-source
+      .modal-project
+        p Client:
+        h5 Mono Block Inc.
+        hr.animated-line
+        p Overview:
+        p.no-margins Mono Block came to us with a name and a conviction: construction should look as serious as it is. A firm building in concrete and steel needed a brand that matched the weight of the work. We shaped the visual identity, the communication strategy and the digital presence around one material idea: everything starts from the block. Rough, direct, built to last.
+        hr
+        .button-wrap.button-icon-box.apart-icon.right.rounded-edge.small-btn(data-sticky)
+          a(target='_blank' href='http://www.clapat-templates.com/')
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-right
+            .text-wrap
+              .button-text
+                span(data-hover='Live Website') Live Website
+  //- Main Content
+  #main-content
+    #main-page-content
+      //- Row: Client meta + intro text (1/3 + 2/3)
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_third
+            p(data-animate)
+              | Client
+              br
+              | Mono Block Inc.
+              br
+              br
+              | Sector
+              br
+              | Branding, CGI Direction, Motion Guidelines
+
+              br
+              br
+              | Industry
+              br
+              | Consumer Electronics
+            hr
+            hr
+          .two_third
+            h3.has-mask(data-play-once) What does it mean to brand for permanence in an industry that never stops moving? For Mono Block it meant stripping every decorative impulse, letting the material speak first, and building a visual system as durable and direct as the structures the company raises.
+            hr
+      //- Row: Two half images
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.dark-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+      //- Row: Two right-offset text columns (2/4 spacer + 1/4 + 1/4)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .two_fourth
+          .one_fourth
+            p.has-mask(data-play-once) Mono Block needed a presence that felt like the work itself. Not polished, not approachable in the usual sense. A brand for clients who measure trust in tonnes, timelines and things that do not move once they are in place.
+          .one_fourth
+            p.has-mask(data-play-once) CGI direction focused on material impact. Concrete in motion, dust and weight suspended at the moment of force. Every frame built to communicate strength without needing a single word to support it.
+      //- Row: Full-height parallax image with bottom-anchored text
+      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.justify_content_end.align_content_end
+            h3.has-mask.no-margins(data-play-once) Built from the ground up.
+            hr
+            hr
+      //- Row: Two left-aligned text columns (1/4 + 1/4 + 2/4 spacer)
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_fourth
+            p.has-mask(data-play-once) The typeface was chosen for its structural weight. Wide, upright, no ornament. Every typographic decision made to reflect the proportions of the materials the company works with every day.
+          .one_fourth
+            p.has-mask(data-play-once) Motion guidelines defined how the brand moves in digital and print. Heavy entries, immediate cuts. Nothing that softens the landing. The brand arrives the same way the company does, with force and without apology.
+          .two_fourth
+      //- Row: Two half images (closing)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+        .columns-group
+          .one_full
+            hr
+    //- Project Navigation — next project transition
+    section#project-nav.flip-title-onload.change-header-color(data-next-bgcolor='#0c0c0c')
+      #project-nav-wrapper
+        #project-nav-caption.content-full-width.text-align-center
+          .wrapper
+            a.next-ajax-link-project(data-type='page-transition' href='project07.html' data-ball='hover' data-ball-type='blur' data-ball-color='#b880ff' data-ball-size='small' data-ball-radius='rounded' data-ball-info='fa-solid fa-arrow-right' data-ball-info-color='#000')
+            .inner
+              .next-hero-title.caption-timeline
+                span.word-wrapper
+                  span Kinetic
+              .next-hero-subtitle.caption-timeline
+                span.word-wrapper
+                  span Next Project
+        .next-project-media
+          .next-project-media-effects
+            .next-project-media-wrapper
+              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+
+  //- ==========================================
+  //- PROJECT 07 — Kinetic (project07.pug)
+  //- ==========================================
+
+  //- Hero Section — image only
+  section#hero.has-media.autoscroll
+    #hero-wrapper
+      #hero-caption.content-full-width.text-align-default-desktop
+        .inner
+          h1.hero-title.caption-timeline.inline-word-wrapper
+            span.word-wrapper
+              span Kinetic
+          .hero-subtitle.caption-timeline
+            span.word-wrapper
+              span Where color moves and form dissolves into rhythm. We created Kinetic, a series of generative gradient artworks built around stripe motion, color shift and visual frequency.
+          .hero-infotitle.caption-timeline
+            span.word-wrapper
+              span.heading-3 2026
+      #hero-footer.has-border
+        .hero-footer-left
+          #scroll-down.button-wrap.button-link.right.circle-edge(data-sticky)
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-down
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Scroll to Explore') Scroll to Explore
+        .hero-footer-center
+          .info-text
+            span Created 2026
+        .hero-footer-right
+          #project-credits.button-wrap.button-link.left.circle-edge.open-modal(data-sticky data-modal-target='#hero-modal' data-modal-direction='right')
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-regular.fa-file
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Project Credits') Project Credits
+    #hero-media.parallax-media
+      #hero-media-effects
+        #hero-media-wrapper
+          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+    #hero-modal.modal-source
+      .modal-project
+        p Client:
+        h5 Kinetic Series
+        hr.animated-line
+        p Overview:
+        p.no-margins
+        p.no-margins Kinetic started as a personal exploration and became a full series. The brief was self-imposed: build visual works that feel alive without animation, using only stripe density, gradient direction and color temperature to suggest movement. Each piece in the series was generated through a custom process, then refined by hand until the motion felt inevitable. The result is a set of works that sit between design and art, between still and moving.
+        p
+        hr
+        .button-wrap.button-icon-box.apart-icon.right.rounded-edge.small-btn(data-sticky)
+          a(target='_blank' href='http://www.clapat-templates.com/')
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-right
+            .text-wrap
+              .button-text
+                span(data-hover='Live Website') Live Website
+  //- Main Content
+  #main-content
+    #main-page-content
+      //- Row: Client meta + intro text (1/3 + 2/3)
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.dark-section(data-bgcolor='#0c0c0c')
+        .columns-group
+          .one_third
+            p(data-animate)
+              | Client
+              br
+              | Kinetic Series Inc.
+              br
+              br
+              | Sector
+              br
+              | Branding, CGI Direction, Motion Guidelines
+
+              br
+              br
+              | Industry
+              br
+              | Consumer Electronics
+            hr
+            hr
+          .two_third
+            h3.has-mask(data-play-once) What does it mean to make something move without moving it? For Kinetic it meant finding the exact point where stripe frequency and color shift create the sensation of motion in a static frame, and building an entire visual language from that single threshold.
+            hr
+      //- Row: Two half images with parallax offset (data-parallax-start)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#0c0c0c')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title' data-parallax-start='15' data-overflow-hidden='true' data-parallax-mobile='false')
+              figcaption Caption
+          .one_half
+            figure(data-animate)
+              img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Caption
+      //- Row: Full-height parallax image, no text overlay
+      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.dark-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.justify_content_end.align_content_end.
+
+
+      //- Row: Two half images (closing)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#0c0c0c')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              img(src='../images/projects/temp/temp-image-half.jpg')
+              figcaption Caption
+          .one_half
+            figure(data-animate)
+              img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title' data-parallax-start='10' data-overflow-hidden='true' data-parallax-mobile='false')
+              figcaption Caption
+        .columns-group
+          .one_full
+            hr
+    //- Project Navigation — next project transition
+    section#project-nav.flip-title-onload(data-next-bgcolor='#0c0c0c')
+      #project-nav-wrapper
+        #project-nav-caption.content-full-width.text-align-center
+          .wrapper
+            a.next-ajax-link-project(data-type='page-transition' href='project08.html' data-ball='hover' data-ball-type='blur' data-ball-color='#b880ff' data-ball-size='small' data-ball-radius='rounded' data-ball-info='fa-solid fa-arrow-right' data-ball-info-color='#000')
+            .inner
+              .next-hero-title.caption-timeline
+                span.word-wrapper
+                  span Expedition
+              .next-hero-subtitle.caption-timeline
+                span.word-wrapper
+                  span Next Project
+        .next-project-media
+          .next-project-media-effects
+            .next-project-media-wrapper
+              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              .item-video-wrapper
+                video.item-video(loop muted playsinline)
+                  source(src='../images/08hero.mp4' type='video/mp4')
+
+  //- ==========================================
+  //- PROJECT 08 — Expedition (project08.pug)
+  //- ==========================================
+
+  //- Hero Section — image + video loop
+  section#hero.has-media.autoscroll
+    #hero-wrapper
+      #hero-caption.content-full-width.text-align-default-desktop
+        .inner
+          h1.hero-title.caption-timeline.inline-word-wrapper
+            span.word-wrapper
+              span Expedition
+          .hero-subtitle.caption-timeline
+            span.word-wrapper
+              span Where the camera follows before the story is known. Behind the scenes of Expedition, a feature documentary shot in remote mountain terrain.
+          .hero-infotitle.caption-timeline
+            span.word-wrapper
+              span.heading-3 2026
+      #hero-footer.has-border
+        .hero-footer-left
+          #scroll-down.button-wrap.button-link.right.circle-edge(data-sticky)
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-down
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Scroll to Explore') Scroll to Explore
+        .hero-footer-center
+          .info-text
+            span Created 2026
+        .hero-footer-right
+          #project-credits.button-wrap.button-link.left.circle-edge.open-modal(data-sticky data-modal-target='#hero-modal' data-modal-direction='right')
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-regular.fa-file
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Project Credits') Project Credits
+    #hero-media.parallax-media
+      #hero-media-effects
+        #hero-media-wrapper
+          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          .item-video-wrapper
+            video.item-video(loop muted playsinline)
+              source(src='../images/08hero.mp4' type='video/mp4')
+    #hero-modal.modal-source
+      .modal-project
+        p Client:
+        h5 Expedition — BTS
+        hr.animated-line
+        p Overview:
+        p.no-margins
+          | Expedition came to us as a request for behind the scenes coverage on a feature documentary being filmed in remote mountain terrain. Three weeks, one crew, altitude that slowed everything down and rock that destroyed two cameras before the end of week one.
+          br
+          br
+          | We documented the making of the film without interrupting it, staying close without getting in the way, and capturing the real weight of what it takes to shoot in conditions like these.
+        hr
+        .button-wrap.button-icon-box.apart-icon.right.rounded-edge.small-btn(data-sticky)
+          a(target='_blank' href='http://www.clapat-templates.com/')
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-right
+            .text-wrap
+              .button-text
+                span(data-hover='Live Website') Live Website
+  //- Main Content
+  #main-content
+    #main-page-content
+      //- Row: Client meta + intro text (1/3 + 2/3)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#0c0c0c')
+        .columns-group
+          .one_third
+            p(data-animate)
+              | Client
+              br
+              | Expedition — BTS
+              br
+              br
+              | Sector
+              br
+              | Branding, CGI Direction, Motion Guidelines
+
+              br
+              br
+              | Industry
+              br
+              | Consumer Electronics
+            hr
+            hr
+          .two_third
+            h3.has-mask(data-play-once) What does it mean to document a documentary? For Expedition it meant learning the rhythm of a crew under pressure, earning the right to be in the frame, and building a behind the scenes record as considered and honest as the film it was made alongside.
+            hr
+      //- Row: Video with light parallax background
+      .content-row.row_padding_top.row_padding_bottom.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg')
+        .columns-group
+          .one_full.align_content_center.justify_content_center
+            hr
+            .video-wrapper.autocenter(data-controls data-poster='../images/projects/temp/temp-image-half.jpg')
+              video.bgvid(controls loop preload='auto')
+                source(src='../images/projects/08project_video1.mp4' type='video/mp4')
+            hr
+      //- Row: Two right-offset text columns (2/4 spacer + 1/4 + 1/4)
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#0c0c0c')
+        .columns-group
+          .two_fourth
+          .one_fourth
+            p.has-mask(data-play-once) The terrain does not offer second chances. Every shot was planned around light that lasted minutes and paths that changed by the hour. Coverage had to be fast, invisible and always secondary to the main production.
+          .one_fourth
+            p.has-mask(data-play-once) Camera choices were minimal by necessity. Altitude, dust and distance from any support meant travelling light and making every angle count. The crew became familiar enough to forget we were there, which was exactly the point.
+      //- Row: Video with dark parallax background + has-animation
+      .content-row.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#0c0c0c' data-img-src='../images/projects/temp/temp-image-half.jpg')
+        .columns-group
+          .one_full.align_content_center.justify_content_center
+            hr
+            .video-wrapper.autocenter.has-animation(data-controls data-poster='../images/projects/temp/temp-image-half.jpg')
+              video.bgvid(controls loop preload='auto')
+                source(src='../images/projects/08project_video2.mp4' type='video/mp4')
+            hr
+      //- Row: Two right-offset text columns + closing hr
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#0c0c0c')
+        .columns-group
+          .two_fourth
+          .one_fourth
+            p.has-mask(data-play-once) The edit was built to feel like fieldwork, not a promotional piece. Rough cuts held, ambient sound kept, nothing polished beyond what the material asked for. The mountain does the work if you let it.
+          .one_fourth
+            p.has-mask(data-play-once) Final delivery included a short form cut for festival use, a long form archive for the production company and a series of stills cleared for press. Everything made to travel as far as the film itself.
+        .columns-group
+          .one_full
+            hr
+    //- Project Navigation — next project transition
+    section#project-nav.flip-title-onload(data-next-bgcolor='#0c0c0c')
+      #project-nav-wrapper
+        #project-nav-caption.content-full-width.text-align-center
+          .wrapper
+            a.next-ajax-link-project(data-type='page-transition' href='project01.html' data-ball='hover' data-ball-type='blur' data-ball-color='#b880ff' data-ball-size='small' data-ball-radius='rounded' data-ball-info='fa-solid fa-arrow-right' data-ball-info-color='#000')
+            .inner
+              .next-hero-title.caption-timeline.inline-word-wrapper
+                span.word-wrapper
+                  span Neo
+                span.word-wrapper
+                  span Action
+              .next-hero-subtitle.caption-timeline
+                span.word-wrapper
+                  span Next Project
+        .next-project-media
+          .next-project-media-effects
+            .next-project-media-wrapper
+              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+
+  //- ==========================================
+  //- PROJECT 09 — Synthesis — All Layouts Reference (project09.pug)
+  //- ==========================================
+
+  //  Hero Section — image + video overlay (from project02 / project08) 
+  section#hero.has-media.autoscroll
+    #hero-wrapper
+      #hero-caption.content-full-width.text-align-default-desktop
+        .inner
+          h1.hero-title.caption-timeline.inline-word-wrapper
+            span.word-wrapper
+              span Synthesis
+          .hero-subtitle.caption-timeline
+            span.word-wrapper
+              span Every section, every layout, every interaction — combined into a single reference page. A complete visual toolkit built from all eight project templates.
+          .hero-infotitle.caption-timeline
+            span.word-wrapper
+              span.heading-3 2026
+      #hero-footer.has-border
+        .hero-footer-left
+          #scroll-down.button-wrap.button-link.right.circle-edge(data-sticky)
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-down
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Scroll to Explore') Scroll to Explore
+        .hero-footer-center
+          .info-text
+            span Created 2026
+        .hero-footer-right
+          #project-credits.button-wrap.button-link.left.circle-edge.open-modal(data-sticky data-modal-target='#hero-modal' data-modal-direction='right')
+            .icon-wrap
+              .icon-effects.parallax-wrap(data-ball-color='primary')
+                .button-icon.parallax-element
+                  i.fa-regular.fa-file
+            .text-wrap.sticky
+              .button-text.parallax-element
+                span(data-hover='Project Credits') Project Credits
+    //  Hero Media Section — image + video loop (project02 / project08 style) 
+    #hero-media.parallax-media
+      #hero-media-effects
+        #hero-media-wrapper
+          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          .item-video-wrapper
+            video.item-video(loop muted playsinline)
+              source(src='../images/02hero.mp4' type='video/mp4')
+    // /Hero Media Section 
+    //  Modal Source 
+    #hero-modal.modal-source
+      .modal-project
+        p Client:
+        h5 Synthesis Studio
+        hr.animated-line
+        p Overview:
+        p.no-margins Synthesis is a complete layout reference — every section type from across the eight project templates, assembled into a single scrollable page. Use it to find any layout quickly, copy what you need, and build without limits.
+        hr
+        .button-wrap.button-icon-box.apart-icon.right.rounded-edge.small-btn(data-sticky)
+          a(target='_blank' href='http://www.clapat-templates.com/')
+            .icon-wrap
+              .icon-effects.parallax-wrap
+                .button-icon.parallax-element
+                  i.fa-solid.fa-arrow-right
+            .text-wrap
+              .button-text
+                span(data-hover='Live Website') Live Website
+    // /Modal Source 
+  // /Hero Section 
+  //  Main Content 
+  #main-content
+    //  Main Page Content 
+    #main-page-content
+      //
+         ==========================================
+        							     ROW 1 — Client meta + intro text (1/3 + 2/3)
+        							     Source: project01 / all projects
+        							     ========================================== 
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_third
+            p(data-animate)
+              | Client
+              br
+              | Synthesis Studio
+              br
+              br
+              | Sector
+              br
+              | Branding, Art Direction, Motion
+              br
+              br
+              | Industry
+              br
+              | Design & Technology
+            hr
+            hr
+          .two_third
+            h3.has-mask(data-play-once) What does it mean to hold every possibility at once? For Synthesis it meant pulling every layout, every section type and every visual decision from across eight projects into a single coherent page — a map of the full system, nothing left out.
+            hr
+      //  /ROW 1 
+      //
+         ==========================================
+        							     ROW 2 — Full-width image + two-half images
+        							     Source: project01
+        							     ========================================== 
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_full
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Full-width image
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Half image left
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Half image right
+      //  /ROW 2 
+      //
+         ==========================================
+        							     ROW 3 — Centered large quote text (heading-1)
+        							     Source: project01 / project05
+        							     ========================================== 
+      section.content-row.full.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_full
+            hr
+            hr
+            h3.heading-1.has-mask.text-align-center.no-margins(data-play-once) Every layout, every section type and every visual possibility — assembled in a single place.
+            hr
+      //  /ROW 3 
+      //
+         ==========================================
+        							     ROW 4 — Small looped carousel slider (autocenter, animated-entry)
+        							     Source: project01
+        							     ========================================== 
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_full
+            .clapat-slider-wrapper.content-slider.small-looped-carousel.autocenter.animated-entry
+              .clapat-slider
+                .clapat-slider-viewport
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              .clapat-controls
+                .clapat-button-prev.slider-button-prev
+                .clapat-button-next.slider-button-next
+                .clapat-slider-pagination
+      //  /ROW 4 
+      //
+         ==========================================
+        							     ROW 5 — Two right-offset text columns (2/4 spacer + 1/4 + 1/4)
+        							     Source: project01 / project02 / project08
+        							     ========================================== 
+      section.content-row.full.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .two_fourth
+          .one_fourth
+            p.has-mask(data-play-once) The first column sits flush to the right half of the grid, offset from the left by two quarters. This creates breathing room on the left and keeps the eye moving through the copy without effort.
+          .one_fourth
+            p.has-mask(data-play-once) The second column runs parallel, matching the rhythm of the first. Both sit within the right-hand half of the layout, creating a clean typographic register that echoes the visual weight of the images above.
+      //  /ROW 5 
+      //
+         ==========================================
+        							     ROW 6 — Video with light parallax background (no animation)
+        							     Source: project02
+        							     ========================================== 
+      .content-row.row_padding_top.row_padding_bottom.light-section.disable-header-gradient.change-header-color(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.align_content_center.justify_content_center
+            hr
+            .video-wrapper.autocenter(data-controls data-poster='../images/projects/temp/temp-image-half.jpg')
+              video.bgvid(controls loop preload='auto')
+                source(src='../images/projects/02project_video.mp4' type='video/mp4')
+            hr
+      //  /ROW 6 
+      //
+         ==========================================
+        							     ROW 7 — Full-height slider on parallax background
+        							     Source: project02
+        							     ========================================== 
+      .content-row.row_full_height.row_padding_top.row_padding_bottom.light-section.disable-header-gradient.change-header-color(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.align_content_center.justify_content_center
+            .clapat-slider-wrapper.content-slider.autocenter
+              .clapat-slider
+                .clapat-slider-viewport
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                  .clapat-slide
+                    .slide-img
+                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              .clapat-controls
+                .clapat-button-prev.slider-button-prev
+                .clapat-button-next.slider-button-next
+                .clapat-slider-pagination
+      //  /ROW 7 
+      //
+         ==========================================
+        							     ROW 8 — 2×2 stacked image grid (two half columns, two images each)
+        							     Source: project03
+        							     ========================================== 
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Grid image top-left
+            hr
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Grid image bottom-left
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Grid image top-right
+            hr
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Grid image bottom-right
+      //  /ROW 8 
+      //
+         ==========================================
+        							     ROW 9 — Full-height parallax image with bottom-anchored text
+        							     Source: project03 / project06
+        							     ========================================== 
+      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.dark-section.disable-header-gradient(data-bgcolor='#111' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.justify_content_end.align_content_end
+            h3.has-mask.no-margins(data-play-once) Built from every decision made.
+            hr
+            hr
+      //  /ROW 9 
+      //
+         ==========================================
+        							     ROW 10 — Two left-aligned text columns (1/4 + 1/4 + 2/4 spacer)
+        							     Source: project03 / project06
+        							     ========================================== 
+      section.content-row.full.row_padding_top.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
+        .columns-group
+          .one_fourth
+            p.has-mask(data-play-once) The left column anchors the typographic baseline on the left edge of the grid. Two columns sit side by side before a two-quarter spacer opens up on the right — inverting the offset of earlier rows.
+          .one_fourth
+            p.has-mask(data-play-once) This reversal gives the layout visual contrast across the full page. The eye moves left to find the text, then right to find the space, tracing the rhythm the designer intended from the start.
+          .two_fourth
+      //  /ROW 10 
+      //
+         ==========================================
+        							     ROW 11 — Offset image layout: 2/4 image + 1/4 gap + 1/4 pinned image
+        							     Source: project04
+        							     ========================================== 
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.light-section.change-header-color(data-bgcolor='#f7f7f7')
+        .columns-group
+          .two_fourth
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Wide image left
+          .one_fourth
+          .one_fourth.pinned-col
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Pinned image right
+      //  /ROW 11 
+      //
+         ==========================================
+        							     ROW 12 — Reverse offset: 1/4 pinned text + 1/4 gap + 2/4 image
+        							     Source: project04
+        							     ========================================== 
+      section.content-row.full.row_padding_bottom.row_padding_left.row_padding_right.light-section.change-header-color(data-bgcolor='#f7f7f7')
+        .columns-group
+          .one_fourth.pinned-col
+            h5.has-mask(data-play-once) The pinned text column holds its position while the adjacent image scrolls past it — creating a locked editorial relationship between word and image.
+          .one_fourth
+          .two_fourth
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Wide image right
+      //  /ROW 12 
+      //
+         ==========================================
+        							     ROW 13 — Full-height parallax with centered heading overlay
+        							     Source: project04
+        							     ========================================== 
+      .content-row.row_full_height.light-section.disable-header-gradient.change-header-color(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.justify_content_center.align_content_center
+            h3.heading-1.no-margins.text-align-center
+              | The image carries the weight
+              br.destroy
+              | of the idea
+      //  /ROW 13 
+      //
+         ==========================================
+        							     ROW 14 — Two half images + full-width image (stacked)
+        							     Source: project05
+        							     ========================================== 
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section.change-header-color(data-bgcolor='#0c0c0c')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Half image left
+          .one_half
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Half image right
+        .columns-group
+          .one_full
+            figure(data-animate)
+              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
+                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              figcaption Full-width image below
+      //  /ROW 14 
+      //
+         ==========================================
+        							     ROW 15 — Two half images with parallax offset (data-parallax-start)
+        							     Source: project07
+        							     ========================================== 
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#0c0c0c')
+        .columns-group
+          .one_half
+            figure(data-animate)
+              img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title' data-parallax-start='15' data-overflow-hidden='true' data-parallax-mobile='false')
+              figcaption Parallax offset image (start: 15)
+          .one_half
+            figure(data-animate)
+              img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title' data-parallax-start='10' data-overflow-hidden='true' data-parallax-mobile='false')
+              figcaption Parallax offset image (start: 10)
+      //  /ROW 15 
+      //
+         ==========================================
+        							     ROW 16 — Full-height parallax image, no text overlay
+        							     Source: project07
+        							     ========================================== 
+      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.dark-section.disable-header-gradient(data-bgcolor='#0c0c0c' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+        .columns-group
+          .one_full.justify_content_end.align_content_end.
+
+
+      //  /ROW 16 
+      //
+         ==========================================
+        							     ROW 17 — Video with dark parallax background + has-animation
+        							     Source: project08
+        							     ========================================== 
+      .content-row.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#0c0c0c' data-img-src='../images/projects/temp/temp-image-half.jpg')
+        .columns-group
+          .one_full.align_content_center.justify_content_center
+            hr
+            .video-wrapper.autocenter.has-animation(data-controls data-poster='../images/projects/temp/temp-image-half.jpg')
+              video.bgvid(controls loop preload='auto')
+                source(src='../images/projects/08project_video2.mp4' type='video/mp4')
+            hr
+      //  /ROW 17 
+      //
+         ==========================================
+        							     ROW 18 — Two right-offset text columns + closing hr
+        							     Source: project08
+        							     ========================================== 
+      section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#0c0c0c')
+        .columns-group
+          .two_fourth
+          .one_fourth
+            p.has-mask(data-play-once) This final text pair closes the content sequence. The right-offset two-column layout brings the page back to the register established at the top — a visual callback that gives the full scroll a sense of resolution.
+          .one_fourth
+            p.has-mask(data-play-once) Every section type from across all eight projects is now represented in a single page. Client info, image grids, sliders, videos, parallax, offset layouts, pinned columns — the complete toolkit, in order, ready to adapt.
+        .columns-group
+          .one_full
+            hr
+      //  /ROW 18 
+    // /Main Page Content 
+    //  Project Navigation 
+    section#project-nav.flip-title-onload(data-next-bgcolor='#0c0c0c')
+      #project-nav-wrapper
+        #project-nav-caption.content-full-width.text-align-center
+          .wrapper
+            a.next-ajax-link-project(data-type='page-transition' href='project01.html' data-ball='hover' data-ball-type='blur' data-ball-color='#b880ff' data-ball-size='small' data-ball-radius='rounded' data-ball-info='fa-solid fa-arrow-right' data-ball-info-color='#000')
+            .inner
+              .next-hero-title.caption-timeline
+                span.word-wrapper
+                  span Neo Action
+              .next-hero-subtitle.caption-timeline
+                span.word-wrapper
+                  span Next Project
+        .next-project-media
+          .next-project-media-effects
+            .next-project-media-wrapper
+              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+    // /Project Navigation 
+  // /Main Content 
+  //  Footer 

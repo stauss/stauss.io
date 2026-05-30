@@ -1277,6 +1277,10 @@ header.stauss-site-header #burger-button {
   width: 100%;
 }
 
+.footer-credits .button-link.left .button-text {
+  margin-left: 0;
+}
+
 .stauss-footer-brand img {
   width: 175px;
   height: auto;

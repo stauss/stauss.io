@@ -1,0 +1,404 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    meta(name='theme-color' content='#0a0a0a')
+    title Hayler — Creative Agency & Studio HTML Template
+    meta(name='description' content='Hayler is a premium HTML template for creative agencies and studios. Built on ClaPat Framework — smooth AJAX transitions, GSAP animations, and a clean component system ready to customize.')
+    meta(name='author' content='ClaPat Studio')
+    link(rel='canonical' href='https://clapat-templates.com/templates/hayler/')
+    //  Open Graph 
+    meta(property='og:type' content='website')
+    meta(property='og:url' content='https://demo.clapat-templates.com/hayler/')
+    meta(property='og:title' content='Hayler — Creative Agency & Studio HTML Template')
+    meta(property='og:description' content='Hayler is a premium HTML template for creative agencies and studios. Built on ClaPat Framework — smooth AJAX transitions, GSAP animations, and a clean component system ready to customize.')
+    meta(property='og:image' content='dist/images/web/og-image.png')
+    meta(property='og:site_name' content='ClaPat Templates')
+    //  Twitter Card 
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:title' content='Hayler — Creative Agency & Studio HTML Template')
+    meta(name='twitter:description' content='Hayler is a premium HTML template for creative agencies and studios. Built on ClaPat Framework — smooth AJAX transitions, GSAP animations, and a clean component system ready to customize.')
+    meta(name='twitter:image' content='dist/images/web/og-image.png')
+    //  Favicon 
+    link(rel='icon' type='image/svg+xml' href='dist/images/web/favicon.svg')
+    link(rel='icon' type='image/png' sizes='48x48' href='dist/images/web/favicon-48x48.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='dist/images/web/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='dist/images/web/favicon-16x16.png')
+    link(rel='apple-touch-icon' sizes='180x180' href='dist/images/web/apple-touch-icon.png')
+    link(rel='manifest' href='dist/images/web/site.webmanifest')
+    //  Critical CSS — loaded immediately 
+    link(href='style.css' rel='stylesheet')
+    link(href='css/variables.css' rel='stylesheet')
+    link(href='css/preloader.css' rel='stylesheet')
+    //  Non-critical CSS — preloaded async 
+    link(href='css/content.css' rel='preload' as='style' onload='this.rel=\'stylesheet\'')
+    noscript <link href="css/content.css" rel="stylesheet">
+    link(href='css/showcase.css' rel='preload' as='style' onload='this.rel=\'stylesheet\'')
+    noscript <link href="css/showcase.css" rel="stylesheet">
+    link(href='css/portfolio.css' rel='preload' as='style' onload='this.rel=\'stylesheet\'')
+    noscript <link href="css/portfolio.css" rel="stylesheet">
+    link(href='css/shortcodes.css' rel='preload' as='style' onload='this.rel=\'stylesheet\'')
+    noscript <link href="css/shortcodes.css" rel="stylesheet">
+    link(href='css/custom.css' rel='preload' as='style' onload='this.rel=\'stylesheet\'')
+    noscript <link href="css/custom.css" rel="stylesheet">
+    link(href='css/all.min.css' rel='preload' as='style' onload='this.rel=\'stylesheet\'')
+    noscript <link href="css/all.min.css" rel="stylesheet">
+    //  Google Analytics 
+    script(async src='https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID')
+    script.
+      
+      window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'GA_MEASUREMENT_ID');
+      
+  body.hidden.hidden-ball.enable-lenis.hayler
+    //  Preloader 
+    #clapat-preloader.preloader-wrap
+      .preloader-reveal
+        span
+        span
+        span
+        span
+      .preloader-caption
+        .preloader-info
+          span
+            | Page is Loading
+            span.dots
+        .preloader-percentage
+          .percentage
+            span.number.number_1
+              span 0
+              span 1
+            span.number.number_2
+              span 0
+              span 1
+              span 2
+              span 3
+              span 4
+              span 5
+              span 6
+              span 7
+              span 8
+              span 9
+              span 0
+            span.number.number_3
+              span 0
+              span 1
+              span 2
+              span 3
+              span 4
+              span 5
+              span 6
+              span 7
+              span 8
+              span 9
+              span 0
+    // /Preloader 
+    main
+      //  ClaPat Index 
+      .clapat-index
+        //  Page Content 
+        #clapat-page-content.dark-content(data-bgcolor='#f7f7f7')
+          //  Header 
+          header#clapat-header.classic-menu.invert-header
+            //  Graidient 
+            #header-gradient.header-gradient
+            // /Graidient 
+            //  Header Container 
+            #header-container
+              //  Logo 
+              #clapat-logo(data-ball='hide')
+                a.ajax-link(data-type='page-transition' href='index.html')
+                  img.black-logo(src='images/logo.png' alt='ClaPat Logo')
+                  img.white-logo(src='images/logo-white.png' alt='ClaPat Logo')
+              // /Logo 
+              //  Navigation 
+              nav#clapat-nav-wrapper
+                .nav-height
+                  ul.clapat-nav
+                    li.menu-timeline(data-ball='highlight')
+                      a.ajax-link(data-type='page-transition' href='index.html')
+                        .before-span
+                          span(data-hover='Index') Index
+                    li.menu-timeline(data-ball='highlight')
+                      a.ajax-link.active(data-type='page-transition' href='#')
+                        .before-span
+                          span(data-hover='Works') Works
+                      ul
+                        li
+                          a.ajax-link(href='portfolio-carousel.html' data-type='page-transition') Case Studies
+                        li
+                          a.ajax-link(href='portfolio-grid.html' data-type='page-transition') Portfolio
+                    li.menu-timeline(data-ball='highlight')
+                      a.ajax-link(data-type='page-transition' href='about.html')
+                        .before-span
+                          span(data-hover='Studio') Studio
+                    li.menu-timeline(data-ball='highlight')
+                      a.ajax-link(data-type='page-transition' href='portfolio-lists.html')
+                        .before-span
+                          span(data-hover='Archive') Archive
+                    li.menu-timeline(data-ball='highlight')
+                      a.ajax-link(data-type='page-transition' href='contact.html')
+                        .before-span
+                          span(data-hover='Contact') Contact
+              // /Navigation 
+              //  Menu Burger 
+              #burger-button.button-wrap.button-link.right.circle-edge.burger-dots(data-sticky)
+                .icon-wrap
+                  .icon-effects.parallax-wrap(data-ball-size='grow' data-ball-color='primary')
+                    .button-icon.parallax-element
+                      .burger-icon
+                        span
+                        span
+                        span
+                .text-wrap
+                  .button-text
+                    span(data-hover='Menu') Menu
+              // /Menu Burger 
+              //  Header Buttons 
+              #header-buttons-wrapper.append-to-nav
+                #header-button.button-wrap.button-icon-box.outline-solid.reveal-icon.right.circle-edge.header-element-color(data-sticky)
+                  a(target='_blank' href='https://themeforest.net/item/hayler-creative-portfolio-html-template/63381465')
+                    .icon-wrap
+                      .icon-effects.parallax-wrap
+                        .button-icon.parallax-element
+                          i.fa-solid.fa-arrow-right
+                    .text-wrap
+                      .button-text
+                        span(data-hover='Get Started') Get Started
+              // /Header Buttons 
+            //  Header Container 
+          // /Header 
+          //  Content Scroll 
+          #content-scroll
+            //  Hero Section 
+            section#hero.has-media.autoscroll
+              #hero-wrapper
+                #hero-caption.content-full-width.text-align-default-desktop
+                  .inner
+                    h1.hero-title.caption-timeline.inline-word-wrapper
+                      span.word-wrapper
+                        span Yolk
+                    .hero-subtitle.caption-timeline
+                      span.word-wrapper
+                        span Where the product becomes the environment. We shaped the Yolk campaign from a single conviction: one color, one object, no compromise, across product photography, web and motion.
+                    .hero-infotitle.caption-timeline
+                      span.word-wrapper
+                        span.heading-3 2026
+                #hero-footer.has-border
+                  .hero-footer-left
+                    #scroll-down.button-wrap.button-link.right.circle-edge(data-sticky)
+                      .icon-wrap
+                        .icon-effects.parallax-wrap
+                          .button-icon.parallax-element
+                            i.fa-solid.fa-arrow-down
+                      .text-wrap.sticky
+                        .button-text.parallax-element
+                          span(data-hover='Scroll to Explore') Scroll to Explore
+                  .hero-footer-center
+                    .info-text
+                      span Created 2026
+                  .hero-footer-right
+                    #project-credits.button-wrap.button-link.left.circle-edge.open-modal(data-sticky data-modal-target='#hero-modal' data-modal-direction='right')
+                      .icon-wrap
+                        .icon-effects.parallax-wrap(data-ball-color='primary')
+                          .button-icon.parallax-element
+                            i.fa-regular.fa-file
+                      .text-wrap.sticky
+                        .button-text.parallax-element
+                          span(data-hover='Project Credits') Project Credits
+              //  Hero Media Section 
+              #hero-media.parallax-media
+                #hero-media-effects
+                  #hero-media-wrapper
+                    img.item-image(src='images/05hero.jpg' alt='Item Image')
+              // /Hero Media Section 
+              //  Modal Source 
+              #hero-modal.modal-source
+                .modal-project
+                  p Client:
+                  h5 Yolk Footwear
+                  hr.animated-line
+                  p Overview:
+                  p.no-margins
+                    | Yolk came to us with a sneaker and a brief so simple it was almost a dare: make yellow disappear into itself. The shoe, the background, the light, all the same.
+                    br
+                    br
+                    | We built the campaign direction and the digital presence around total color immersion. No contrast, no relief, no escape. Just the object dissolving into its own signal.
+                  hr
+                  .button-wrap.button-icon-box.apart-icon.right.rounded-edge.small-btn(data-sticky)
+                    a(target='_blank' href='http://www.clapat-templates.com/')
+                      .icon-wrap
+                        .icon-effects.parallax-wrap
+                          .button-icon.parallax-element
+                            i.fa-solid.fa-arrow-right
+                      .text-wrap
+                        .button-text
+                          span(data-hover='Live Website') Live Website
+              // /Modal Source 
+            // /Hero Section 
+            //  Main Content 
+            #main-content
+              //  Main Page Content 
+              #main-page-content
+                //  Row 
+                section.content-row.full.row_padding_top.row_padding_left.row_padding_right.dark-section.change-header-color(data-bgcolor='#111')
+                  .columns-group
+                    .one_third
+                      p(data-animate)
+                        | Client
+                        br
+                        | Yolk Footwear
+                        br
+                        br
+                        | Sector
+                        br
+                        | Branding, CGI Direction, Motion Guidelines
+
+                        br
+                        br
+                        | Industry
+                        br
+                        | Consumer Electronics
+                      hr
+                      hr
+                    .two_third
+                      h3.has-mask(data-play-once) What does it mean to design for total immersion in a world built on contrast? For Yolk it meant removing every visual anchor, letting color absorb the frame completely, and building a product presence that hits before the eye has time to adjust.
+                      hr
+                // /Row 
+                //  Row 
+                section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section.change-header-color(data-bgcolor='#111')
+                  .columns-group
+                    .one_half
+                      figure(data-animate)
+                        a.image-link(href='images/projects/05project1.jpg')
+                          img(src='images/projects/05project1.jpg' alt='Image Title')
+                        figcaption Caption
+                    .one_half
+                      figure(data-animate)
+                        a.image-link(href='images/projects/05project2.jpg')
+                          img(src='images/projects/05project2.jpg' alt='Image Title')
+                        figcaption Caption
+                  .columns-group
+                    .one_full
+                      figure(data-animate)
+                        a.image-link(href='images/projects/05project3.jpg')
+                          img(src='images/projects/05project3.jpg' alt='Image Title')
+                        figcaption Caption
+                // /Row 
+                //  Row 
+                section.content-row.full.row_padding_left.row_padding_right.dark-section.change-header-color(data-bgcolor='#111')
+                  .columns-group
+                    .one_full
+                      hr
+                      hr
+                      h3.heading-1.has-mask.text-align-center.no-margins(data-play-once) For Yolk it meant letting color absorb the frame before the eye has time to adjust.
+                      hr
+                // /Row 
+                //  Row 
+                section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section.change-header-color(data-bgcolor='#111')
+                  .columns-group
+                    .one_half
+                      figure(data-animate)
+                        a.image-link(href='images/projects/05project4.jpg')
+                          img(src='images/projects/05project4.jpg' alt='Image Title')
+                        figcaption Caption
+                    .one_half
+                      figure(data-animate)
+                        a.image-link(href='images/projects/05project5.jpg')
+                          img(src='images/projects/05project5.jpg' alt='Image Title')
+                        figcaption Caption
+                  .columns-group
+                    .one_full
+                      figure(data-animate)
+                        a.image-link(href='images/projects/05project6.jpg')
+                          img(src='images/projects/05project6.jpg' alt='Image Title')
+                        figcaption Caption
+                  .columns-group
+                    .one_full
+                      hr
+                // /Row 
+              // /Main Page Content 
+              //  Project Navigation 
+              section#project-nav.flip-title-onload(data-next-bgcolor='#0c0c0c')
+                #project-nav-wrapper
+                  #project-nav-caption.content-full-width.text-align-center
+                    .wrapper
+                      a.next-ajax-link-project(data-type='page-transition' href='project06.html' data-ball='hover' data-ball-type='blur' data-ball-color='#b880ff' data-ball-size='small' data-ball-radius='rounded' data-ball-info='fa-solid fa-arrow-right' data-ball-info-color='#000')
+                      .inner
+                        .next-hero-title.caption-timeline
+                          span.word-wrapper
+                            span Mono Block
+                        .next-hero-subtitle.caption-timeline
+                          span.word-wrapper
+                            span Next Project
+                  .next-project-media
+                    .next-project-media-effects
+                      .next-project-media-wrapper
+                        img.item-image(src='images/06hero.jpg' alt='Item Image')
+              // /Project Navigation 
+            // /Main Content 
+            //  Footer 
+            footer#clapat-footer.absolute
+              //  Footer Container
+              #footer-container.parallax-footer
+                //  Footer Credits
+                .footer-credits
+                  .clapat-footer-left
+                    #backtotop.button-wrap.button-link.left.circle-edge(data-sticky)
+                      .icon-wrap
+                        .icon-effects.parallax-wrap(data-ball-size='grow' data-ball-color='primary' data-ball-radius='circle')
+                          .button-icon.parallax-element
+                            i.fa-solid.fa-angle-up
+                      .text-wrap
+                        .button-text
+                          span(data-hover='Back to Top') Back to Top
+                  .clapat-footer-center
+                    .copyright
+                      | 2026 © 
+                      a.link(target='_blank' href='https://www.clapat-templates.com/' data-ball='highlight') ClaPat
+                      | . All rights reserved.
+                  .clapat-footer-right
+                    #footer-socials.socials-wrap
+                      .socials-text Follow Us
+                      ul.socials
+                        li
+                          span.parallax-wrap(data-ball-size='grow' data-ball-color='primary' data-ball-radius='circle')
+                            a.parallax-element(href='https://x.com/clapatdesign' target='_blank' aria-label='Follow ClaPat on X')
+                              i.fa-brands.fa-x-twitter
+                        li
+                          span.parallax-wrap(data-ball-size='grow' data-ball-color='primary' data-ball-radius='circle')
+                            a.parallax-element(href='https://www.instagram.com/clapat.themes/' target='_blank' aria-label='Follow ClaPat on Instagram')
+                              i.fa-brands.fa-instagram
+                        li
+                          span.parallax-wrap(data-ball-size='grow' data-ball-color='primary' data-ball-radius='circle')
+                            a.parallax-element(href='https://www.behance.net/clapat' target='_blank' aria-label='Follow ClaPat on YouTube')
+                              i.fa-brands.fa-behance
+                        li
+                          span.parallax-wrap(data-ball-size='grow' data-ball-color='primary' data-ball-radius='circle')
+                            a.parallax-element(href='https://www.threads.com/@clapat.themes' target='_blank' aria-label='Follow ClaPat on Threads')
+                              i.fa-brands.fa-threads
+                        li
+                          span.parallax-wrap(data-ball-size='grow' data-ball-color='primary' data-ball-radius='circle')
+                            a.parallax-element(href='https://www.facebook.com/clapat.ro' target='_blank' aria-label='Follow ClaPat on Facebook')
+                              i.fa-brands.fa-facebook-f
+                // /Footer Credits
+              // /Footer Container
+            // /Footer 
+          // /Content Scroll 
+        // /Page Content 
+      // /ClaPat Index 
+    //  ClaPat Cursor 
+    #clapat-cursor(data-cursor-zoom='fa fa-plus' data-cursor-play='fa fa-play' data-cursor-pause='fa fa-pause' data-cursor-drag-x='Drag' data-cursor-drag-y='fa-solid fa-arrows-up-down' data-cursor-prev='fa fa-arrow-left' data-cursor-next='fa fa-arrow-right')
+      #ball
+        #ball-loader
+    // /ClaPat Cursor 
+    .clapat-rotate-device
+    script(src='lib/gsap.js')
+    script(src='lib/lenis.js')
+    script(src='js/preloader.js')
+    script(src='js/slider.js')
+    script(src='js/common.js')
+    script(src='js/scripts.js')

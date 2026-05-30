@@ -48,6 +48,21 @@ const pugPages = [
       projects
     }
   },
+  {
+    src: path.join(srcDir, "pug/projects/all-projects-template.pug"),
+    dest: path.join(distDir, "projects", "all-projects-template.html"),
+    locals: {
+      title: "All Projects — Layout Reference",
+      description: "A reference page showing all project section and layout types.",
+      canonical: "https://stauss.io/projects/all-projects-template.html",
+      ogImage: "https://stauss.io/dist/images/web/og-image.png",
+      assetPrefix: "../",
+      bodyClass: "disable-preloader enable-lenis hayler",
+      headerMode: "case",
+      headerCta: "Let's Talk",
+      projects
+    }
+  },
   ...projects.map((project) => ({
     src: path.join(srcDir, "pug/projects/template.pug"),
     dest: path.join(distDir, "projects", `${project.slug}.html`),
@@ -109,8 +124,6 @@ async function compileScss() {
     sourceMap: true
   });
 
-  await mkdir(path.join(distDir, "css"), { recursive: true });
-  await copyFile(path.join(root, "css/variables.css"), path.join(distDir, "css/variables.css"));
   await import("node:fs/promises").then(({ writeFile }) =>
     Promise.all([
       writeFile(path.join(distDir, "css/case-study.css"), result.css),
