@@ -122,6 +122,13 @@ export const projects = [
     outcome: "3 Products",
     summary:
       "Architected the KX 200 suite for BendixKing, translating the tactile rhythm of legacy cockpit radios into a scalable, multi-variant digital interface system.",
+    projectIntro: {
+      heading: "Project Introduction",
+      paragraphs: [
+        "The KX 200 was not a screen assignment. It was a cockpit logic problem disguised as an interface. A familiar hardware lineage needed to gain modern digital capability without creating a new burden for pilots to interpret, remember, or visually hunt through while flying. In aviation, novelty is not automatically progress; a new interaction pattern can become a liability the moment it interrupts trained behavior.",
+        "The screen was the last step. The real design problem lived beneath it: mapping tactile memory, mode logic, hardware constraints, regulatory clarity, and variant complexity into one operating model. The goal was not to make the radio feel new. It was to expand what it could do while preserving the physical confidence pilots already had in BendixKing radios."
+      ]
+    },
     introHeading: "From Muscle Memory to Mission Logic.",
     intro:
       "The KX 200 required a familiar BendixKing radio lineage to gain modern digital capability without adding new cognitive load in flight. New capability had to preserve the physical confidence pilots already had.",

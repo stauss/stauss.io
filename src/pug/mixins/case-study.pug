@@ -4,6 +4,16 @@ mixin heroCase(title, deck)
       h1.case-hero-title!= title
       p.case-hero-deck= deck
 
+mixin projectIntro(heading, paragraphs)
+  section.case-frame.case-project-intro(data-bgcolor="#ffffff", data-header-theme="light")
+    .case-text-inner.case-project-intro-inner
+      .case-project-intro-heading-group
+        p.case-project-intro-label Project Overview
+        h2.case-project-intro-heading= heading
+      .case-project-intro-copy
+        each paragraph in paragraphs
+          p= paragraph
+
 mixin placeholderBand(src)
   section.case-frame.case-placeholder-band(data-bgcolor="#f5f5f7", data-header-theme="light")
     img(src=assetPrefix + src, alt="")

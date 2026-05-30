@@ -4,6 +4,9 @@ include ../mixins/case-study.pug
 block content
   +heroCase(project.heroTitle, project.deck)
 
+  if project.projectIntro
+    +projectIntro(project.projectIntro.heading, project.projectIntro.paragraphs)
+
   #main-content
     #main-page-content
       +placeholderBand(project.heroImage)
