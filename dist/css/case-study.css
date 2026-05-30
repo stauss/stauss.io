@@ -1633,12 +1633,16 @@ body.case-study-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 1054px;
+  min-height: clamp(360px, 55vw, 760px);
+  padding: clamp(72px, 10vw, 160px) 24px;
   background: var(--case-surface-gray);
 }
 .case-placeholder-band img {
-  width: 436px;
-  height: 436px;
+  display: block;
+  width: min(100%, 436px);
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
 }
 
 .case-summary-band {
@@ -1748,14 +1752,16 @@ body.case-study-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 1049px;
+  min-height: 0;
+  padding: clamp(32px, 5vw, 80px);
   background: var(--case-surface-gray);
   overflow: hidden;
 }
 .case-device-cell img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: min(88vh, 1049px);
+  object-fit: contain;
 }
 
 .case-quote-section {
@@ -1803,9 +1809,11 @@ body.case-study-page {
   overflow: hidden;
 }
 .case-media-pad img {
+  display: block;
   width: min(100%, 1123px);
-  aspect-ratio: 1123/632;
-  object-fit: cover;
+  height: auto;
+  max-height: 84vh;
+  object-fit: contain;
 }
 
 .portfolio-section {
@@ -1949,9 +1957,10 @@ body.case-study-page {
 .portfolio-figure img {
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: 420px;
-  object-fit: cover;
+  height: auto;
+  min-height: 0;
+  max-height: 86vh;
+  object-fit: contain;
 }
 .portfolio-figure figcaption {
   padding: 14px 0 0;
@@ -1963,14 +1972,6 @@ body.case-study-page {
 .portfolio-parallax-img {
   transform: scale(1.06);
   will-change: transform;
-}
-
-.portfolio-figure.wide img {
-  min-height: 720px;
-}
-
-.portfolio-figure.tall img {
-  min-height: 820px;
 }
 
 .portfolio-layered-media {
@@ -1993,7 +1994,8 @@ body.case-study-page {
 }
 .portfolio-layered-media .portfolio-parallax-bg img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   object-fit: cover;
   opacity: 0.62;
 }
