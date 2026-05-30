@@ -1,4 +1,4 @@
-import { cp, mkdir, readdir, rm, stat, copyFile } from "node:fs/promises";
+import { mkdir, readdir, rm, stat, copyFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import pug from "pug";
@@ -21,7 +21,7 @@ const pugPages = [
       description:
         "VP, SVP, and director-level product design portfolio by Caleb Stauss.",
       canonical: "https://stauss.io/",
-      ogImage: "https://stauss.io/images/05hero.jpg",
+      ogImage: "https://stauss.io/images/icons/og-image.png",
       assetPrefix: "",
       bodyClass: "disable-preloader enable-lenis hayler home-index-page",
       headerMode: "index",
@@ -38,7 +38,7 @@ const pugPages = [
       description:
         "About Caleb Stauss, a product designer and systems engineer with more than 15 years of digital product experience.",
       canonical: "https://stauss.io/about.html",
-      ogImage: "https://stauss.io/images/05hero.jpg",
+      ogImage: "https://stauss.io/images/icons/og-image.png",
       assetPrefix: "",
       bodyClass: "disable-preloader enable-lenis hayler about-page",
       headerMode: "index",
@@ -55,7 +55,7 @@ const pugPages = [
       title: "All Projects — Layout Reference",
       description: "A reference page showing all project section and layout types.",
       canonical: "https://stauss.io/projects/all-projects-template.html",
-      ogImage: "https://stauss.io/dist/images/web/og-image.png",
+      ogImage: "https://stauss.io/images/icons/og-image.png",
       assetPrefix: "../",
       bodyClass: "disable-preloader enable-lenis hayler",
       headerMode: "case",
@@ -92,11 +92,26 @@ async function exists(filePath) {
   }
 }
 
+async function copyDir(source, dest) {
+  await mkdir(dest, { recursive: true });
+  const entries = await readdir(source, { withFileTypes: true });
+  for (const entry of entries) {
+    const srcPath = path.join(source, entry.name);
+    const destPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      await copyDir(srcPath, destPath);
+    } else {
+      await mkdir(path.dirname(destPath), { recursive: true });
+      await copyFile(srcPath, destPath);
+    }
+  }
+}
+
 async function copyStaticAssets() {
   for (const dir of staticDirs) {
     const source = path.join(root, dir);
     if (!(await exists(source))) continue;
-    await cp(source, path.join(distDir, dir), { recursive: true });
+    await copyDir(source, path.join(distDir, dir));
   }
 
   for (const file of staticFiles) {
@@ -112,7 +127,11 @@ async function copyStaticAssets() {
     await Promise.all(
       files
         .filter((file) => file.endsWith(".js"))
-        .map((file) => copyFile(path.join(generatedJsDir, file), path.join(distDir, "js", file)))
+        .map(async (file) => {
+          const dest = path.join(distDir, "js", file);
+          await mkdir(path.dirname(dest), { recursive: true });
+          await copyFile(path.join(generatedJsDir, file), dest);
+        })
     );
   }
 }
@@ -124,10 +143,12 @@ async function compileScss() {
     sourceMap: true
   });
 
+  const cssDir = path.join(distDir, "css");
+  await mkdir(cssDir, { recursive: true });
   await import("node:fs/promises").then(({ writeFile }) =>
     Promise.all([
-      writeFile(path.join(distDir, "css/case-study.css"), result.css),
-      writeFile(path.join(distDir, "css/case-study.css.map"), JSON.stringify(result.sourceMap))
+      writeFile(path.join(cssDir, "case-study.css"), result.css),
+      writeFile(path.join(cssDir, "case-study.css.map"), JSON.stringify(result.sourceMap))
     ])
   );
 }

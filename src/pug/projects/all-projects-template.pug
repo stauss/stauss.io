@@ -1,4 +1,5 @@
 extends ../layouts/base.pug
+include ../mixins/case-study.pug
 
 block content
   //- ==========================================
@@ -8,13 +9,11 @@ block content
   //- Hero Section — image only
   section#hero.has-media.autoscroll
     #hero-wrapper
-      #hero-caption.content-full-width.text-align-default-desktop
+      #hero-caption.content-full-width.text-align-default-desktop.dark-section
         .inner
-          h1.hero-title.caption-timeline
+          h1.hero-title.caption-timeline.light-content
             span.word-wrapper
-              span Neo
-            span.word-wrapper
-              span Action
+              span Neo Action
           .hero-subtitle.caption-timeline
             span.word-wrapper
               span Built to capture what others miss. We shaped the identity of Neo Action Pro from product logic to visual presence, across CGI, web and motion.
@@ -46,7 +45,7 @@ block content
     #hero-media.parallax-media
       #hero-media-effects
         #hero-media-wrapper
-          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
     #hero-modal.modal-source
       .modal-project
         p Client:
@@ -68,6 +67,10 @@ block content
             .text-wrap
               .button-text
                 span(data-hover='Live Website') Live Website
+  
+  
+  
+  
   //- Main Content
   #main-content
     #main-page-content
@@ -95,34 +98,42 @@ block content
           .two_third
             h3.has-mask(data-play-once) What does it mean to be product-led in a saturated market? For Neo Systems it meant starting from the object itself, letting form drive every visual decision, and building a brand that feels as precise as the hardware inside.
             hr
+      
+
+
       //- Row: Full-width image + two half images
       section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
         .columns-group
           .one_full
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
         .columns-group
           .one_half
             figure(data-animate)
               a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_half
             figure(data-animate)
               a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
+      
+      
+      
       //- Row: Centered large quote text (heading-1)
+      //- Row
       section.content-row.full.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
         .columns-group
           .one_full
             hr
             hr
-            h3.heading-1.has-mask.text-align-center.no-margins(data-play-once) For Neo Systems it meant starting from the object, letting form drive every visual decision made.
+            h3.heading-1.has-mask.text-align-center.no-margins(data-play-once='')
+              | For Neo Systems it meant starting from the object, letting form drive every visual decision made.
             hr
-      //- Row: Small looped carousel slider (autocenter, animated-entry)
+      //- Row
       section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
         .columns-group
           .one_full
@@ -137,7 +148,7 @@ block content
                       img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
                   .clapat-slide
                     .slide-img
                       img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
@@ -145,6 +156,11 @@ block content
                 .clapat-button-prev.slider-button-prev
                 .clapat-button-next.slider-button-next
                 .clapat-slider-pagination
+      //- /Row
+
+
+
+                
       //- Row: Two right-offset text columns (2/4 spacer + 1/4 + 1/4)
       section.content-row.full.row_padding_left.row_padding_right.dark-section(data-bgcolor='#111')
         .columns-group
@@ -157,13 +173,13 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
         .columns-group
           .one_full
@@ -184,7 +200,7 @@ block content
         .next-project-media
           .next-project-media-effects
             .next-project-media-wrapper
-              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
               .item-video-wrapper
                 video.item-video(loop muted playsinline)
                   source(src='../images/02hero.mp4' type='video/mp4')
@@ -232,7 +248,7 @@ block content
     #hero-media.parallax-media
       #hero-media-effects
         #hero-media-wrapper
-          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
           .item-video-wrapper
             video.item-video(loop muted playsinline)
               source(src='../images/02hero.mp4' type='video/mp4')
@@ -285,11 +301,11 @@ block content
             h3.has-mask(data-play-once) What does it mean to design for tension? For Thorned it meant holding two opposites at once, fragility and threat, softness and sharp edge, until the uneasy space between them became the brand itself and the only honest answer.
             hr
       //- Row: Video with light parallax background
-      .content-row.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.align_content_center.justify_content_center
             hr
-            .video-wrapper.autocenter.has-animation(data-controls data-poster='../images/projects/temp/temp-image-half.jpg')
+            .video-wrapper.autocenter.has-animation(data-controls data-poster='../images/projects/temp/temp-image-full.jpg')
               video.bgvid(controls loop preload='auto')
                 source(src='../images/projects/02project_video.mp4' type='video/mp4')
             hr
@@ -302,7 +318,7 @@ block content
             h3.heading-1.has-mask.text-align-center.no-margins(data-play-once) For Thorned it meant holding two opposites, until the space between them became the work.
             hr
       //- Row: Full-height slider on parallax background
-      .content-row.row_full_height.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.row_full_height.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.align_content_center.justify_content_center
             .clapat-slider-wrapper.content-slider.autocenter
@@ -310,13 +326,13 @@ block content
                 .clapat-slider-viewport
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               .clapat-controls
                 .clapat-button-prev.slider-button-prev
                 .clapat-button-next.slider-button-next
@@ -348,7 +364,7 @@ block content
         .next-project-media
           .next-project-media-effects
             .next-project-media-wrapper
-              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
 
   //- ==========================================
   //- PROJECT 03 — Pure Motion (project03.pug)
@@ -393,7 +409,7 @@ block content
     #hero-media.parallax-media
       #hero-media-effects
         #hero-media-wrapper
-          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
     #hero-modal.modal-source
       .modal-project
         p Client:
@@ -447,23 +463,23 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
             hr
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
             hr
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
       //- Row: Two right-offset text columns (2/4 spacer + 1/4 + 1/4)
       section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
@@ -474,7 +490,7 @@ block content
           .one_fourth
             p.has-mask(data-play-once) Photography direction used motion blur as the only narrative device. The watch in movement, then frozen. Time as subject, not just product. No lifestyle, no wrist, no context beyond light and speed.
       //- Row: Full-height parallax image with bottom-anchored text
-      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.justify_content_end.align_content_end
             h3.has-mask.no-margins(data-play-once) Details that endure.
@@ -493,23 +509,23 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
             hr
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
             hr
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
         .columns-group
           .one_full
@@ -530,7 +546,7 @@ block content
         .next-project-media
           .next-project-media-effects
             .next-project-media-wrapper
-              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
 
   //- ==========================================
   //- PROJECT 04 — Arctic Flame (project04.pug)
@@ -577,7 +593,7 @@ block content
     #hero-media.parallax-media
       #hero-media-effects
         #hero-media-wrapper
-          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
     #hero-modal.modal-source
       .modal-project
         p Client:
@@ -627,14 +643,14 @@ block content
         .columns-group
           .two_fourth
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_fourth
           .one_fourth.pinned-col
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
       //- Row: Reverse offset: 1/4 pinned text + 1/4 gap + 2/4 image
       section.content-row.full.row_padding_bottom.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
@@ -644,11 +660,11 @@ block content
           .one_fourth
           .two_fourth
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
       //- Row: Full-height parallax with centered heading overlay
-      .content-row.row_full_height.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.row_full_height.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.justify_content_center.align_content_center
             h3.heading-1.no-margins.text-align-center
@@ -660,8 +676,8 @@ block content
         .columns-group
           .two_fourth
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_fourth
           .one_fourth.pinned-col
@@ -671,14 +687,14 @@ block content
         .columns-group
           .one_fourth.pinned-col
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_fourth
           .two_fourth
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
         .columns-group
           .one_full
@@ -699,7 +715,7 @@ block content
         .next-project-media
           .next-project-media-effects
             .next-project-media-wrapper
-              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
 
   //- ==========================================
   //- PROJECT 05 — Yolk (project05.pug)
@@ -744,7 +760,7 @@ block content
     #hero-media.parallax-media
       #hero-media-effects
         #hero-media-wrapper
-          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
     #hero-modal.modal-source
       .modal-project
         p Client:
@@ -798,19 +814,19 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
         .columns-group
           .one_full
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
       //- Row: Centered large quote text (heading-1)
       section.content-row.full.row_padding_left.row_padding_right.dark-section.change-header-color(data-bgcolor='#111')
@@ -825,19 +841,19 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
         .columns-group
           .one_full
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
         .columns-group
           .one_full
@@ -858,7 +874,7 @@ block content
         .next-project-media
           .next-project-media-effects
             .next-project-media-wrapper
-              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
 
   //- ==========================================
   //- PROJECT 06 — Mono Block (project06.pug)
@@ -903,7 +919,7 @@ block content
     #hero-media.parallax-media
       #hero-media-effects
         #hero-media-wrapper
-          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
     #hero-modal.modal-source
       .modal-project
         p Client:
@@ -953,13 +969,13 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
       //- Row: Two right-offset text columns (2/4 spacer + 1/4 + 1/4)
       section.content-row.full.row_padding_top.row_padding_bottom.row_padding_left.row_padding_right.light-section(data-bgcolor='#f7f7f7')
@@ -970,7 +986,7 @@ block content
           .one_fourth
             p.has-mask(data-play-once) CGI direction focused on material impact. Concrete in motion, dust and weight suspended at the moment of force. Every frame built to communicate strength without needing a single word to support it.
       //- Row: Full-height parallax image with bottom-anchored text
-      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.justify_content_end.align_content_end
             h3.has-mask.no-margins(data-play-once) Built from the ground up.
@@ -989,13 +1005,13 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
         .columns-group
           .one_full
@@ -1016,7 +1032,7 @@ block content
         .next-project-media
           .next-project-media-effects
             .next-project-media-wrapper
-              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
 
   //- ==========================================
   //- PROJECT 07 — Kinetic (project07.pug)
@@ -1061,7 +1077,7 @@ block content
     #hero-media.parallax-media
       #hero-media-effects
         #hero-media-wrapper
-          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
     #hero-modal.modal-source
       .modal-project
         p Client:
@@ -1113,14 +1129,14 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title' data-parallax-start='15' data-overflow-hidden='true' data-parallax-mobile='false')
+              img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title' data-parallax-start='15' data-overflow-hidden='true' data-parallax-mobile='false')
               figcaption Caption
           .one_half
             figure(data-animate)
-              img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Caption
       //- Row: Full-height parallax image, no text overlay
-      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.dark-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.dark-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.justify_content_end.align_content_end.
 
@@ -1130,11 +1146,11 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              img(src='../images/projects/temp/temp-image-half.jpg')
+              img(src='../images/projects/temp/temp-image-full.jpg')
               figcaption Caption
           .one_half
             figure(data-animate)
-              img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title' data-parallax-start='10' data-overflow-hidden='true' data-parallax-mobile='false')
+              img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title' data-parallax-start='10' data-overflow-hidden='true' data-parallax-mobile='false')
               figcaption Caption
         .columns-group
           .one_full
@@ -1155,7 +1171,7 @@ block content
         .next-project-media
           .next-project-media-effects
             .next-project-media-wrapper
-              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
               .item-video-wrapper
                 video.item-video(loop muted playsinline)
                   source(src='../images/08hero.mp4' type='video/mp4')
@@ -1203,7 +1219,7 @@ block content
     #hero-media.parallax-media
       #hero-media-effects
         #hero-media-wrapper
-          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
           .item-video-wrapper
             video.item-video(loop muted playsinline)
               source(src='../images/08hero.mp4' type='video/mp4')
@@ -1256,11 +1272,11 @@ block content
             h3.has-mask(data-play-once) What does it mean to document a documentary? For Expedition it meant learning the rhythm of a crew under pressure, earning the right to be in the frame, and building a behind the scenes record as considered and honest as the film it was made alongside.
             hr
       //- Row: Video with light parallax background
-      .content-row.row_padding_top.row_padding_bottom.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg')
+      .content-row.row_padding_top.row_padding_bottom.light-section.disable-header-gradient(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-full.jpg')
         .columns-group
           .one_full.align_content_center.justify_content_center
             hr
-            .video-wrapper.autocenter(data-controls data-poster='../images/projects/temp/temp-image-half.jpg')
+            .video-wrapper.autocenter(data-controls data-poster='../images/projects/temp/temp-image-full.jpg')
               video.bgvid(controls loop preload='auto')
                 source(src='../images/projects/08project_video1.mp4' type='video/mp4')
             hr
@@ -1273,11 +1289,11 @@ block content
           .one_fourth
             p.has-mask(data-play-once) Camera choices were minimal by necessity. Altitude, dust and distance from any support meant travelling light and making every angle count. The crew became familiar enough to forget we were there, which was exactly the point.
       //- Row: Video with dark parallax background + has-animation
-      .content-row.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#0c0c0c' data-img-src='../images/projects/temp/temp-image-half.jpg')
+      .content-row.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#0c0c0c' data-img-src='../images/projects/temp/temp-image-full.jpg')
         .columns-group
           .one_full.align_content_center.justify_content_center
             hr
-            .video-wrapper.autocenter.has-animation(data-controls data-poster='../images/projects/temp/temp-image-half.jpg')
+            .video-wrapper.autocenter.has-animation(data-controls data-poster='../images/projects/temp/temp-image-full.jpg')
               video.bgvid(controls loop preload='auto')
                 source(src='../images/projects/08project_video2.mp4' type='video/mp4')
             hr
@@ -1310,7 +1326,7 @@ block content
         .next-project-media
           .next-project-media-effects
             .next-project-media-wrapper
-              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
 
   //- ==========================================
   //- PROJECT 09 — Synthesis — All Layouts Reference (project09.pug)
@@ -1356,7 +1372,7 @@ block content
     #hero-media.parallax-media
       #hero-media-effects
         #hero-media-wrapper
-          img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+          img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
           .item-video-wrapper
             video.item-video(loop muted playsinline)
               source(src='../images/02hero.mp4' type='video/mp4')
@@ -1422,19 +1438,19 @@ block content
         .columns-group
           .one_full
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Full-width image
         .columns-group
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Half image left
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Half image right
       //  /ROW 2 
       //
@@ -1463,16 +1479,16 @@ block content
                 .clapat-slider-viewport
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               .clapat-controls
                 .clapat-button-prev.slider-button-prev
                 .clapat-button-next.slider-button-next
@@ -1496,11 +1512,11 @@ block content
         							     ROW 6 — Video with light parallax background (no animation)
         							     Source: project02
         							     ========================================== 
-      .content-row.row_padding_top.row_padding_bottom.light-section.disable-header-gradient.change-header-color(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.row_padding_top.row_padding_bottom.light-section.disable-header-gradient.change-header-color(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.align_content_center.justify_content_center
             hr
-            .video-wrapper.autocenter(data-controls data-poster='../images/projects/temp/temp-image-half.jpg')
+            .video-wrapper.autocenter(data-controls data-poster='../images/projects/temp/temp-image-full.jpg')
               video.bgvid(controls loop preload='auto')
                 source(src='../images/projects/02project_video.mp4' type='video/mp4')
             hr
@@ -1510,7 +1526,7 @@ block content
         							     ROW 7 — Full-height slider on parallax background
         							     Source: project02
         							     ========================================== 
-      .content-row.row_full_height.row_padding_top.row_padding_bottom.light-section.disable-header-gradient.change-header-color(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.row_full_height.row_padding_top.row_padding_bottom.light-section.disable-header-gradient.change-header-color(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.align_content_center.justify_content_center
             .clapat-slider-wrapper.content-slider.autocenter
@@ -1518,13 +1534,13 @@ block content
                 .clapat-slider-viewport
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
                   .clapat-slide
                     .slide-img
-                      img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+                      img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               .clapat-controls
                 .clapat-button-prev.slider-button-prev
                 .clapat-button-next.slider-button-next
@@ -1539,23 +1555,23 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Grid image top-left
             hr
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Grid image bottom-left
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Grid image top-right
             hr
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Grid image bottom-right
       //  /ROW 8 
       //
@@ -1563,7 +1579,7 @@ block content
         							     ROW 9 — Full-height parallax image with bottom-anchored text
         							     Source: project03 / project06
         							     ========================================== 
-      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.dark-section.disable-header-gradient(data-bgcolor='#111' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.dark-section.disable-header-gradient(data-bgcolor='#111' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.justify_content_end.align_content_end
             h3.has-mask.no-margins(data-play-once) Built from every decision made.
@@ -1592,14 +1608,14 @@ block content
         .columns-group
           .two_fourth
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Wide image left
           .one_fourth
           .one_fourth.pinned-col
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Pinned image right
       //  /ROW 11 
       //
@@ -1614,8 +1630,8 @@ block content
           .one_fourth
           .two_fourth
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Wide image right
       //  /ROW 12 
       //
@@ -1623,7 +1639,7 @@ block content
         							     ROW 13 — Full-height parallax with centered heading overlay
         							     Source: project04
         							     ========================================== 
-      .content-row.row_full_height.light-section.disable-header-gradient.change-header-color(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.row_full_height.light-section.disable-header-gradient.change-header-color(data-bgcolor='#f7f7f7' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.justify_content_center.align_content_center
             h3.heading-1.no-margins.text-align-center
@@ -1640,19 +1656,19 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Half image left
           .one_half
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Half image right
         .columns-group
           .one_full
             figure(data-animate)
-              a.image-link(href='../images/projects/temp/temp-image-half.jpg')
-                img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title')
+              a.image-link(href='../images/projects/temp/temp-image-full.jpg')
+                img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title')
               figcaption Full-width image below
       //  /ROW 14 
       //
@@ -1664,11 +1680,11 @@ block content
         .columns-group
           .one_half
             figure(data-animate)
-              img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title' data-parallax-start='15' data-overflow-hidden='true' data-parallax-mobile='false')
+              img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title' data-parallax-start='15' data-overflow-hidden='true' data-parallax-mobile='false')
               figcaption Parallax offset image (start: 15)
           .one_half
             figure(data-animate)
-              img(src='../images/projects/temp/temp-image-half.jpg' alt='Image Title' data-parallax-start='10' data-overflow-hidden='true' data-parallax-mobile='false')
+              img(src='../images/projects/temp/temp-image-full.jpg' alt='Image Title' data-parallax-start='10' data-overflow-hidden='true' data-parallax-mobile='false')
               figcaption Parallax offset image (start: 10)
       //  /ROW 15 
       //
@@ -1676,7 +1692,7 @@ block content
         							     ROW 16 — Full-height parallax image, no text overlay
         							     Source: project07
         							     ========================================== 
-      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.dark-section.disable-header-gradient(data-bgcolor='#0c0c0c' data-img-src='../images/projects/temp/temp-image-half.jpg' data-parallax-media)
+      .content-row.full.row_padding_top.row_padding_left.row_padding_right.row_full_height.dark-section.disable-header-gradient(data-bgcolor='#0c0c0c' data-img-src='../images/projects/temp/temp-image-full.jpg' data-parallax-media)
         .columns-group
           .one_full.justify_content_end.align_content_end.
 
@@ -1687,11 +1703,11 @@ block content
         							     ROW 17 — Video with dark parallax background + has-animation
         							     Source: project08
         							     ========================================== 
-      .content-row.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#0c0c0c' data-img-src='../images/projects/temp/temp-image-half.jpg')
+      .content-row.row_padding_top.row_padding_bottom.dark-section.disable-header-gradient(data-bgcolor='#0c0c0c' data-img-src='../images/projects/temp/temp-image-full.jpg')
         .columns-group
           .one_full.align_content_center.justify_content_center
             hr
-            .video-wrapper.autocenter.has-animation(data-controls data-poster='../images/projects/temp/temp-image-half.jpg')
+            .video-wrapper.autocenter.has-animation(data-controls data-poster='../images/projects/temp/temp-image-full.jpg')
               video.bgvid(controls loop preload='auto')
                 source(src='../images/projects/08project_video2.mp4' type='video/mp4')
             hr
@@ -1729,7 +1745,7 @@ block content
         .next-project-media
           .next-project-media-effects
             .next-project-media-wrapper
-              img.item-image(src='../images/projects/temp/temp-image-half.jpg' alt='Item Image')
+              img.item-image(src='../images/projects/temp/temp-image-full.jpg' alt='Item Image')
     // /Project Navigation 
   // /Main Content 
   //  Footer 

@@ -9,7 +9,7 @@ export const projects = [
     deck: "Designing a crisis information system where showing less, faster, and with more honesty was the product.",
     description:
       "Designing a crisis information system where showing less, faster — and with more honesty — was the product.",
-    ogImage: "https://stauss.io/images/01hero.jpg",
+    ogImage: "https://stauss.io/images/icons/og-image.png",
     heroImage: "images/01hero.jpg",
     images: ["01project1.jpg", "01project2.jpg", "01project3.jpg", "01project4.jpg", "01project5.jpg"],
     role: "Product Design Lead",
@@ -35,7 +35,7 @@ export const projects = [
     deck: "Architecting the relational backbone for a live sports league from deadline emergency to category standard.",
     description:
       "Architecting the relational backbone for a live sports league — from deadline emergency to category standard, live on ESPN for three seasons.",
-    ogImage: "https://stauss.io/images/02hero.jpg",
+    ogImage: "https://stauss.io/images/icons/og-image.png",
     heroImage: "images/02hero.jpg",
     images: ["02project1.jpg", "02project2.jpg", "02project3.jpg", "02project4.jpg"],
     role: "Product Design Lead",
@@ -61,7 +61,7 @@ export const projects = [
     deck: "Building trust into the moving industry by making the variables behind cost visible, verifiable, and customer-owned.",
     description:
       "Building trust into the moving industry by making the variables behind cost visible, verifiable, and customer-owned.",
-    ogImage: "https://stauss.io/images/03hero.jpg",
+    ogImage: "https://stauss.io/images/icons/og-image.png",
     heroImage: "images/03hero.jpg",
     images: ["03project1.jpg", "03project2.jpg", "03project3.jpg", "03project4.jpg", "03project5.jpg"],
     role: "Product Design Lead",
@@ -87,7 +87,7 @@ export const projects = [
     deck: "Designing a modular kiosk platform that protected Walmart's in-store experience during a mobile rebuild.",
     description:
       "Designing a modular kiosk platform that protected Walmart's in-store experience during a mobile rebuild — then disappeared when the bridge was no longer needed.",
-    ogImage: "https://stauss.io/images/04hero.jpg",
+    ogImage: "https://stauss.io/images/icons/og-image.png",
     heroImage: "images/04hero.jpg",
     images: ["04project1.jpg", "04project2.jpg", "04project3.jpg", "04project4.jpg", "04project5.jpg", "04project6.jpg"],
     role: "Product Design Lead",
@@ -113,7 +113,7 @@ export const projects = [
     deck: "When the cockpit is under pressure, the interface cannot become another thing to manage.",
     description:
       "Designing avionics UX where novelty is risk — translating legacy cockpit muscle memory into a scalable digital operating system pilots could trust without studying.",
-    ogImage: "https://stauss.io/images/05hero.jpg",
+    ogImage: "https://stauss.io/images/icons/og-image.png",
     heroImage: "images/case-study/kx-placeholder.svg",
     images: ["../case-study/kx-ipad-left.png", "../case-study/kx-ipad-right.png", "../case-study/kx-ipad-hero.png", "05project1.jpg", "05project2.jpg", "05project3.jpg", "05project4.jpg", "05project5.jpg", "05project6.jpg"],
     role: "Principal Product Designer",
@@ -139,7 +139,7 @@ export const projects = [
     deck: "Turning a design system teams were ignoring into infrastructure they actually used.",
     description:
       "Turning a design system teams were ignoring into infrastructure they actually used — by making the official path faster than the workaround.",
-    ogImage: "https://stauss.io/images/06hero.jpg",
+    ogImage: "https://stauss.io/images/icons/og-image.png",
     heroImage: "images/06hero.jpg",
     images: ["06project1.jpg", "06project2.jpg", "06project3.jpg", "06project4.jpg", "06project5.jpg"],
     role: "Product Design Lead",
@@ -165,7 +165,7 @@ export const projects = [
     deck: "Designing the trust layer between token ownership and live access across global events.",
     description:
       "Designing the trust layer between token ownership and live access — from operator configuration to door verification across 75+ global events.",
-    ogImage: "https://stauss.io/images/07hero.jpg",
+    ogImage: "https://stauss.io/images/icons/og-image.png",
     heroImage: "images/07hero.jpg",
     images: ["07project1.jpg", "07project2.jpg", "07project3.jpg", "07project4.jpg", "07project5.jpg"],
     role: "Product Design Lead",
@@ -191,7 +191,7 @@ export const projects = [
     deck: "Turning monthly travel-intent searches into a regional discovery engine organized around how travelers actually search.",
     description:
       "Turning 716,000 monthly travel-intent searches into a regional discovery engine — restructuring 700+ pages around how travelers actually search, not how destinations organize themselves.",
-    ogImage: "https://stauss.io/images/08hero.jpg",
+    ogImage: "https://stauss.io/images/icons/og-image.png",
     heroImage: "images/08hero.jpg",
     images: ["08project1.jpg", "08project2.jpg"],
     role: "Product Design Lead",
