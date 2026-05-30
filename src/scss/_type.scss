@@ -24,10 +24,10 @@
 .case-study-page .copy-grid h2,
 .case-study-page .portfolio-layered-media h2 {
   margin: 0 0 var(--case-heading-gap-48);
-  font-size: var(--type-48);
-  line-height: 1.08;
-  font-weight: 600;
-  letter-spacing: -0.012em;
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-h2);
 }
 
 .case-study-page .case-h3,
@@ -35,8 +35,59 @@
 .case-study-page .copy-grid h3,
 .case-study-page .portfolio-pin-copy h3 {
   margin: 0 0 var(--case-heading-gap-36);
-  font-size: var(--type-36);
-  line-height: 1.11;
-  font-weight: 600;
-  letter-spacing: -0.011em;
+  font-size: var(--text-h3);
+  line-height: var(--leading-h3);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-h3);
+}
+
+/* Utility classes */
+.hero-title {
+  font-size: var(--text-hero);
+  line-height: var(--leading-hero);
+  letter-spacing: var(--tracking-hero);
+  font-weight: var(--weight-medium);
+}
+
+.section-title-xl {
+  font-size: var(--text-h1);
+  line-height: var(--leading-h1);
+  letter-spacing: var(--tracking-h1);
+  font-weight: var(--weight-medium);
+}
+
+.section-title {
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  letter-spacing: var(--tracking-h2);
+  font-weight: var(--weight-medium);
+}
+
+.section-kicker-title {
+  font-size: var(--text-h3);
+  line-height: var(--leading-h3);
+  letter-spacing: var(--tracking-h3);
+  font-weight: var(--weight-medium);
+}
+
+.body-large {
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+  font-weight: var(--weight-regular);
+}
+
+.body {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+  font-weight: var(--weight-regular);
+}
+
+.meta-label {
+  font-size: var(--text-meta);
+  line-height: var(--leading-meta);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: var(--weight-medium);
 }

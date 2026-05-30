@@ -3,8 +3,42 @@
   --case-text-max: 1800px;
   --case-image-max: 2300px;
   --case-surface-gray: #f5f5f7;
-  --case-copy-size: var(--type-22);
-  --case-copy-line: 1.55;
   --case-heading-gap-48: 0.7em;
   --case-heading-gap-36: 0.75em;
+
+  /* Portfolio type system */
+  --text-hero:        clamp(56px, 9vw, 144px);
+  --leading-hero:     0.94;
+  --tracking-hero:    -0.065em;
+
+  --text-h1:          clamp(44px, 5.5vw, 88px);
+  --leading-h1:       1;
+  --tracking-h1:      -0.055em;
+
+  --text-h2:          clamp(36px, 4vw, 64px);
+  --leading-h2:       1.05;
+  --tracking-h2:      -0.045em;
+
+  --text-h3:          clamp(22px, 2vw, 32px);
+  --leading-h3:       1.2;
+  --tracking-h3:      -0.03em;
+
+  --text-body-lg:     clamp(22px, 1.75vw, 28px);
+  --leading-body-lg:  1.5;
+  --tracking-body-lg: -0.025em;
+
+  --text-body:        clamp(18px, 1.3vw, 21px);
+  --leading-body:     1.57;
+  --tracking-body:    -0.018em;
+
+  --text-meta:        12px;
+  --leading-meta:     1.35;
+
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+
+  /* Derived aliases */
+  --case-copy-size: var(--text-body);
+  --case-copy-line: var(--leading-body);
 }

@@ -8,7 +8,29 @@ block content
     #main-page-content
       +placeholderBand("images/case-study/kx-placeholder.svg")
 
-      +summaryBand(summary)
+      section.case-frame.case-project-intro(data-bgcolor="#ffffff", data-header-theme="light")
+        .case-text-inner.case-project-intro-inner
+          h2.case-project-intro-heading Project Intro
+          .case-project-intro-copy
+            p The KX 200 was not a screen assignment. It was a cockpit logic problem disguised as an interface. A familiar hardware lineage needed to gain modern digital capability without creating a new burden for pilots to interpret, remember, or visually hunt through while flying. In aviation, novelty is not automatically progress; a new interaction pattern can become a liability the moment it interrupts trained behavior.
+            p The screen was the last step. The real design problem lived beneath it: mapping tactile memory, mode logic, hardware constraints, regulatory clarity, and variant complexity into one operating model. The goal was not to make the radio feel new. It was to expand what it could do while preserving the physical confidence pilots already had in BendixKing radios.
+
+      section.case-frame.case-summary-band(data-bgcolor="#000000", data-header-theme="dark")
+        .case-summary-grid
+          .case-meta
+            .case-meta-value Principal Product Designer
+            .case-meta-label Role
+          .case-meta.align-right
+            .case-meta-value 18+ Months
+            .case-meta-label Duration
+        p.case-summary-copy Architected the KX 200 suite for BendixKing, translating the tactile rhythm of legacy cockpit radios into a scalable, multi-variant digital interface system.
+        .case-summary-footer
+          .case-meta
+            .case-meta-label Products
+            .case-meta-value KX 200 C / CN / CT
+          .case-meta.align-right
+            .case-meta-label Outcome
+            .case-meta-value 3 Products
 
       +textPair("From Muscle Memory to Mission Logic.")
         p The KX 200 required a familiar BendixKing radio lineage to gain modern digital capability without adding new cognitive load in flight.
@@ -94,5 +116,5 @@ block content
         { src: "images/projects/07project1.jpg", speed: "0.1", caption: "Temporary caption for first parallel artifact." },
         { src: "images/projects/07project2.jpg", speed: "0.03", caption: "Temporary caption for second parallel artifact." }
       ])
- 
-   include ../partials/next-project
+
+    include ../partials/next-project

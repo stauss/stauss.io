@@ -64,7 +64,7 @@ const pugPages = [
     }
   },
   ...projects.map((project) => ({
-    src: path.join(srcDir, "pug/projects/template.pug"),
+    src: path.join(srcDir, "pug/projects", `${project.slug}.pug`),
     dest: path.join(distDir, "projects", `${project.slug}.html`),
     locals: {
       title: project.metaTitle,

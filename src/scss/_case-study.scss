@@ -48,10 +48,10 @@ body.case-study-page {
   bottom: 50px;
   max-width: 900px;
   margin: 0;
-  font-size: var(--type-100);
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: -0.03em;
+  font-size: var(--text-hero);
+  line-height: var(--leading-hero);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-hero);
 }
 
 .case-hero-deck {
@@ -60,10 +60,10 @@ body.case-study-page {
   bottom: 60px;
   width: 455px;
   margin: 0;
-  font-size: var(--type-28);
-  line-height: 1.37;
-  font-weight: 500;
-  letter-spacing: -0.025em;
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-body-lg);
 }
 
 .case-placeholder-band {
@@ -121,18 +121,18 @@ body.case-study-page {
 }
 
 .case-meta-value {
-  font-size: var(--type-22);
-  line-height: 1.09;
-  font-weight: 500;
-  letter-spacing: 0.01em;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-body);
 }
 
 .case-meta-label {
   opacity: 0.8;
-  font-size: var(--type-11);
-  line-height: 2.18;
-  font-weight: 500;
-  letter-spacing: 0.13em;
+  font-size: var(--text-meta);
+  line-height: var(--leading-meta);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -143,10 +143,10 @@ body.case-study-page {
   width: min(972px, calc(100% - 128px));
   margin: 0;
   transform: translate(-50%, -50%);
-  font-size: var(--type-48);
-  line-height: 1.25;
-  font-weight: 500;
-  letter-spacing: -0.0125em;
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-h2);
 }
 
 .case-project-intro {
@@ -163,10 +163,10 @@ body.case-study-page {
 
 .case-project-intro-heading {
   margin: 0;
-  font-size: var(--type-48);
-  line-height: 1.08;
-  font-weight: 600;
-  letter-spacing: -0.012em;
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-h2);
 }
 
 .case-project-intro-copy {
