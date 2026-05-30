@@ -7,9 +7,7 @@ mixin heroCase(title, deck)
 mixin projectIntro(heading, paragraphs)
   section.case-frame.case-project-intro(data-bgcolor="#ffffff", data-header-theme="light")
     .case-text-inner.case-project-intro-inner
-      .case-project-intro-heading-group
-        p.case-project-intro-label Project Overview
-        h2.case-project-intro-heading= heading
+      h2.case-project-intro-heading= heading
       .case-project-intro-copy
         each paragraph in paragraphs
           p= paragraph

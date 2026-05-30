@@ -1718,23 +1718,9 @@ body.case-study-page {
 
 .case-project-intro-inner {
   display: grid;
-  grid-template-columns: minmax(260px, 0.36fr) minmax(0, 0.64fr);
-  gap: 96px;
+  grid-template-columns: 1fr;
+  gap: 56px;
   align-items: start;
-}
-
-.case-project-intro-heading-group {
-  display: grid;
-  gap: 24px;
-}
-
-.case-project-intro-label {
-  margin: 0;
-  color: rgba(0, 0, 0, 0.55);
-  font-size: var(--case-copy-size);
-  line-height: var(--case-copy-line);
-  font-weight: 500;
-  letter-spacing: -0.01em;
 }
 
 .case-project-intro-heading {
@@ -1746,17 +1732,17 @@ body.case-study-page {
 }
 
 .case-project-intro-copy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 64px;
   color: rgba(0, 0, 0, 0.75);
 }
 .case-project-intro-copy p {
-  margin: 0 0 1.55em;
+  margin: 0;
   font-size: var(--case-copy-size);
   line-height: var(--case-copy-line);
   font-weight: 500;
   letter-spacing: -0.01em;
-}
-.case-project-intro-copy p:last-child {
-  margin-bottom: 0;
 }
 
 .case-text-section {
@@ -2177,6 +2163,10 @@ body.case-study-page {
   .case-project-intro-inner {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+  .case-project-intro-copy {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
   .case-text-section,
   .case-quote-section {
