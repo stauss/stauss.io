@@ -93,8 +93,8 @@ body.case-study-page {
 .case-summary-grid,
 .case-summary-footer {
   position: absolute;
-  left: max(40px, calc((100% - var(--case-text-max)) / 2));
-  right: max(40px, calc((100% - var(--case-text-max)) / 2));
+  left: max(64px, calc((100% - var(--case-text-max)) / 2));
+  right: max(64px, calc((100% - var(--case-text-max)) / 2));
   display: flex;
   justify-content: space-between;
 }
@@ -140,7 +140,7 @@ body.case-study-page {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: min(972px, calc(100% - 80px));
+  width: min(972px, calc(100% - 128px));
   margin: 0;
   transform: translate(-50%, -50%);
   font-size: var(--type-48);
@@ -521,8 +521,8 @@ body.case-study-page {
 
 @media only screen and (max-width: 1680px) {
   .case-hero-copy {
-    left: 65px;
-    right: 36px;
+    left: 64px;
+    right: 64px;
     max-width: none;
   }
 }
