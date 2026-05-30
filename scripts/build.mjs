@@ -58,7 +58,7 @@ const pugPages = [
       ogImage: "https://stauss.io/images/icons/og-image.png",
       assetPrefix: "../",
       bodyClass: "disable-preloader enable-lenis hayler",
-      headerMode: "case",
+      headerMode: "index",
       headerCta: "Let's Talk",
       projects
     }
@@ -73,8 +73,8 @@ const pugPages = [
       ogImage: project.ogImage,
       assetPrefix: "../",
       bodyClass: "disable-preloader enable-lenis hayler case-study-page",
-      headerMode: "case",
-      headerCta: "Early Access",
+      headerMode: "index",
+      headerCta: "Let's Talk",
       pageScripts: ["js/case-study.js"],
       projects,
       project,
