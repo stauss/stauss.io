@@ -7,26 +7,19 @@ header#clapat-header.classic-menu.stauss-site-header.disable-header-gradient
 
     nav#clapat-nav-wrapper
       .nav-height
-        if headerMode === "case"
-          .case-menu-pill
-            span Menu
-            span.case-menu-lines(aria-hidden="true")
-              span
-              span
-        else
-          ul.clapat-nav
-            li.menu-timeline(data-ball="highlight")
-              a.ajax-link(data-type="page-transition", href=assetPrefix + "index.html")
-                .before-span
-                  span(data-hover="Projects") Projects
-            li.menu-timeline(data-ball="highlight")
-              a.ajax-link(data-type="page-transition", href=assetPrefix +"about.html")
-                .before-span
-                  span(data-hover="About") About
-            li.menu-timeline(data-ball="highlight")
-              a(href=assetPrefix + "about.html#contact")
-                .before-span
-                  span(data-hover="Contact") Contact
+        ul.clapat-nav
+          li.menu-timeline(data-ball="highlight")
+            a.ajax-link(data-type="page-transition", href=assetPrefix + "index.html")
+              .before-span
+                span(data-hover="Projects") Projects
+          li.menu-timeline(data-ball="highlight")
+            a.ajax-link(data-type="page-transition", href=assetPrefix +"about.html")
+              .before-span
+                span(data-hover="About") About
+          li.menu-timeline(data-ball="highlight")
+            a(href=assetPrefix + "about.html#contact")
+              .before-span
+                span(data-hover="Contact") Contact
 
     #burger-button.button-wrap.button-link.right.circle-edge.burger-dots(data-sticky)
       .icon-wrap
